@@ -7,6 +7,7 @@
 //
 
 #import "BMW_iOSViewController.h"
+#import <CoreMotion/CMMotionManager.h>
 
 @implementation BMW_iOSViewController
 
@@ -23,11 +24,25 @@
 }
 */
 
-/*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
+	CMMotionManager *motionManager = [[CMMotionManager alloc] init];
+	motionManager.gyroUpdateInterval = 1.0;
+    [motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue]
+                               withHandler: ^(CMGyroData *gyroData, NSError *error)
+	 {
+		 CMRotationRate rotate = gyroData.rotationRate;
+		 NSLog(@"rotation rate = [%f, %f, %f]", rotate.x, rotate.y, rotate.z);
+	 }];
+	
+	motionManager.accelerometerUpdateInterval = 1.0;
+    [motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
+										withHandler: ^(CMAccelerometerData *accelData, NSError *error)
+	 {
+		 CMAcceleration a = accelData.acceleration;
+		 NSLog(@"acceleration rate = [%f, %f, %f]", a.x, a.y, a.z);
+	 }];
 }
-*/
 
 
 /*

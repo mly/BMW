@@ -26,24 +26,40 @@
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
-	CMMotionManager *motionManager = [[CMMotionManager alloc] init];
-	motionManager.gyroUpdateInterval = 1.0;
-    [motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue]
-                               withHandler: ^(CMGyroData *gyroData, NSError *error)
-	 {
-		 CMRotationRate rotate = gyroData.rotationRate;
-		 NSLog(@"rotation rate = [%f, %f, %f]", rotate.x, rotate.y, rotate.z);
-	 }];
+	CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+	locationManager.delegate = self;
+	[locationManager startUpdatingLocation];
 	
-	motionManager.accelerometerUpdateInterval = 1.0;
-    [motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
-										withHandler: ^(CMAccelerometerData *accelData, NSError *error)
+	CMMotionManager *motionManager = [[CMMotionManager alloc] init];
+	motionManager.deviceMotionUpdateInterval = 1.0/10.0;
+    [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue]
+                               withHandler: ^(CMDeviceMotion *motionData, NSError *error)
 	 {
-		 CMAcceleration a = accelData.acceleration;
-		 NSLog(@"acceleration rate = [%f, %f, %f]", a.x, a.y, a.z);
+		 CMAcceleration gravity = motionData.gravity;
+		 CMAcceleration userAcceleration = motionData.userAcceleration;
+		 CMRotationRate rot = motionData.rotationRate;
+#if CM_DEBUG
+		 NSLog(@"gravity = [%f, %f, %f]", gravity.x, gravity.y, gravity.z);
+		  NSLog(@"User Acceleration = [%f, %f, %f]", userAcceleration.x, userAcceleration.y, userAcceleration.z);
+		 NSLog(@"Rotation = [%f, %f, %f]", rot.x, rot.y, rot.z);
+#endif
+		 //CMAttitude att = motionData.attitude;
+		 //NSLog(@"Attitude = [%f, %f, %f]", att.roll, att.pitch, att.yaw);
+		 
 	 }];
 }
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+#if CL_DEBUG
+	NSLog(@"Coordinate: [%f,%f]",newLocation.coordinate.longitude,newLocation.coordinate.latitude);
+	NSLog(@"Altitude: %f",newLocation.altitude);
+#endif
+}
+
+- (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error
+{
+}
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

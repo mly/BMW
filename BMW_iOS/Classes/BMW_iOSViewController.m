@@ -9,7 +9,7 @@
 #import "BMW_iOSViewController.h"
 #import <CoreMotion/CMMotionManager.h>
 
-#define UPDATE_INTERVAL 10;
+#define UPDATE_INTERVAL 5;
 
 @implementation BMW_iOSViewController
 

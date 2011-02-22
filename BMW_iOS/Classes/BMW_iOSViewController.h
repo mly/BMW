@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface BMW_iOSViewController : UIViewController <CLLocationManagerDelegate>{
+@interface BMW_iOSViewController : UIViewController {
 
 }
 

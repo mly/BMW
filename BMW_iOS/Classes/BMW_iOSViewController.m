@@ -9,6 +9,8 @@
 #import "BMW_iOSViewController.h"
 #import <CoreMotion/CMMotionManager.h>
 
+#define UPDATE_INTERVAL 10;
+
 @implementation BMW_iOSViewController
 
 
@@ -27,38 +29,29 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 	CLLocationManager *locationManager = [[CLLocationManager alloc] init];
-	locationManager.delegate = self;
 	[locationManager startUpdatingLocation];
 	
 	CMMotionManager *motionManager = [[CMMotionManager alloc] init];
-	motionManager.deviceMotionUpdateInterval = 1.0/10.0;
+	motionManager.deviceMotionUpdateInterval = UPDATE_INTERVAL;
     [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue]
                                withHandler: ^(CMDeviceMotion *motionData, NSError *error)
 	 {
 		 CMAcceleration gravity = motionData.gravity;
 		 CMAcceleration userAcceleration = motionData.userAcceleration;
 		 CMRotationRate rot = motionData.rotationRate;
+		 CMAttitude *att = motionData.attitude;
 #if CM_DEBUG
 		 NSLog(@"gravity = [%f, %f, %f]", gravity.x, gravity.y, gravity.z);
 		  NSLog(@"User Acceleration = [%f, %f, %f]", userAcceleration.x, userAcceleration.y, userAcceleration.z);
 		 NSLog(@"Rotation = [%f, %f, %f]", rot.x, rot.y, rot.z);
+		 NSLog(@"Attitude = [%f, %f, %f]", att.roll, att.pitch, att.yaw);
 #endif
-		 //CMAttitude att = motionData.attitude;
-		 //NSLog(@"Attitude = [%f, %f, %f]", att.roll, att.pitch, att.yaw);
+#if CL_DEBUG
+		 NSLog(@"Coordinate: [%f,%f]",locationManager.location.coordinate.longitude,locationManager.location.coordinate.latitude);
+		 NSLog(@"Altitude: %f",locationManager.location.altitude);
+#endif
 		 
 	 }];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{
-#if CL_DEBUG
-	NSLog(@"Coordinate: [%f,%f]",newLocation.coordinate.longitude,newLocation.coordinate.latitude);
-	NSLog(@"Altitude: %f",newLocation.altitude);
-#endif
-}
-
-- (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error
-{
 }
 
 /*

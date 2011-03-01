@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <CoreMotion/CMMotionManager.h>
+#include "CaptureSessionManager.h"
 
 @interface BMW_iOSViewController : UIViewController {
-
+	CaptureSessionManager *captureManager;
+	float v[3];
 }
+-(void)signalStart;
+-(void)signalStop;
 
 @end
 

@@ -7,9 +7,9 @@
 //
 
 #import "BMW_iOSViewController.h"
-#import <CoreMotion/CMMotionManager.h>
 
-#define UPDATE_INTERVAL 5;
+#define UPDATE_INTERVAL 1.0f/30.0f;
+#define CONVERSION 2.23693629f/9.8f
 
 @implementation BMW_iOSViewController
 
@@ -26,15 +26,34 @@
 }
 */
 
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
+-(void)signalStart
+{
+	captureManager = [[CaptureSessionManager alloc] init];
+	
+	// Configure capture session
+	[captureManager addVideoInput];
+	[captureManager addVideoOutput];
+	
+	// Set up video preview layer
+	[captureManager addVideoPreviewLayer];
+	CGRect layerRect = self.view.layer.bounds;
+	captureManager.previewLayer.bounds = layerRect;
+	captureManager.previewLayer.position = CGPointMake(CGRectGetMidX(layerRect), CGRectGetMidY(layerRect));
+	[self.view.layer addSublayer:captureManager.previewLayer];
+	
+	[captureManager startCapturing];
+	
+	//Location
 	CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 	[locationManager startUpdatingLocation];
 	
+	v[0] = v[1] = v[2] = 0;
+	
+	//Accelerometer and Gyro
 	CMMotionManager *motionManager = [[CMMotionManager alloc] init];
 	motionManager.deviceMotionUpdateInterval = UPDATE_INTERVAL;
     [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue]
-                               withHandler: ^(CMDeviceMotion *motionData, NSError *error)
+									   withHandler: ^(CMDeviceMotion *motionData, NSError *error)
 	 {
 		 CMAcceleration gravity = motionData.gravity;
 		 CMAcceleration userAcceleration = motionData.userAcceleration;
@@ -42,7 +61,7 @@
 		 CMAttitude *att = motionData.attitude;
 #if CM_DEBUG
 		 NSLog(@"gravity = [%f, %f, %f]", gravity.x, gravity.y, gravity.z);
-		  NSLog(@"User Acceleration = [%f, %f, %f]", userAcceleration.x, userAcceleration.y, userAcceleration.z);
+		 NSLog(@"User Acceleration = [%f, %f, %f]", userAcceleration.x, userAcceleration.y, userAcceleration.z);
 		 NSLog(@"Rotation = [%f, %f, %f]", rot.x, rot.y, rot.z);
 		 NSLog(@"Attitude = [%f, %f, %f]", att.roll, att.pitch, att.yaw);
 #endif
@@ -50,16 +69,24 @@
 		 NSLog(@"Coordinate: [%f,%f]",locationManager.location.coordinate.longitude,locationManager.location.coordinate.latitude);
 		 NSLog(@"Altitude: %f",locationManager.location.altitude);
 #endif
-		 
-	 }];
+		 v[0] += userAcceleration.x*UPDATE_INTERVAL;
+		 v[1] += userAcceleration.y*UPDATE_INTERVAL;
+		 v[2] += userAcceleration.z*UPDATE_INTERVAL;
+		 NSLog(@"Velocity (MPH) = [%f, %f, %f]", v[0]*CONVERSION,v[1]*CONVERSION,v[2]*CONVERSION); 
+	 }];	
 }
 
-/*
+-(void)signalStop
+{
+	[captureManager stopCapturing];
+	[captureManager release];
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[self signalStart];	
 }
-*/
 
 
 /*

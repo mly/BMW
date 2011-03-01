@@ -11,10 +11,10 @@
 #import <CoreMotion/CMMotionManager.h>
 #import <QuartzCore/QuartzCore.h>
 #import "GravityObject.h"
-//#include "CaptureSessionManager.h"
+#include "CaptureSessionManager.h"
 
 @interface BMW_iOSViewController : UIViewController {
-//	CaptureSessionManager *captureManager;
+	CaptureSessionManager *captureManager;
 	float v[3];
 	NSMutableArray *gravData;
 }

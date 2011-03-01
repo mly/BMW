@@ -23,6 +23,7 @@
 		7B80CD8E131C5FF400AD2BAA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CD8D131C5FF400AD2BAA /* AssetsLibrary.framework */; };
 		D4B8F1CC131CE519002C1A44 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */; };
 		D4B8F225131CF44E002C1A44 /* GravityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F224131CF44E002C1A44 /* GravityObject.m */; };
+		D4B8F27A131D6588002C1A44 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F279131D6588002C1A44 /* CaptureSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D4B8F223131CF44E002C1A44 /* GravityObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GravityObject.h; sourceTree = "<group>"; };
 		D4B8F224131CF44E002C1A44 /* GravityObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GravityObject.m; sourceTree = "<group>"; };
+		D4B8F278131D6588002C1A44 /* CaptureSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSessionManager.h; sourceTree = "<group>"; };
+		D4B8F279131D6588002C1A44 /* CaptureSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				28D7ACF70DDB3853001CB0EB /* BMW_iOSViewController.m */,
 				D4B8F223131CF44E002C1A44 /* GravityObject.h */,
 				D4B8F224131CF44E002C1A44 /* GravityObject.m */,
+				D4B8F278131D6588002C1A44 /* CaptureSessionManager.h */,
+				D4B8F279131D6588002C1A44 /* CaptureSessionManager.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 				1D3623260D0F684500981E51 /* BMW_iOSAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* BMW_iOSViewController.m in Sources */,
 				D4B8F225131CF44E002C1A44 /* GravityObject.m in Sources */,
+				D4B8F27A131D6588002C1A44 /* CaptureSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

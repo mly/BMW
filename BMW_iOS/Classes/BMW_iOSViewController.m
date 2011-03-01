@@ -11,6 +11,8 @@
 #define UPDATE_INTERVAL 1.0f/30.0f;
 #define CONVERSION 2.23693629f/9.8f
 
+#define CM_DEBUG 1
+
 @implementation BMW_iOSViewController
 
 
@@ -27,7 +29,7 @@
 */
 
 -(void)signalStart
-{
+{/*
 	captureManager = [[CaptureSessionManager alloc] init];
 	
 	// Configure capture session
@@ -42,8 +44,15 @@
 	[self.view.layer addSublayer:captureManager.previewLayer];
 	
 	[captureManager startCapturing];
-	
+	*/
 	//Location
+	[self getGravDataFile];
+	
+	if (gravData) {
+		[gravData release];
+	}
+	gravData = [[NSMutableArray alloc] init];
+	
 	CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 	[locationManager startUpdatingLocation];
 	
@@ -59,11 +68,17 @@
 		 CMAcceleration userAcceleration = motionData.userAcceleration;
 		 CMRotationRate rot = motionData.rotationRate;
 		 CMAttitude *att = motionData.attitude;
+		 
+		 //NSData *data = [[NSData alloc] initWithBytes:<#(const void *)bytes#> length:<#(NSUInteger)length#>
+		 [gravData addObject:[[GravityObject alloc] initWithX:gravity.x Y:gravity.y andZ:gravity.z]];
+
+		 //-(id)initWithX:(float)x Y:(float)y andZ:(float)z;
+
 #if CM_DEBUG
 		 NSLog(@"gravity = [%f, %f, %f]", gravity.x, gravity.y, gravity.z);
-		 NSLog(@"User Acceleration = [%f, %f, %f]", userAcceleration.x, userAcceleration.y, userAcceleration.z);
-		 NSLog(@"Rotation = [%f, %f, %f]", rot.x, rot.y, rot.z);
-		 NSLog(@"Attitude = [%f, %f, %f]", att.roll, att.pitch, att.yaw);
+		 //NSLog(@"User Acceleration = [%f, %f, %f]", userAcceleration.x, userAcceleration.y, userAcceleration.z);
+		 //NSLog(@"Rotation = [%f, %f, %f]", rot.x, rot.y, rot.z);
+		 //NSLog(@"Attitude = [%f, %f, %f]", att.roll, att.pitch, att.yaw);
 #endif
 #if CL_DEBUG
 		 NSLog(@"Coordinate: [%f,%f]",locationManager.location.coordinate.longitude,locationManager.location.coordinate.latitude);
@@ -72,14 +87,44 @@
 		 v[0] += userAcceleration.x*UPDATE_INTERVAL;
 		 v[1] += userAcceleration.y*UPDATE_INTERVAL;
 		 v[2] += userAcceleration.z*UPDATE_INTERVAL;
-		 NSLog(@"Velocity (MPH) = [%f, %f, %f]", v[0]*CONVERSION,v[1]*CONVERSION,v[2]*CONVERSION); 
+		 //NSLog(@"Velocity (MPH) = [%f, %f, %f]", v[0]*CONVERSION,v[1]*CONVERSION,v[2]*CONVERSION); 
 	 }];	
 }
 
 -(void)signalStop
 {
-	[captureManager stopCapturing];
-	[captureManager release];
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	
+	// the path to write file
+	NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"myFile"];
+	
+	double CurrentTime = CACurrentMediaTime();
+	NSLog(@"Serializing and writing gravData with %d entries", [gravData count]);
+	
+	[gravData writeToFile:appFile atomically:YES];
+	NSLog(@"Current Time: %f", CurrentTime);
+	NSLog(@"Time to write: %f", (double)CACurrentMediaTime() - (double)CurrentTime);
+	//[captureManager stopCapturing];
+	//[captureManager release];
+}
+
+-(void)getGravDataFile {
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	
+	// the path to write file
+	NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"myFile"];
+	
+	NSMutableArray *gd = [[NSMutableArray alloc] initWithContentsOfFile:appFile];
+
+	NSLog(@"Retrieved gravData with %d entries", [gd count]);
+	
+	for (NSArray *arr in gd) {
+		NSLog(@"gravity = [%f, %f, %f]", arr[0], arr[1], arr[2]);		
+	}
+
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

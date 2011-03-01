@@ -22,9 +22,11 @@
 - (void) addVideoPreviewLayer;
 - (void) addVideoInput;
 - (void) addVideoOutput;
-- (NSURL *) tempFileURL;
-- (void) startCapturing;
-- (void) stopCapturing;
+- (NSURL *) fileURL;
+#if VIDEO_SAVE
+- (void) startWriting;
+- (void) finishWriting;
+#endif
 
 @property (retain) AVCaptureVideoPreviewLayer *previewLayer;
 @property (retain) AVCaptureSession *captureSession;

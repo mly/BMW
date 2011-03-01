@@ -71,7 +71,11 @@ static int64_t frameNumber = 0;
 	else
 		NSLog(@"Couldn't add video output");
 	[videoOut release];
+}
+
 #if VIDEO_SAVE
+- (void) startWriting
+{
 	//Asset writing (saving the video)
 	NSDictionary *outputSettings =
     [NSDictionary dictionaryWithObjectsAndKeys:
@@ -82,8 +86,8 @@ static int64_t frameNumber = 0;
 	 
 	 nil];
 	assetWriterInput = [AVAssetWriterInput 
-											assetWriterInputWithMediaType:AVMediaTypeVideo
-											outputSettings:outputSettings];
+						assetWriterInputWithMediaType:AVMediaTypeVideo
+						outputSettings:outputSettings];
 	pixelBufferAdaptor =
 	[[AVAssetWriterInputPixelBufferAdaptor alloc] 
 	 initWithAssetWriterInput:assetWriterInput 
@@ -92,43 +96,27 @@ static int64_t frameNumber = 0;
 	  [NSNumber numberWithInt:kCVPixelFormatType_32BGRA], 
 	  kCVPixelBufferPixelFormatTypeKey,
 	  nil]];
-	outputFileURL = [self tempFileURL];
+	outputFileURL = [self fileURL];
 	assetWriter = [[AVAssetWriter alloc]
-								  initWithURL:outputFileURL
-								  fileType:AVFileTypeMPEG4
-								  error:nil];
+				   initWithURL:outputFileURL
+				   fileType:AVFileTypeMPEG4
+				   error:nil];
 	[assetWriter addInput:assetWriterInput];
 	assetWriterInput.expectsMediaDataInRealTime = YES;
-#endif
-}
-
-- (void) startCapturing
-{
-#if VIDEO_SAVE
+	
 	[assetWriter startWriting];
 	[assetWriter startSessionAtSourceTime:kCMTimeZero];
-	//[self performSelector:@selector(stopCapturing)];
-	//[self performSelector:@selector(stopCapturing) withObject:nil afterDelay:5];
-#endif
-	[captureSession startRunning];
 }
 
-- (void) stopCapturing
+- (void) finishWriting
 {
-	[captureSession stopRunning];
-#if VIDEO_SAVE
 	[assetWriter finishWriting];
-	ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-    if ([library videoAtPathIsCompatibleWithSavedPhotosAlbum:outputFileURL]) {
-        [library writeVideoAtPathToSavedPhotosAlbum:outputFileURL
-                                    completionBlock:nil];
-	}
-#endif
 }
+#endif
 
-- (NSURL *) tempFileURL
+- (NSURL *) fileURL
 {
-	NSString *outputPath = [[NSString alloc] initWithFormat:@"%@%@", NSTemporaryDirectory(), @"camera.mov"];
+	NSString *outputPath = [[NSString alloc] initWithFormat:@"%@%@%f%@", NSHomeDirectory(), @"/Documents/Drive",[[NSDate date] timeIntervalSince1970],@".mov"];
 	NSURL *outputURL = [[NSURL alloc] initFileURLWithPath:outputPath];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if ([fileManager fileExistsAtPath:outputPath]) {
@@ -156,7 +144,7 @@ static int64_t frameNumber = 0;
 - (void)dealloc {
 	[self stopCapturing];
 	
-	 [self.previewLayer release];
+	[self.previewLayer release];
 	[self.captureSession release];
 	
 	[super dealloc];

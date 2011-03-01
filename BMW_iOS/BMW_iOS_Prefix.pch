@@ -8,4 +8,4 @@
 #endif
 #define CM_DEBUG 0
 #define CL_DEBUG 0
-#define VIDEO_SAVE 0
+#define VIDEO_SAVE 1

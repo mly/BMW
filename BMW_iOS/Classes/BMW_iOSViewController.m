@@ -28,6 +28,17 @@
 
 -(void)signalStart
 {
+	[captureManager startWriting];
+}
+
+-(void)signalStop
+{
+	[captureManager finishWriting];
+}
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
 	captureManager = [[CaptureSessionManager alloc] init];
 	
 	// Configure capture session
@@ -41,7 +52,7 @@
 	captureManager.previewLayer.position = CGPointMake(CGRectGetMidX(layerRect), CGRectGetMidY(layerRect));
 	[self.view.layer addSublayer:captureManager.previewLayer];
 	
-	[captureManager startCapturing];
+	[captureManager.captureSession startRunning];
 	
 	//Location
 	CLLocationManager *locationManager = [[CLLocationManager alloc] init];
@@ -64,28 +75,16 @@
 		 NSLog(@"User Acceleration = [%f, %f, %f]", userAcceleration.x, userAcceleration.y, userAcceleration.z);
 		 NSLog(@"Rotation = [%f, %f, %f]", rot.x, rot.y, rot.z);
 		 NSLog(@"Attitude = [%f, %f, %f]", att.roll, att.pitch, att.yaw);
+		 v[0] += userAcceleration.x*UPDATE_INTERVAL;
+		 v[1] += userAcceleration.y*UPDATE_INTERVAL;
+		 v[2] += userAcceleration.z*UPDATE_INTERVAL;
+		 NSLog(@"Velocity (MPH) = [%f, %f, %f]", v[0]*CONVERSION,v[1]*CONVERSION,v[2]*CONVERSION);
 #endif
 #if CL_DEBUG
 		 NSLog(@"Coordinate: [%f,%f]",locationManager.location.coordinate.longitude,locationManager.location.coordinate.latitude);
 		 NSLog(@"Altitude: %f",locationManager.location.altitude);
 #endif
-		 v[0] += userAcceleration.x*UPDATE_INTERVAL;
-		 v[1] += userAcceleration.y*UPDATE_INTERVAL;
-		 v[2] += userAcceleration.z*UPDATE_INTERVAL;
-		 NSLog(@"Velocity (MPH) = [%f, %f, %f]", v[0]*CONVERSION,v[1]*CONVERSION,v[2]*CONVERSION); 
-	 }];	
-}
-
--(void)signalStop
-{
-	[captureManager stopCapturing];
-	[captureManager release];
-}
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	[self signalStart];	
+	 }];
 }
 
 

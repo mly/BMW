@@ -98,14 +98,15 @@
 		 
 		 //-(id)initWithX:(float)x Y:(float)y andZ:(float)z;
 		 
+		 v[0] += userAcceleration.x*UPDATE_INTERVAL;
+		 v[1] += userAcceleration.y*UPDATE_INTERVAL;
+		 v[2] += userAcceleration.z*UPDATE_INTERVAL;
+		 
 #if CM_DEBUG
 		 NSLog(@"gravity = [%f, %f, %f]", gravity.x, gravity.y, gravity.z);
 		 NSLog(@"User Acceleration = [%f, %f, %f]", userAcceleration.x, userAcceleration.y, userAcceleration.z);
 		 NSLog(@"Rotation = [%f, %f, %f]", rot.x, rot.y, rot.z);
 		 NSLog(@"Attitude = [%f, %f, %f]", att.roll, att.pitch, att.yaw);
-		 v[0] += userAcceleration.x*UPDATE_INTERVAL;
-		 v[1] += userAcceleration.y*UPDATE_INTERVAL;
-		 v[2] += userAcceleration.z*UPDATE_INTERVAL;
 		 NSLog(@"Velocity (MPH) = [%f, %f, %f]", v[0]*CONVERSION,v[1]*CONVERSION,v[2]*CONVERSION);
 #endif
 #if CL_DEBUG

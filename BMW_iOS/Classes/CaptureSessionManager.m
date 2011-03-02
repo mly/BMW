@@ -123,9 +123,6 @@ static int64_t frameNumber = 0;
 	[videoOut setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey]]; // BGRA is necessary for manual preview
 	dispatch_queue_t my_queue = dispatch_queue_create("BMW.VideoOutput", NULL);
 	[videoOut setSampleBufferDelegate:self queue:my_queue];
-#if SCREEN_CAPTURE
-	videoOut.minFrameDuration = CMTimeMake(1, 1);
-#endif
 	if ([self.captureSession canAddOutput:videoOut])
 		[self.captureSession addOutput:videoOut];
 	else

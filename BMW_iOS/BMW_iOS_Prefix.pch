@@ -8,4 +8,6 @@
 #endif
 #define CM_DEBUG 0
 #define CL_DEBUG 0
-#define VIDEO_SAVE 1
+#define VIDEO_SAVE 0
+#define SCREEN_CAPTURE 1
+#define STATS_OVERLAY 1

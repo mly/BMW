@@ -30,12 +30,14 @@
 
 -(void)signalStart
 {
-	[captureManager startWriting];
+	[self getGravDataFile];
+	//[captureManager startWriting];
 }
 
 -(void)signalStop
 {
-	[captureManager finishWriting];
+	[self writeToGravDataFile];
+	//[captureManager finishWriting];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -58,12 +60,12 @@
 	[captureManager.captureSession startRunning];
 	
 	//Location
-	[self getGravDataFile];
+	//[self getGravDataFile];
 	
-	if (gravData) {
-		[gravData release];
+	if (motionDataArry) {
+		[motionDataArry release];
 	}
-	gravData = [[NSMutableArray alloc] init];
+	motionDataArry = [[NSMutableArray alloc] init];
 	
 	CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 	[locationManager startUpdatingLocation];
@@ -82,10 +84,12 @@
 		 CMAttitude *att = motionData.attitude;
 		 
 		 //NSData *data = [[NSData alloc] initWithBytes:<#(const void *)bytes#> length:<#(NSUInteger)length#>
-		 [gravData addObject:[[GravityObject alloc] initWithX:gravity.x Y:gravity.y andZ:gravity.z]];
-
+		 //[gravData addObject:[[GravityObject alloc] initWithX:gravity.x Y:gravity.y andZ:gravity.z]];
+		 //NSData *motionData = [NSData dataWithBytes: length:sizeof(CMAcceleration)];
+		 [motionDataArry addObject:motionData];
+		 
 		 //-(id)initWithX:(float)x Y:(float)y andZ:(float)z;
-
+		 
 #if CM_DEBUG
 		 NSLog(@"gravity = [%f, %f, %f]", gravity.x, gravity.y, gravity.z);
 		 NSLog(@"User Acceleration = [%f, %f, %f]", userAcceleration.x, userAcceleration.y, userAcceleration.z);
@@ -109,12 +113,12 @@
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	
 	// the path to write file
-	NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"myFile"];
+	NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"test1"];
 	
 	double CurrentTime = CACurrentMediaTime();
-	NSLog(@"Serializing and writing gravData with %d entries", [gravData count]);
-	
-	[gravData writeToFile:appFile atomically:YES];
+	NSLog(@"Serializing and writing gravData with %d entries", [motionDataArry count]);
+
+	[NSKeyedArchiver archiveRootObject:motionDataArry toFile:appFile];
 	NSLog(@"Current Time: %f", CurrentTime);
 	NSLog(@"Time to write: %f", (double)CACurrentMediaTime() - (double)CurrentTime);
 }
@@ -124,16 +128,17 @@
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	
 	// the path to write file
-	NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"myFile"];
+	NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"test1"];
 	
-	NSMutableArray *gd = [[NSMutableArray alloc] initWithContentsOfFile:appFile];
-
-	NSLog(@"Retrieved gravData with %d entries", [gd count]);
-	
-	for (NSArray *arr in gd) {
-		NSLog(@"gravity = [%f, %f, %f]", arr[0], arr[1], arr[2]);		
-	}
-
+	NSData *retrievedData = [[NSData alloc] initWithContentsOfFile:appFile];
+	if (retrievedData) {
+		NSArray *gd = [NSKeyedUnarchiver unarchiveObjectWithData:retrievedData];
+		NSLog(@"Retrieved gravData with %d entries", [gd count]);
+		for (CMDeviceMotion *motion in gd) {
+			CMAcceleration grav = motion.gravity;
+			NSLog(@"gravity = [%f, %f, %f]", grav.x, grav.y, grav.z);	
+		}
+	} else NSLog(@"could not retrieve data");
 }
 
 

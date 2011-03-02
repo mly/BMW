@@ -16,7 +16,7 @@
 @interface BMW_iOSViewController : UIViewController {
 	CaptureSessionManager *captureManager;
 	float v[3];
-	NSMutableArray *gravData;
+	NSMutableArray *motionDataArry;
 }
 -(void)signalStart;
 -(void)signalStop;

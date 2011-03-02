@@ -27,13 +27,13 @@
   </pluginmanifest>
   <pluginApp>
     <comment></comment>
-    <text>SimpleWeather</text>
+    <text>MINI 360</text>
     <applicationType>OnlineServices</applicationType>
     <entryButton>
       <id>BTN_Entry</id>
       <numericId>33</numericId>
       <tooltipText></tooltipText>
-      <text>SimpleWeather</text>
+      <text>MINI 360</text>
       <action>HAC_Goto_Main</action>
     </entryButton>
     <actions>
@@ -134,7 +134,7 @@
     <hmiStates>
       <toolbarHmiState>
         <id>HST_Main</id>
-        <text>SimpleWeather</text>
+        <text>MINI 360</text>
         <numericId>1</numericId>
         <optionComponents/>
         <components>
@@ -183,7 +183,7 @@
       </toolbarHmiState>
       <hmiState>
         <id>HST_Menu</id>
-        <text>List</text>
+        <text>Dude, List</text>
         <numericId>23</numericId>
         <components>
           <list>

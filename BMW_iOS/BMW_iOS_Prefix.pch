@@ -9,5 +9,7 @@
 #define CM_DEBUG 1
 #define CL_DEBUG 1
 #define VIDEO_SAVE 0
+#if !VIDEO_SAVE
 #define SCREEN_CAPTURE 1
+#endif
 #define STATS_OVERLAY 1

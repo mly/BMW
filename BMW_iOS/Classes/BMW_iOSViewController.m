@@ -11,8 +11,6 @@
 #define UPDATE_INTERVAL 1.0f/30.0f;
 #define CONVERSION 2.23693629f/9.8f
 
-#define CM_DEBUG 1
-
 @implementation BMW_iOSViewController
 
 

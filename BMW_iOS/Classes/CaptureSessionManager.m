@@ -67,12 +67,10 @@ static int64_t frameNumber = 0;
 												 frameSize.height, 8, 4*frameSize.width, rgbColorSpace, 
 												 kCGImageAlphaNoneSkipFirst);
     NSParameterAssert(context);
-    //CGContextConcatCTM(context, CGAffineTransformMakeRotation(M_PI));
-	//CGContextConcatCTM(context, CGAffineTransformMakeTranslation(160, 0));
 	CGContextTranslateCTM(context,
 						  +(frameSize.width/2),
 						  +(frameSize.height/2));	
-	CGContextRotateCTM(context, -M_PI/2.0);
+	CGContextRotateCTM(context, M_PI/2.0);
 	CGContextTranslateCTM(context,
 						  -(frameSize.height/2),
 						  -(frameSize.width/2));

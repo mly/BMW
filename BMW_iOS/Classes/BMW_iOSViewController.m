@@ -56,7 +56,7 @@
 	[self.view.layer addSublayer:captureManager.previewLayer];
 	
 	dataOverlayVC = [[DataOverlayViewController alloc] init];
-	[dataOverlayVC.view setFrame:CGRectMake(-230, 180, 460, 100)];
+	[dataOverlayVC.view setFrame:CGRectMake(-230, 200, 500, 100)];
 	dataOverlayVC.view.transform = CGAffineTransformMakeRotation(M_PI/2);
 	
 	[self.view addSubview:dataOverlayVC.view];

@@ -36,6 +36,8 @@
 	[altitude setText:[NSString stringWithFormat:@"Altitude: %.3fft ASL", l.altitude]];
 	[vaccel setText:[NSString stringWithFormat:@"Vaccel: [%.3f, %.3f, %.3f]", va[0], va[1], va[2]]];
 	[vgps setText:[NSString stringWithFormat:@"Vgps: %.3f mph", vg]];
+	[latitude setText:[NSString stringWithFormat:@"Latitude: %.5f", l.coordinate.latitude]];
+	[longitude setText:[NSString stringWithFormat:@"Longitude: %.5f", l.coordinate.longitude]];
 }
 
 /*

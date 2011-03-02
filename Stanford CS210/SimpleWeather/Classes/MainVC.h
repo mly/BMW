@@ -18,7 +18,7 @@
 	IDButton* lookupButton;
 	
 	IDImage* viewImage;
-	IDLabel* stateLabel;
+	IDLoadingLabel* stateLabel;
 	
 	MenuVC* menuVC;
 }

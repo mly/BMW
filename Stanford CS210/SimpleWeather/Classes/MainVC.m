@@ -40,7 +40,9 @@
 		self.lookupButton = [[[IDButton alloc] initWithViewController:self	widgetID:BTN_Lookup			modelID:-1	imageModelID:-1	actionID:ACT_Lookup_Clicked targetModelID:-1] autorelease];
 		
 		self.viewImage = [[[IDImage alloc] initWithViewController:self widgetID:IMG_View modelID:MDL_Image_View] autorelease];
-		self.stateLabel = [[[IDLabel alloc] initWithViewController:self widgetID:LBL_State modelID:MDL_Text_State] autorelease];
+		self.stateLabel = [[[IDLoadingLabel alloc] initWithViewController:self widgetID:LBL_State modelID:MDL_Text_State] autorelease];
+		
+//		[[[IDLabel alloc] initWithViewController:self widgetID:LBL_State modelID:MDL_Text_State] autorelease];
 
 		[self addWidget: homeButton];
 		[self addWidget: currentButton];
@@ -85,6 +87,7 @@
 	
 	[viewImage setPosition: CGPointMake(10, 10)];
 	[stateLabel setPosition: CGPointMake(50, 50)];
+	[stateLabel setHidesWhenStopped:NO];
 	
 	[super rhmiDidStart];
 }
@@ -153,11 +156,13 @@
 	// Display View
 	[viewImage setImage: view];
 	[stateLabel setText: nil];
+	[stateLabel stopAnimating];
 }
 
 -(void)currentButtonClicked:(IDButton*)button
 {
 	[viewImage setImage: nil];
+	[stateLabel startAnimating];
 	[stateLabel setText: @"Current"];
 }
 

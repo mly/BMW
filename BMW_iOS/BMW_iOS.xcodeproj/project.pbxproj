@@ -24,6 +24,8 @@
 		D4B8F1CC131CE519002C1A44 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */; };
 		D4B8F225131CF44E002C1A44 /* GravityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F224131CF44E002C1A44 /* GravityObject.m */; };
 		D4B8F27A131D6588002C1A44 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F279131D6588002C1A44 /* CaptureSessionManager.m */; };
+		D4B8F365131E3D61002C1A44 /* DataOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F363131E3D61002C1A44 /* DataOverlayViewController.m */; };
+		D4B8F366131E3D61002C1A44 /* DataOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4B8F364131E3D61002C1A44 /* DataOverlayViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,9 @@
 		D4B8F224131CF44E002C1A44 /* GravityObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GravityObject.m; sourceTree = "<group>"; };
 		D4B8F278131D6588002C1A44 /* CaptureSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSessionManager.h; sourceTree = "<group>"; };
 		D4B8F279131D6588002C1A44 /* CaptureSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionManager.m; sourceTree = "<group>"; };
+		D4B8F362131E3D61002C1A44 /* DataOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataOverlayViewController.h; sourceTree = "<group>"; };
+		D4B8F363131E3D61002C1A44 /* DataOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataOverlayViewController.m; sourceTree = "<group>"; };
+		D4B8F364131E3D61002C1A44 /* DataOverlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DataOverlayViewController.xib; path = Classes/DataOverlayViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +90,8 @@
 				D4B8F224131CF44E002C1A44 /* GravityObject.m */,
 				D4B8F278131D6588002C1A44 /* CaptureSessionManager.h */,
 				D4B8F279131D6588002C1A44 /* CaptureSessionManager.m */,
+				D4B8F362131E3D61002C1A44 /* DataOverlayViewController.h */,
+				D4B8F363131E3D61002C1A44 /* DataOverlayViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D4B8F364131E3D61002C1A44 /* DataOverlayViewController.xib */,
 				2899E5210DE3E06400AC0155 /* BMW_iOSViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* BMW_iOS-Info.plist */,
@@ -196,6 +204,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* BMW_iOSViewController.xib in Resources */,
+				D4B8F366131E3D61002C1A44 /* DataOverlayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +220,7 @@
 				28D7ACF80DDB3853001CB0EB /* BMW_iOSViewController.m in Sources */,
 				D4B8F225131CF44E002C1A44 /* GravityObject.m in Sources */,
 				D4B8F27A131D6588002C1A44 /* CaptureSessionManager.m in Sources */,
+				D4B8F365131E3D61002C1A44 /* DataOverlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

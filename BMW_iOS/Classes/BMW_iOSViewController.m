@@ -31,13 +31,13 @@
 -(void)signalStart
 {
 	[self getGravDataFile];
-	//[captureManager startWriting];
+	[captureManager startWriting];
 }
 
 -(void)signalStop
 {
 	[self writeToGravDataFile];
-	//[captureManager finishWriting];
+	[captureManager finishWriting];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -54,10 +54,18 @@
 	CGRect layerRect = self.view.layer.bounds;
 	captureManager.previewLayer.bounds = layerRect;
 	captureManager.previewLayer.position = CGPointMake(CGRectGetMidX(layerRect), CGRectGetMidY(layerRect));
+	//[captureManager set
 	[self.view.layer addSublayer:captureManager.previewLayer];
 	
-
+	dataOverlayVC = [[DataOverlayViewController alloc] init];
+	[dataOverlayVC.view setFrame:CGRectMake(-230, 180, 460, 100)];
+	dataOverlayVC.view.transform = CGAffineTransformMakeRotation(M_PI/2);
+	
+	[self.view addSubview:dataOverlayVC.view];
+	
 	[captureManager.captureSession startRunning];
+	
+	
 	
 	//Location
 	//[self getGravDataFile];
@@ -87,6 +95,8 @@
 		 //[gravData addObject:[[GravityObject alloc] initWithX:gravity.x Y:gravity.y andZ:gravity.z]];
 		 //NSData *motionData = [NSData dataWithBytes: length:sizeof(CMAcceleration)];
 		 [motionDataArry addObject:motionData];
+		 [dataOverlayVC populateLabelsWithAccel:userAcceleration Location:locationManager.location GPSVelocity:0.0 andAccelerometerVelocity:&v ];
+		 
 		 
 		 //-(id)initWithX:(float)x Y:(float)y andZ:(float)z;
 		 
@@ -142,13 +152,13 @@
 }
 
 
-/*
+
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-*/
+
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.

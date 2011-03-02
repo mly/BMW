@@ -12,9 +12,11 @@
 #import <QuartzCore/QuartzCore.h>
 #import "GravityObject.h"
 #include "CaptureSessionManager.h"
+#import "DataOverlayViewController.h"
 
 @interface BMW_iOSViewController : UIViewController {
 	CaptureSessionManager *captureManager;
+	DataOverlayViewController *dataOverlayVC;
 	float v[3];
 	NSMutableArray *motionDataArry;
 }

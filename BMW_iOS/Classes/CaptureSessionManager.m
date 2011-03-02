@@ -33,13 +33,10 @@ static int64_t frameNumber = 0;
 	//UIGetScreenImage()
     if(assetWriterInput.readyForMoreMediaData)
 	{
-		if(assetWriterInput.readyForMoreMediaData)
-		{
-			CVImageBufferRef pixelBuffer2 = [self pixelBufferFromCGImage:UIGetScreenImage()];
-			[pixelBufferAdaptor appendPixelBuffer:pixelBuffer2
+		CVPixelBufferRef pixelBuffer2 = [self pixelBufferFromCGImage:UIGetScreenImage()];
+		[pixelBufferAdaptor appendPixelBuffer:pixelBuffer2
 							 withPresentationTime:CMTimeMake(frameNumber, 25)];
-			CVPixelBufferRelease(pixelBuffer2);
-		}
+		CVPixelBufferRelease(pixelBuffer2);
 
 	}
     frameNumber++;
@@ -83,7 +80,6 @@ static int64_t frameNumber = 0;
     CGContextRelease(context);
 	
     CVPixelBufferUnlockBaseAddress(pxbuffer, 0);
-	
     return pxbuffer;
 }
 #endif

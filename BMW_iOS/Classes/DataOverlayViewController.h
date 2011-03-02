@@ -11,9 +11,9 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface DataOverlayViewController : UIViewController {
-	IBOutlet UILabel *accel, *vaccel, *vgps, *altitude, *latitude, *longitude;
+	IBOutlet UILabel *accel, *vaccel, *vgps, *altitude, *latlong, *vaverage;
 }
 
--(void)populateLabelsWithAccel:(CMAcceleration)a Location:(CLLocation *)l GPSVelocity:(float)vg andAccelerometerVelocity:(float *)va;
+-(void)populateLabelsWithAccel:(CMAcceleration)a Location:(CLLocation *)l GPSVelocity:(float)vg AverageVelocity:(float)vav andAccelerometerVelocity:(float *)va;
 
 @end

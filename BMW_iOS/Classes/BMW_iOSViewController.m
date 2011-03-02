@@ -98,7 +98,7 @@
 		 //[gravData addObject:[[GravityObject alloc] initWithX:gravity.x Y:gravity.y andZ:gravity.z]];
 		 //NSData *motionData = [NSData dataWithBytes: length:sizeof(CMAcceleration)];
 		 [motionDataArry addObject:motionData];
-		 [dataOverlayVC populateLabelsWithAccel:userAcceleration Location:locationManager.location GPSVelocity:Vgps andAccelerometerVelocity:&v ];
+		 [dataOverlayVC populateLabelsWithAccel:userAcceleration Location:locationManager.location GPSVelocity:Vgps AverageVelocity:Vav andAccelerometerVelocity:&v ];
 		 
 		 
 		 //-(id)initWithX:(float)x Y:(float)y andZ:(float)z;

@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10F569</string>
+		<string key="IBDocument.SystemVersion">10J567</string>
 		<string key="IBDocument.InterfaceBuilderVersion">823</string>
-		<string key="IBDocument.AppKitVersion">1038.29</string>
-		<string key="IBDocument.HIToolboxVersion">461.00</string>
+		<string key="IBDocument.AppKitVersion">1038.35</string>
+		<string key="IBDocument.HIToolboxVersion">462.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">132</string>
@@ -129,7 +129,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Latitude: 0</string>
+						<string key="IBUIText">Lat/Long</string>
 						<reference key="IBUITextColor" ref="992941508"/>
 						<reference key="IBUIHighlightedColor" ref="418400989"/>
 						<object class="NSColor" key="IBUIShadowColor" id="312639034">
@@ -149,7 +149,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Longitude: 0</string>
+						<string key="IBUIText">Vaverage : 0</string>
 						<reference key="IBUITextColor" ref="992941508"/>
 						<reference key="IBUIHighlightedColor" ref="418400989"/>
 						<reference key="IBUIShadowColor" ref="312639034"/>
@@ -211,19 +211,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">latitude</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="13670146"/>
-					</object>
-					<int key="connectionID">15</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">longitude</string>
+						<string key="label">vaverage</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="839203713"/>
 					</object>
-					<int key="connectionID">16</int>
+					<int key="connectionID">17</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">latlong</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="13670146"/>
+					</object>
+					<int key="connectionID">18</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -317,7 +317,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>DataOverlayViewController</string>
 					<string>UIResponder</string>
-					<string>{{467, 402}, {480, 70}}</string>
+					<string>{{18, 402}, {480, 70}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -361,7 +361,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">16</int>
+			<int key="maxID">18</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -375,9 +375,9 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>accel</string>
 							<string>altitude</string>
-							<string>latitude</string>
-							<string>longitude</string>
+							<string>latlong</string>
 							<string>vaccel</string>
+							<string>vaverage</string>
 							<string>vgps</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -396,9 +396,9 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>accel</string>
 							<string>altitude</string>
-							<string>latitude</string>
-							<string>longitude</string>
+							<string>latlong</string>
 							<string>vaccel</string>
+							<string>vaverage</string>
 							<string>vgps</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -412,15 +412,15 @@
 								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">latitude</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">longitude</string>
+								<string key="name">latlong</string>
 								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">vaccel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">vaverage</string>
 								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">

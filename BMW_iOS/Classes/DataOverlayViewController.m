@@ -31,13 +31,13 @@
 }
 */
 
--(void)populateLabelsWithAccel:(CMAcceleration)a Location:(CLLocation *)l GPSVelocity:(float)vg andAccelerometerVelocity:(float *)va {
+-(void)populateLabelsWithAccel:(CMAcceleration)a Location:(CLLocation *)l GPSVelocity:(float)vg AverageVelocity:(float)vav andAccelerometerVelocity:(float *)va {
 	[accel setText:[NSString stringWithFormat:@"Accel: [%.3f, %.3f, %.3f]", a.x, a.y, a.z]];
 	[altitude setText:[NSString stringWithFormat:@"Altitude: %.3fft ASL", l.altitude]];
 	[vaccel setText:[NSString stringWithFormat:@"Vaccel: [%.3f, %.3f, %.3f]", va[0], va[1], va[2]]];
 	[vgps setText:[NSString stringWithFormat:@"Vgps: %.3f mph", vg]];
-	[latitude setText:[NSString stringWithFormat:@"Latitude: %.5f", l.coordinate.latitude]];
-	[longitude setText:[NSString stringWithFormat:@"Longitude: %.5f", l.coordinate.longitude]];
+	[latlong setText:[NSString stringWithFormat:@"Lat: %.5f, Long: %.5f", l.coordinate.latitude, l.coordinate.longitude]];
+	[vaverage setText:[NSString stringWithFormat:@"Vav: %.3f", vav]];
 }
 
 /*

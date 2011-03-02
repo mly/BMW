@@ -12,8 +12,6 @@
 #define CONVERSION 2.23693629f/9.8f
 #define METERS_SEC_MILES_HOUR_CONVERSION 2.2369
 
-#define CM_DEBUG 0
-
 @implementation BMW_iOSViewController
 
 
@@ -62,7 +60,7 @@
 	[self.view.layer addSublayer:captureManager.previewLayer];
 	
 	dataOverlayVC = [[DataOverlayViewController alloc] init];
-	[dataOverlayVC.view setFrame:CGRectMake(-230, 180, 460, 100)];
+	[dataOverlayVC.view setFrame:CGRectMake(-230, 200, 500, 100)];
 	dataOverlayVC.view.transform = CGAffineTransformMakeRotation(M_PI/2);
 	
 	[self.view addSubview:dataOverlayVC.view];
@@ -105,14 +103,15 @@
 		 
 		 //-(id)initWithX:(float)x Y:(float)y andZ:(float)z;
 		 
+		 v[0] += userAcceleration.x*UPDATE_INTERVAL;
+		 v[1] += userAcceleration.y*UPDATE_INTERVAL;
+		 v[2] += userAcceleration.z*UPDATE_INTERVAL;
+		 
 #if CM_DEBUG
 		 NSLog(@"gravity = [%f, %f, %f]", gravity.x, gravity.y, gravity.z);
 		 NSLog(@"User Acceleration = [%f, %f, %f]", userAcceleration.x, userAcceleration.y, userAcceleration.z);
 		 NSLog(@"Rotation = [%f, %f, %f]", rot.x, rot.y, rot.z);
 		 NSLog(@"Attitude = [%f, %f, %f]", att.roll, att.pitch, att.yaw);
-		 v[0] += userAcceleration.x*UPDATE_INTERVAL;
-		 v[1] += userAcceleration.y*UPDATE_INTERVAL;
-		 v[2] += userAcceleration.z*UPDATE_INTERVAL;
 		 NSLog(@"Velocity (MPH) = [%f, %f, %f]", v[0]*CONVERSION,v[1]*CONVERSION,v[2]*CONVERSION);
 #endif
 #if CL_DEBUG

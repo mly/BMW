@@ -21,7 +21,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
-
+#ifdef SCREEN_CAPTURE
+	[UIApplication sharedApplication].statusBarHidden = YES;
+#endif
     // Add the view controller's view to the window and display.
     [self.window addSubview:viewController.view];
     [self.window makeKeyAndVisible];

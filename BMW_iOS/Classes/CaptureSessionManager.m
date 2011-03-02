@@ -28,8 +28,61 @@ static int64_t frameNumber = 0;
     frameNumber++;
 	
 #endif
+#if SCREEN_CAPTURE
+	//screen capture
+	//UIGetScreenImage()
+    if(assetWriterInput.readyForMoreMediaData)
+	{
+		if(assetWriterInput.readyForMoreMediaData)
+			[pixelBufferAdaptor appendPixelBuffer:[self pixelBufferFromCGImage:UIGetScreenImage()]
+							 withPresentationTime:CMTimeMake(frameNumber, 25)];
+
+	}
+    frameNumber++;
+	
+#endif
 	//Do image processing here
 }
+
+#if SCREEN_CAPTURE
+- (CVPixelBufferRef) pixelBufferFromCGImage: (CGImageRef) image
+{
+	CGSize frameSize = CGSizeMake(CGImageGetWidth(image), CGImageGetHeight(image));
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+							 [NSNumber numberWithBool:YES], kCVPixelBufferCGImageCompatibilityKey,
+							 [NSNumber numberWithBool:YES], kCVPixelBufferCGBitmapContextCompatibilityKey,
+							 nil];
+    CVPixelBufferRef pxbuffer = NULL;
+    CVReturn status = CVPixelBufferCreate(kCFAllocatorDefault, frameSize.width,
+										  frameSize.height, kCVPixelFormatType_32ARGB, (CFDictionaryRef) options, 
+										  &pxbuffer);
+    NSParameterAssert(status == kCVReturnSuccess && pxbuffer != NULL);
+	
+    CVPixelBufferLockBaseAddress(pxbuffer, 0);
+    void *pxdata = CVPixelBufferGetBaseAddress(pxbuffer);
+    NSParameterAssert(pxdata != NULL);
+	
+    CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(pxdata, frameSize.width,
+												 frameSize.height, 8, 4*frameSize.width, rgbColorSpace, 
+												 kCGImageAlphaNoneSkipFirst);
+    NSParameterAssert(context);
+	CGContextTranslateCTM(context,
+						  +(frameSize.width/2),
+						  +(frameSize.height/2));	
+	CGContextRotateCTM(context, M_PI/2.0);
+	CGContextTranslateCTM(context,
+						  -(frameSize.height/2),
+						  -(frameSize.width/2));
+	CGContextDrawImage(context, CGRectMake(0, 0, CGImageGetHeight(image), CGImageGetWidth(image)), image);
+    CGColorSpaceRelease(rgbColorSpace);
+    CGContextRelease(context);
+	
+    CVPixelBufferUnlockBaseAddress(pxbuffer, 0);
+	
+    return pxbuffer;
+}
+#endif
 
 #pragma mark Capture Session Configuration
 
@@ -73,7 +126,7 @@ static int64_t frameNumber = 0;
 	[videoOut release];
 }
 
-#if VIDEO_SAVE
+#if VIDEO_SAVE||SCREEN_CAPTURE
 - (void) startWriting
 {
 	//Asset writing (saving the video)

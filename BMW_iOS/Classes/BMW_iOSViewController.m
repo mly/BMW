@@ -8,10 +8,11 @@
 
 #import "BMW_iOSViewController.h"
 
-#define UPDATE_INTERVAL 1.0f/30.0f;
+#define UPDATE_INTERVAL 1.0f/3.0f;
 #define CONVERSION 2.23693629f/9.8f
+#define METERS_SEC_MILES_HOUR_CONVERSION 2.2369
 
-#define CM_DEBUG 1
+#define CM_DEBUG 0
 
 @implementation BMW_iOSViewController
 
@@ -43,6 +44,9 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	totalDist = 0.0;
+	lastLocationUpdateTime = timeZero = CACurrentMediaTime();
 	captureManager = [[CaptureSessionManager alloc] init];
 	
 	// Configure capture session
@@ -76,6 +80,7 @@
 	motionDataArry = [[NSMutableArray alloc] init];
 	
 	CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+	locationManager.delegate = self;
 	[locationManager startUpdatingLocation];
 	
 	v[0] = v[1] = v[2] = 0;
@@ -117,6 +122,17 @@
 	}];
 }
 
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+	double updateSeconds = CACurrentMediaTime() - lastLocationUpdateTime;
+	lastLocationUpdateTime = CACurrentMediaTime();
+	double distance = [newLocation distanceFromLocation:oldLocation];
+	totalDist += distance;
+	Vgps = (distance/updateSeconds)*METERS_SEC_MILES_HOUR_CONVERSION;
+	Vav = (totalDist / (CACurrentMediaTime() - timeZero))*METERS_SEC_MILES_HOUR_CONVERSION;
+	NSLog(@"Current gps speed: %f mph", Vgps);
+	NSLog(@"Current average speed: %f mph", Vav);
+}
+
 -(void)writeToGravDataFile {
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -150,7 +166,6 @@
 		}
 	} else NSLog(@"could not retrieve data");
 }
-
 
 
 // Override to allow orientations other than the default portrait orientation.

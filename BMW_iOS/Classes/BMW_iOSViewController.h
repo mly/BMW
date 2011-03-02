@@ -14,11 +14,15 @@
 #include "CaptureSessionManager.h"
 #import "DataOverlayViewController.h"
 
-@interface BMW_iOSViewController : UIViewController {
+@interface BMW_iOSViewController : UIViewController <CLLocationManagerDelegate> {
 	CaptureSessionManager *captureManager;
 	DataOverlayViewController *dataOverlayVC;
 	float v[3];
 	NSMutableArray *motionDataArry;
+		
+	float totalDist, timeZero;
+	double lastLocationUpdateTime;
+	float Vgps, Vav;
 }
 -(void)signalStart;
 -(void)signalStop;

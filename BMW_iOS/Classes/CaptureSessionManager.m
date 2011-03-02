@@ -34,8 +34,12 @@ static int64_t frameNumber = 0;
     if(assetWriterInput.readyForMoreMediaData)
 	{
 		if(assetWriterInput.readyForMoreMediaData)
-			[pixelBufferAdaptor appendPixelBuffer:[self pixelBufferFromCGImage:UIGetScreenImage()]
+		{
+			CVImageBufferRef pixelBuffer2 = [self pixelBufferFromCGImage:UIGetScreenImage()];
+			[pixelBufferAdaptor appendPixelBuffer:pixelBuffer2
 							 withPresentationTime:CMTimeMake(frameNumber, 25)];
+			CVPixelBufferRelease(pixelBuffer2);
+		}
 
 	}
     frameNumber++;
@@ -119,6 +123,9 @@ static int64_t frameNumber = 0;
 	[videoOut setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey]]; // BGRA is necessary for manual preview
 	dispatch_queue_t my_queue = dispatch_queue_create("BMW.VideoOutput", NULL);
 	[videoOut setSampleBufferDelegate:self queue:my_queue];
+#if SCREEN_CAPTURE
+	videoOut.minFrameDuration = CMTimeMake(1, 1);
+#endif
 	if ([self.captureSession canAddOutput:videoOut])
 		[self.captureSession addOutput:videoOut];
 	else
@@ -170,6 +177,10 @@ static int64_t frameNumber = 0;
 - (NSURL *) fileURL
 {
 	NSString *outputPath = [[NSString alloc] initWithFormat:@"%@%@%f%@", NSHomeDirectory(), @"/Documents/Drive",[[NSDate date] timeIntervalSince1970],@".mov"];
+#if SCREEN_CAPTURE
+	outputPath = [[NSString alloc] initWithFormat:@"%@%@%f%@", NSHomeDirectory(), @"/Documents/Drive",[[NSDate date] timeIntervalSince1970],@"_OVERLAY.mov"];
+
+#endif
 	NSURL *outputURL = [[NSURL alloc] initFileURLWithPath:outputPath];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if ([fileManager fileExistsAtPath:outputPath]) {

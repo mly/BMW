@@ -29,13 +29,13 @@
 
 -(void)signalStart
 {
-	[self getGravDataFile];
+	//[self getGravDataFile];
 	[captureManager startWriting];
 }
 
 -(void)signalStop
 {
-	[self writeToGravDataFile];
+	//[self writeToGravDataFile];
 	[captureManager finishWriting];
 }
 
@@ -98,7 +98,7 @@
 		 //[gravData addObject:[[GravityObject alloc] initWithX:gravity.x Y:gravity.y andZ:gravity.z]];
 		 //NSData *motionData = [NSData dataWithBytes: length:sizeof(CMAcceleration)];
 		 [motionDataArry addObject:motionData];
-		 [dataOverlayVC populateLabelsWithAccel:userAcceleration Location:locationManager.location GPSVelocity:0.0 andAccelerometerVelocity:&v ];
+		 [dataOverlayVC populateLabelsWithAccel:userAcceleration Location:locationManager.location GPSVelocity:Vgps andAccelerometerVelocity:&v ];
 		 
 		 
 		 //-(id)initWithX:(float)x Y:(float)y andZ:(float)z;

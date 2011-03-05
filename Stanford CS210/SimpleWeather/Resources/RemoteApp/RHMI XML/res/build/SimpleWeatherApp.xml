@@ -43,7 +43,7 @@
                     <button id="19" action="10" imageModel="7" />
                 </toolbarComponents>
             </toolbarHmiState>
-            <hmiState id="23" text="Dude, List">
+            <hmiState id="23" text="Current MINI Rankings">
                 <components>
                     <list id="24" model="21" action="25" />
                 </components>

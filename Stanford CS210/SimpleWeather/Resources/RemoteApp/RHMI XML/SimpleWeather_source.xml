@@ -183,7 +183,7 @@
       </toolbarHmiState>
       <hmiState>
         <id>HST_Menu</id>
-        <text>Dude, List</text>
+        <text>Current MINI Rankings</text>
         <numericId>23</numericId>
         <components>
           <list>
@@ -200,28 +200,28 @@
         <id>RES_Home</id>
         <numericId>55001</numericId>
         <imageInstance>
-          <uri>Bitmaps\home.png</uri>
+          <uri>Bitmaps\icon_dashboard.png</uri>
         </imageInstance>
       </imageResource>
       <imageResource>
         <id>RES_Current</id>
         <numericId>55002</numericId>
         <imageInstance>
-          <uri>Bitmaps\current.png</uri>
+          <uri>Bitmaps\icon_achievements.png</uri>
         </imageInstance>
       </imageResource>
       <imageResource>
         <id>RES_Dest</id>
         <numericId>55003</numericId>
         <imageInstance>
-          <uri>Bitmaps\destination.png</uri>
+          <uri>Bitmaps\icon_profile.png</uri>
         </imageInstance>
       </imageResource>
       <imageResource>
         <id>RES_Search</id>
         <numericId>55004</numericId>
         <imageInstance>
-          <uri>Bitmaps\search.png</uri>
+          <uri>Bitmaps\icon_leaderboards.png</uri>
         </imageInstance>
       </imageResource>
     </resources>

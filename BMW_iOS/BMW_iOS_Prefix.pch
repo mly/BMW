@@ -6,8 +6,8 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 #endif
-#define CM_DEBUG 1
-#define CL_DEBUG 1
+#define CM_DEBUG 0
+#define CL_DEBUG 0
 #ifndef SCREEN_CAPTURE
 #define VIDEO_SAVE 1
 #endif

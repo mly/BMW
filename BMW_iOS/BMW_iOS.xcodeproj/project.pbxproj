@@ -490,7 +490,6 @@
 				INFOPLIST_FILE = "BMW_iOS-Info copy.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/opencv/lib\\\"",
 					"\"$(SRCROOT)/opencv/lib\"",
 				);
 				PRODUCT_NAME = BMW_iOS;
@@ -512,7 +511,6 @@
 				INFOPLIST_FILE = "BMW_OpenCV-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/opencv/lib\\\"",
 					"\"$(SRCROOT)/opencv/lib\"",
 				);
 				PRODUCT_NAME = BMW_CV;
@@ -530,8 +528,6 @@
 				INFOPLIST_FILE = "BMW_ScreenCapture-Info copy.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/opencv/lib\\\\\\\"",
-					"\\\"$(SRCROOT)/opencv/lib\\\"",
 					"\"$(SRCROOT)/opencv/lib\"",
 				);
 				PRODUCT_NAME = BMW_iOS;

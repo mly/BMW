@@ -27,7 +27,7 @@
 - (void) startWriting;
 - (void) finishWriting;
 #endif
-#if SCREEN_CAPTURE
+#ifdef SCREEN_CAPTURE
 - (CVPixelBufferRef) pixelBufferFromCGImage: (CGImageRef) image;
 #endif
 

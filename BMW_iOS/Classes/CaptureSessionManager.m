@@ -28,7 +28,7 @@ static int64_t frameNumber = 0;
     frameNumber++;
 	
 #endif
-#if SCREEN_CAPTURE
+#ifdef SCREEN_CAPTURE
 	//screen capture
 	//UIGetScreenImage()
     if(assetWriterInput.readyForMoreMediaData)
@@ -45,7 +45,7 @@ static int64_t frameNumber = 0;
 	//Do image processing here
 }
 
-#if SCREEN_CAPTURE
+#ifdef SCREEN_CAPTURE
 - (CVPixelBufferRef) pixelBufferFromCGImage: (CGImageRef) image
 {
 	CGSize frameSize = CGSizeMake(CGImageGetWidth(image), CGImageGetHeight(image));
@@ -126,9 +126,9 @@ static int64_t frameNumber = 0;
 	[videoOut release];
 }
 
-#if VIDEO_SAVE||SCREEN_CAPTURE
 - (void) startWriting
 {
+#if VIDEO_SAVE||SCREEN_CAPTURE
 	//Asset writing (saving the video)
 	NSDictionary *outputSettings =
     [NSDictionary dictionaryWithObjectsAndKeys:
@@ -159,18 +159,20 @@ static int64_t frameNumber = 0;
 	
 	[assetWriter startWriting];
 	[assetWriter startSessionAtSourceTime:kCMTimeZero];
+#endif
 }
 
 - (void) finishWriting
 {
+#if VIDEO_SAVE||SCREEN_CAPTURE
 	[assetWriter finishWriting];
-}
 #endif
+}
 
 - (NSURL *) fileURL
 {
 	NSString *outputPath = [[NSString alloc] initWithFormat:@"%@%@%f%@", NSHomeDirectory(), @"/Documents/Drive",[[NSDate date] timeIntervalSince1970],@".mov"];
-#if SCREEN_CAPTURE
+#ifdef SCREEN_CAPTURE
 	outputPath = [[NSString alloc] initWithFormat:@"%@%@%f%@", NSHomeDirectory(), @"/Documents/Drive",[[NSDate date] timeIntervalSince1970],@"_OVERLAY.mov"];
 
 #endif
@@ -199,8 +201,6 @@ static int64_t frameNumber = 0;
 
 
 - (void)dealloc {
-	[self stopCapturing];
-	
 	[self.previewLayer release];
 	[self.captureSession release];
 	

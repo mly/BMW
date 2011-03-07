@@ -15,6 +15,12 @@
 		2899E5220DE3E06400AC0155 /* BMW_iOSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* BMW_iOSViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* BMW_iOSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* BMW_iOSViewController.m */; };
+		7B4177641324924C00BE9374 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4177621324924C00BE9374 /* libcv.a */; };
+		7B4177651324924C00BE9374 /* libcxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4177631324924C00BE9374 /* libcxcore.a */; };
+		7B4177661324924C00BE9374 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4177621324924C00BE9374 /* libcv.a */; };
+		7B4177671324924C00BE9374 /* libcxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4177631324924C00BE9374 /* libcxcore.a */; };
+		7B41784F1324926100BE9374 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B41784E1324926100BE9374 /* Accelerate.framework */; };
+		7B4178501324926100BE9374 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B41784E1324926100BE9374 /* Accelerate.framework */; };
 		7B4EC7F81313516E00175D77 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4EC7F61313516E00175D77 /* CoreMotion.framework */; };
 		7B4EC7F91313516E00175D77 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4EC7F71313516E00175D77 /* CoreLocation.framework */; };
 		7B80CC60131C465C00AD2BAA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CC5F131C465C00AD2BAA /* CoreMedia.framework */; };
@@ -60,6 +66,9 @@
 		28D7ACF70DDB3853001CB0EB /* BMW_iOSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMW_iOSViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* BMW_iOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMW_iOS_Prefix.pch; sourceTree = "<group>"; };
+		7B4177621324924C00BE9374 /* libcv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcv.a; path = opencv/lib/libcv.a; sourceTree = "<group>"; };
+		7B4177631324924C00BE9374 /* libcxcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcxcore.a; path = opencv/lib/libcxcore.a; sourceTree = "<group>"; };
+		7B41784E1324926100BE9374 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		7B4EC7F61313516E00175D77 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		7B4EC7F71313516E00175D77 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7B80CC5F131C465C00AD2BAA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -94,6 +103,9 @@
 				7B80CC7C131C46A800AD2BAA /* AVFoundation.framework in Frameworks */,
 				7B80CD8E131C5FF400AD2BAA /* AssetsLibrary.framework in Frameworks */,
 				D4B8F1CC131CE519002C1A44 /* QuartzCore.framework in Frameworks */,
+				7B4177641324924C00BE9374 /* libcv.a in Frameworks */,
+				7B4177651324924C00BE9374 /* libcxcore.a in Frameworks */,
+				7B41784F1324926100BE9374 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +123,9 @@
 				7B900353132489BB004A37D7 /* AVFoundation.framework in Frameworks */,
 				7B900354132489BB004A37D7 /* AssetsLibrary.framework in Frameworks */,
 				7B900355132489BB004A37D7 /* QuartzCore.framework in Frameworks */,
+				7B4177661324924C00BE9374 /* libcv.a in Frameworks */,
+				7B4177671324924C00BE9374 /* libcxcore.a in Frameworks */,
+				7B4178501324926100BE9374 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +164,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				7B4177601324922100BE9374 /* Libraries */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -179,6 +195,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B41784E1324926100BE9374 /* Accelerate.framework */,
 				7B80CD8D131C5FF400AD2BAA /* AssetsLibrary.framework */,
 				7B80CC7B131C46A800AD2BAA /* AVFoundation.framework */,
 				7B80CC6D131C466900AD2BAA /* CoreVideo.framework */,
@@ -191,6 +208,15 @@
 				D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B4177601324922100BE9374 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				7B4177621324924C00BE9374 /* libcv.a */,
+				7B4177631324924C00BE9374 /* libcxcore.a */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,16 +339,17 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Downloads/FindMyiCone/iphoneos4.0/System/Library/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BMW_iOS_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "BMW_iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/opencv/lib\"",
+				);
 				PRODUCT_NAME = BMW_iOS;
 			};
 			name = Debug;
@@ -332,13 +359,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Downloads/FindMyiCone/iphoneos4.0/System/Library/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BMW_iOS_Prefix.pch;
 				INFOPLIST_FILE = "BMW_iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/opencv/lib\"",
+				);
 				PRODUCT_NAME = BMW_iOS;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -359,6 +387,10 @@
 					1,
 				);
 				INFOPLIST_FILE = "BMWScreenCapture-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/opencv/lib\"",
+				);
 				PRODUCT_NAME = BMW_SC;
 			};
 			name = Debug;
@@ -376,6 +408,10 @@
 					1,
 				);
 				INFOPLIST_FILE = "BMWScreenCapture-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/opencv/lib\"",
+				);
 				PRODUCT_NAME = BMW_SC;
 				VALIDATE_PRODUCT = YES;
 			};

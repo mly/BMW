@@ -8,7 +8,13 @@
 #endif
 #define CM_DEBUG 0
 #define CL_DEBUG 0
+#ifndef OPEN_CV
 #ifndef SCREEN_CAPTURE
 #define VIDEO_SAVE 1
 #endif
+#endif
 #define STATS_OVERLAY 1
+#ifdef OPEN_CV
+#define EDGE_DETECTION 0
+#define FACE_DETECTION 1
+#endif

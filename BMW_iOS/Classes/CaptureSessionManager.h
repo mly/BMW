@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #include <AssetsLibrary/AssetsLibrary.h>
+#import <opencv/cv.h>
 
 @interface CaptureSessionManager : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate> {
 	AVCaptureSession *captureSession;
@@ -26,9 +27,10 @@
 - (NSURL *) fileURL;
 - (void) startWriting;
 - (void) finishWriting;
-#ifdef SCREEN_CAPTURE
+- (CGImageRef) imageFromSampleBuffer:(CMSampleBufferRef) sampleBuffer;
 - (CVPixelBufferRef) pixelBufferFromCGImage: (CGImageRef) image;
-#endif
+- (CGImageRef) CGImageFromIplImage:(IplImage *)image;
+- (IplImage *) CreateIplImageFromCGImage:(CGImageRef)imageRef;
 
 @property (retain) AVCaptureVideoPreviewLayer *previewLayer;
 @property (retain) AVCaptureSession *captureSession;

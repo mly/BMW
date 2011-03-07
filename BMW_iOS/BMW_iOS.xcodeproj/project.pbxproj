@@ -15,8 +15,6 @@
 		2899E5220DE3E06400AC0155 /* BMW_iOSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* BMW_iOSViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* BMW_iOSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* BMW_iOSViewController.m */; };
-		7B4177641324924C00BE9374 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4177621324924C00BE9374 /* libcv.a */; };
-		7B4177651324924C00BE9374 /* libcxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4177631324924C00BE9374 /* libcxcore.a */; };
 		7B41784F1324926100BE9374 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B41784E1324926100BE9374 /* Accelerate.framework */; };
 		7B4EC7F81313516E00175D77 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4EC7F61313516E00175D77 /* CoreMotion.framework */; };
 		7B4EC7F91313516E00175D77 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4EC7F71313516E00175D77 /* CoreLocation.framework */; };
@@ -44,8 +42,6 @@
 		7BECBAAA1324FECB00E9D057 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CD8D131C5FF400AD2BAA /* AssetsLibrary.framework */; };
 		7BECBAAB1324FECB00E9D057 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */; };
 		7BECBAAE1324FECB00E9D057 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B41784E1324926100BE9374 /* Accelerate.framework */; };
-		7BECBAE51324FF9A00E9D057 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4177621324924C00BE9374 /* libcv.a */; };
-		7BECBAE61324FF9A00E9D057 /* libcxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4177631324924C00BE9374 /* libcxcore.a */; };
 		7BECBAEC1324FFB300E9D057 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		7BECBAED1324FFB300E9D057 /* BMW_iOSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* BMW_iOSViewController.xib */; };
 		7BECBAEE1324FFB300E9D057 /* DataOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4B8F364131E3D61002C1A44 /* DataOverlayViewController.xib */; };
@@ -66,8 +62,12 @@
 		7BECBB011324FFB300E9D057 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CD8D131C5FF400AD2BAA /* AssetsLibrary.framework */; };
 		7BECBB021324FFB300E9D057 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */; };
 		7BECBB031324FFB300E9D057 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B41784E1324926100BE9374 /* Accelerate.framework */; };
-		7BECBB0C1325000D00E9D057 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4177621324924C00BE9374 /* libcv.a */; };
-		7BECBB0D1325000D00E9D057 /* libcxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4177631324924C00BE9374 /* libcxcore.a */; };
+		7BFC771B1325078F004983A8 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC77191325078F004983A8 /* libcv.a */; };
+		7BFC771C1325078F004983A8 /* libcxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC771A1325078F004983A8 /* libcxcore.a */; };
+		7BFC771D1325078F004983A8 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC77191325078F004983A8 /* libcv.a */; };
+		7BFC771E1325078F004983A8 /* libcxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC771A1325078F004983A8 /* libcxcore.a */; };
+		7BFC771F1325078F004983A8 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC77191325078F004983A8 /* libcv.a */; };
+		7BFC77201325078F004983A8 /* libcxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC771A1325078F004983A8 /* libcxcore.a */; };
 		D4B8F1CC131CE519002C1A44 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */; };
 		D4B8F225131CF44E002C1A44 /* GravityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F224131CF44E002C1A44 /* GravityObject.m */; };
 		D4B8F27A131D6588002C1A44 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F279131D6588002C1A44 /* CaptureSessionManager.m */; };
@@ -88,8 +88,6 @@
 		28D7ACF70DDB3853001CB0EB /* BMW_iOSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMW_iOSViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* BMW_iOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMW_iOS_Prefix.pch; sourceTree = "<group>"; };
-		7B4177621324924C00BE9374 /* libcv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcv.a; path = opencv/lib/libcv.a; sourceTree = "<group>"; };
-		7B4177631324924C00BE9374 /* libcxcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcxcore.a; path = opencv/lib/libcxcore.a; sourceTree = "<group>"; };
 		7B41784E1324926100BE9374 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		7B4EC7F61313516E00175D77 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		7B4EC7F71313516E00175D77 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -101,6 +99,8 @@
 		7BECBAB41324FECB00E9D057 /* BMW_ScreenCapture-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BMW_ScreenCapture-Info.plist"; sourceTree = "<group>"; };
 		7BECBB071324FFB300E9D057 /* BMW_CV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMW_CV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BECBB091324FFB300E9D057 /* BMW_OpenCV-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BMW_OpenCV-Info.plist"; sourceTree = "<group>"; };
+		7BFC77191325078F004983A8 /* libcv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcv.a; path = opencv_device/lib/libcv.a; sourceTree = "<group>"; };
+		7BFC771A1325078F004983A8 /* libcxcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcxcore.a; path = opencv_device/lib/libcxcore.a; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* BMW_iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BMW_iOS-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D4B8F223131CF44E002C1A44 /* GravityObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GravityObject.h; sourceTree = "<group>"; };
@@ -127,9 +127,9 @@
 				7B80CC7C131C46A800AD2BAA /* AVFoundation.framework in Frameworks */,
 				7B80CD8E131C5FF400AD2BAA /* AssetsLibrary.framework in Frameworks */,
 				D4B8F1CC131CE519002C1A44 /* QuartzCore.framework in Frameworks */,
-				7B4177641324924C00BE9374 /* libcv.a in Frameworks */,
-				7B4177651324924C00BE9374 /* libcxcore.a in Frameworks */,
 				7B41784F1324926100BE9374 /* Accelerate.framework in Frameworks */,
+				7BFC771B1325078F004983A8 /* libcv.a in Frameworks */,
+				7BFC771C1325078F004983A8 /* libcxcore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +137,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BECBAE51324FF9A00E9D057 /* libcv.a in Frameworks */,
-				7BECBAE61324FF9A00E9D057 /* libcxcore.a in Frameworks */,
 				7BECBAA21324FECB00E9D057 /* Foundation.framework in Frameworks */,
 				7BECBAA31324FECB00E9D057 /* UIKit.framework in Frameworks */,
 				7BECBAA41324FECB00E9D057 /* CoreGraphics.framework in Frameworks */,
@@ -150,6 +148,8 @@
 				7BECBAAA1324FECB00E9D057 /* AssetsLibrary.framework in Frameworks */,
 				7BECBAAB1324FECB00E9D057 /* QuartzCore.framework in Frameworks */,
 				7BECBAAE1324FECB00E9D057 /* Accelerate.framework in Frameworks */,
+				7BFC771D1325078F004983A8 /* libcv.a in Frameworks */,
+				7BFC771E1325078F004983A8 /* libcxcore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,8 +157,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BECBB0C1325000D00E9D057 /* libcv.a in Frameworks */,
-				7BECBB0D1325000D00E9D057 /* libcxcore.a in Frameworks */,
 				7BECBAF91324FFB300E9D057 /* Foundation.framework in Frameworks */,
 				7BECBAFA1324FFB300E9D057 /* UIKit.framework in Frameworks */,
 				7BECBAFB1324FFB300E9D057 /* CoreGraphics.framework in Frameworks */,
@@ -170,6 +168,8 @@
 				7BECBB011324FFB300E9D057 /* AssetsLibrary.framework in Frameworks */,
 				7BECBB021324FFB300E9D057 /* QuartzCore.framework in Frameworks */,
 				7BECBB031324FFB300E9D057 /* Accelerate.framework in Frameworks */,
+				7BFC771F1325078F004983A8 /* libcv.a in Frameworks */,
+				7BFC77201325078F004983A8 /* libcxcore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +259,8 @@
 		7B4177601324922100BE9374 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				7B4177621324924C00BE9374 /* libcv.a */,
-				7B4177631324924C00BE9374 /* libcxcore.a */,
+				7BFC77191325078F004983A8 /* libcv.a */,
+				7BFC771A1325078F004983A8 /* libcxcore.a */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -432,10 +432,18 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BMW_iOS_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/include";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "$(SRCROOT)/opencv_simulator/include";
 				INFOPLIST_FILE = "BMW_iOS-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/opencv/lib\"",
+					"\"$(SRCROOT)/opencv_device/lib\"",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/lib";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "$(SRCROOT)/opencv_simulator/lib";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lz",
 				);
 				PRODUCT_NAME = BMW_iOS;
 			};
@@ -449,10 +457,18 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BMW_iOS_Prefix.pch;
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/include";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "$(SRCROOT)/opencv_simulator/include";
 				INFOPLIST_FILE = "BMW_iOS-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/opencv/lib\"",
+					"\"$(SRCROOT)/opencv_device/lib\"",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/lib";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "$(SRCROOT)/opencv_simulator/lib";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lz",
 				);
 				PRODUCT_NAME = BMW_iOS;
 				VALIDATE_PRODUCT = YES;
@@ -470,10 +486,18 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BMW_iOS_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = SCREEN_CAPTURE;
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/include";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "$(SRCROOT)/opencv_simulator/include";
 				INFOPLIST_FILE = "BMW_ScreenCapture-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/opencv/lib\"",
+					"\"$(SRCROOT)/opencv_device/lib\"",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/lib";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "$(SRCROOT)/opencv_simulator/lib";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lz",
 				);
 				PRODUCT_NAME = BMW_SC;
 			};
@@ -487,10 +511,18 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BMW_iOS_Prefix.pch;
-				INFOPLIST_FILE = "BMW_iOS-Info copy.plist";
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/include";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "$(SRCROOT)/opencv_simulator/include";
+				INFOPLIST_FILE = "BMW_ScreenCapture-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/opencv/lib\"",
+					"\"$(SRCROOT)/opencv_device/lib\"",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/lib";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "$(SRCROOT)/opencv_simulator/lib";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lz",
 				);
 				PRODUCT_NAME = BMW_iOS;
 				VALIDATE_PRODUCT = YES;
@@ -508,10 +540,18 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BMW_iOS_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = OPEN_CV;
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/include";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "$(SRCROOT)/opencv_simulator/include";
 				INFOPLIST_FILE = "BMW_OpenCV-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/opencv/lib\"",
+					"\"$(SRCROOT)/opencv_device/lib\"",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/lib";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "$(SRCROOT)/opencv_simulator/lib";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lz",
 				);
 				PRODUCT_NAME = BMW_CV;
 			};
@@ -525,10 +565,18 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BMW_iOS_Prefix.pch;
-				INFOPLIST_FILE = "BMW_ScreenCapture-Info copy.plist";
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/include";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "$(SRCROOT)/opencv_simulator/include";
+				INFOPLIST_FILE = "BMW_OpenCV-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/opencv/lib\"",
+					"\"$(SRCROOT)/opencv_device/lib\"",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/lib";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "$(SRCROOT)/opencv_simulator/lib";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lz",
 				);
 				PRODUCT_NAME = BMW_iOS;
 				VALIDATE_PRODUCT = YES;

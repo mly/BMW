@@ -7,6 +7,7 @@
 //
 #if TARGET_OS_IPHONE
 #import "CaptureSessionManager.h"
+#import <opencv/cv.h>
 
 
 @implementation CaptureSessionManager
@@ -126,9 +127,8 @@ static int64_t frameNumber = 0;
 	[videoOut release];
 }
 
-- (void) startWriting
+- (void) assetWriterStart
 {
-#if VIDEO_SAVE||SCREEN_CAPTURE
 	//Asset writing (saving the video)
 	NSDictionary *outputSettings =
     [NSDictionary dictionaryWithObjectsAndKeys:
@@ -159,12 +159,24 @@ static int64_t frameNumber = 0;
 	
 	[assetWriter startWriting];
 	[assetWriter startSessionAtSourceTime:kCMTimeZero];
+}
+
+- (void) startWriting
+{
+#ifdef SCREEN_CAPTURE
+	[self assetWriterStart];
+#endif
+#if VIDEO_SAVE
+	[self assetWriterStart];
 #endif
 }
 
 - (void) finishWriting
 {
-#if VIDEO_SAVE||SCREEN_CAPTURE
+#ifdef SCREEN_CAPTURE
+	[assetWriter finishWriting];
+#endif
+#if VIDEO_SAVE
 	[assetWriter finishWriting];
 #endif
 }

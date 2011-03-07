@@ -24,13 +24,9 @@
 - (void) addVideoInput;
 - (void) addVideoOutput;
 - (NSURL *) fileURL;
-#if VIDEO_SAVE
 - (void) startWriting;
 - (void) finishWriting;
-#endif
 #ifdef SCREEN_CAPTURE
-- (void) startWriting;
-- (void) finishWriting;
 - (CVPixelBufferRef) pixelBufferFromCGImage: (CGImageRef) image;
 #endif
 

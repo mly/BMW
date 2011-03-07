@@ -34,6 +34,9 @@
 		2899E5220DE3E06400AC0155 /* SimpleWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* SimpleWeatherViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* SimpleWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* SimpleWeatherViewController.m */; };
+		D4B8F4FB131F06F0002C1A44 /* DrivingProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B8F4FA131F06F0002C1A44 /* DrivingProfile.png */; };
+		D4B8F51B131F0FFB002C1A44 /* Dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B8F51A131F0FFB002C1A44 /* Dashboard.png */; };
+		D4B8F523131F1373002C1A44 /* Achievements.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B8F522131F1373002C1A44 /* Achievements.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +82,9 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* SimpleWeather_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleWeather_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* SimpleWeather-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SimpleWeather-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		D4B8F4FA131F06F0002C1A44 /* DrivingProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DrivingProfile.png; sourceTree = "<group>"; };
+		D4B8F51A131F0FFB002C1A44 /* Dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dashboard.png; sourceTree = "<group>"; };
+		D4B8F522131F1373002C1A44 /* Achievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Achievements.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +209,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				D4B8F4F9131F06F0002C1A44 /* Images */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -247,6 +254,16 @@
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4B8F4F9131F06F0002C1A44 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D4B8F522131F1373002C1A44 /* Achievements.png */,
+				D4B8F4FA131F06F0002C1A44 /* DrivingProfile.png */,
+				D4B8F51A131F0FFB002C1A44 /* Dashboard.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +322,9 @@
 				0653A42F13186633006E7761 /* Sunny-Interval-icon.png in Resources */,
 				0653A460131868D4006E7761 /* SimpleWeatherApp_ALL_Images.zip in Resources */,
 				0653A461131868D4006E7761 /* SimpleWeatherApp.xml in Resources */,
+				D4B8F4FB131F06F0002C1A44 /* DrivingProfile.png in Resources */,
+				D4B8F51B131F0FFB002C1A44 /* Dashboard.png in Resources */,
+				D4B8F523131F1373002C1A44 /* Achievements.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

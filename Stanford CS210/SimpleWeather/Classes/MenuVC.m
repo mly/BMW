@@ -100,7 +100,36 @@
 	// Stations
 	int i;
 	for (i=0;i<rows;i++) {
-		NSString* text = [[NSNumber numberWithInt:i] stringValue];
+		
+		NSString* text;
+		
+		switch (i) {
+			case 0:
+				text = @"#14 Top Speed";
+				break;
+			case 1:
+				text = @"#209 Red Lights Run";
+				break;
+			case 2:
+				text = @"#67 Miles Per Gallon";
+				break;
+			case 3:
+				text = @"#1 Cars Passed";
+				break;
+			case 4:
+				text = @"#1 MINI's Passed";
+				break;
+			case 5:
+				text = @"#88 Smooth Braking";
+				break;
+			case 6:
+				text = @"#15 Stop Signs Encountered";
+				break;
+			default:
+				text = [[NSNumber numberWithInt:i] stringValue];
+				break;
+		}
+		
 		IDTableCell* cell = [IDTableCell tableCellWithString: text];
 		[list setCell:cell row:i column:0];
 	}	

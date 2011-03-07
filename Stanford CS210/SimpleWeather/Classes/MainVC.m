@@ -153,29 +153,31 @@
 	// Create View
 	UIImage* view = [WeatherRenderer renderWithForecast: forecast];
 	
+	
+	
 	// Display View
-	[viewImage setImage: view];
+	[viewImage setImage: [UIImage imageNamed:@"Dashboard.png"]];
 	[stateLabel setText: nil];
-	[stateLabel stopAnimating];
+	//[stateLabel stopAnimating];
 }
 
 -(void)currentButtonClicked:(IDButton*)button
 {
-	[viewImage setImage: nil];
-	[stateLabel startAnimating];
-	[stateLabel setText: @"Current"];
+	[viewImage setImage: [UIImage imageNamed:@"Achievements.png"]];
+	//[stateLabel startAnimating];
+	[stateLabel setText: @""];
 }
 
 -(void)destButtonClicked:(IDButton*)button
 {
-	[viewImage setImage: nil];
-	[stateLabel setText: @"Destination"];
+	[viewImage setImage: [UIImage imageNamed:@"DrivingProfile.png"]];
+	[stateLabel setText: @""];
 }
 
 -(void)lookupButtonClicked:(IDButton*)button
 {
 	[viewImage setImage: nil];
-	[stateLabel setText: @"Lookup"];
+	[stateLabel setText: @"Leaderboards"];
 	
 	[menuVC show]; // This doesn't actually present the view as it was originally desinged to do. That is hard-coded into the xml file.
 }

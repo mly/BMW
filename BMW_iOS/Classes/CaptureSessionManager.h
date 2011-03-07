@@ -6,6 +6,7 @@
 //  Copyright 2011 Stanford University. All rights reserved.
 //
 
+#ifndef TARGET_IPHONE_SIMULATOR
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #include <AssetsLibrary/AssetsLibrary.h>
@@ -35,3 +36,9 @@
 @property (retain) AVCaptureSession *captureSession;
 
 @end
+#else
+#import <Foundation/Foundation.h>
+@interface CaptureSessionManager : NSObject
+{
+}
+#endif

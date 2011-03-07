@@ -11,11 +11,15 @@
 #import <CoreMotion/CMMotionManager.h>
 #import <QuartzCore/QuartzCore.h>
 #import "GravityObject.h"
-#include "CaptureSessionManager.h"
 #import "DataOverlayViewController.h"
+#ifndef TARGET_IPHONE_SIMULATOR
+#include "CaptureSessionManager.h"
+#endif
 
 @interface BMW_iOSViewController : UIViewController <CLLocationManagerDelegate> {
+#ifndef TARGET_IPHONE_SIMULATOR
 	CaptureSessionManager *captureManager;
+#endif
 	DataOverlayViewController *dataOverlayVC;
 	float v[3];
 	NSMutableArray *motionDataArry;

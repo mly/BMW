@@ -30,13 +30,17 @@
 -(void)signalStart
 {
 	//[self getGravDataFile];
+#ifndef TARGET_IPHONE_SIMULATOR
 	[captureManager startWriting];
+#endif
 }
 
 -(void)signalStop
 {
 	//[self writeToGravDataFile];
+#ifndef TARGET_IPHONE_SIMULATOR
 	[captureManager finishWriting];
+#endif
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -45,6 +49,7 @@
 	
 	totalDist = 0.0;
 	lastLocationUpdateTime = timeZero = CACurrentMediaTime();
+#ifndef TARGET_IPHONE_SIMULATOR
 	captureManager = [[CaptureSessionManager alloc] init];
 	
 	// Configure capture session
@@ -58,6 +63,7 @@
 	captureManager.previewLayer.position = CGPointMake(CGRectGetMidX(layerRect), CGRectGetMidY(layerRect));
 	//[captureManager set
 	[self.view.layer addSublayer:captureManager.previewLayer];
+#endif
 	
 	dataOverlayVC = [[DataOverlayViewController alloc] init];
 	[dataOverlayVC.view setFrame:CGRectMake(-230, 200, 500, 100)];
@@ -65,7 +71,9 @@
 	
 	[self.view addSubview:dataOverlayVC.view];
 	
+#ifndef TARGET_IPHONE_SIMULATOR
 	[captureManager.captureSession startRunning];
+#endif
 	
 	
 	

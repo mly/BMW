@@ -5,7 +5,7 @@
 //  Created by Aaron Sarnoff on 2/28/11.
 //  Copyright 2011 Stanford University. All rights reserved.
 //
-
+#ifndef TARGET_IPHONE_SIMULATOR
 #import "CaptureSessionManager.h"
 
 
@@ -206,5 +206,5 @@ static int64_t frameNumber = 0;
 	
 	[super dealloc];
 }
-
+#endif
 @end

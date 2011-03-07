@@ -30,7 +30,7 @@
 -(void)signalStart
 {
 	//[self getGravDataFile];
-#ifndef TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE
 	[captureManager startWriting];
 #endif
 }
@@ -38,7 +38,7 @@
 -(void)signalStop
 {
 	//[self writeToGravDataFile];
-#ifndef TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE
 	[captureManager finishWriting];
 #endif
 }
@@ -49,7 +49,7 @@
 	
 	totalDist = 0.0;
 	lastLocationUpdateTime = timeZero = CACurrentMediaTime();
-#ifndef TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE
 	captureManager = [[CaptureSessionManager alloc] init];
 	
 	// Configure capture session
@@ -71,7 +71,7 @@
 	
 	[self.view addSubview:dataOverlayVC.view];
 	
-#ifndef TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE
 	[captureManager.captureSession startRunning];
 #endif
 	

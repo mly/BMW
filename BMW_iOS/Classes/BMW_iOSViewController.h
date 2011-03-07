@@ -12,12 +12,12 @@
 #import <QuartzCore/QuartzCore.h>
 #import "GravityObject.h"
 #import "DataOverlayViewController.h"
-#ifndef TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE
 #include "CaptureSessionManager.h"
 #endif
 
 @interface BMW_iOSViewController : UIViewController <CLLocationManagerDelegate> {
-#ifndef TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE
 	CaptureSessionManager *captureManager;
 #endif
 	DataOverlayViewController *dataOverlayVC;

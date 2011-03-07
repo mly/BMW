@@ -6,7 +6,7 @@
 //  Copyright 2011 Stanford University. All rights reserved.
 //
 
-#ifndef TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #include <AssetsLibrary/AssetsLibrary.h>
@@ -24,11 +24,13 @@
 - (void) addVideoInput;
 - (void) addVideoOutput;
 - (NSURL *) fileURL;
-#if VIDEO_SAVE||SCREEN_CAPTURE
+#if VIDEO_SAVE
 - (void) startWriting;
 - (void) finishWriting;
 #endif
 #ifdef SCREEN_CAPTURE
+- (void) startWriting;
+- (void) finishWriting;
 - (CVPixelBufferRef) pixelBufferFromCGImage: (CGImageRef) image;
 #endif
 

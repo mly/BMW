@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @velocity_event.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @velocity_event.longitude %>
+</p>
+
+<p>
+  <b>Velocity:</b>
+  <%= @velocity_event.velocity %>
+</p>
+
+<p>
+  <b>Heading:</b>
+  <%= @velocity_event.heading %>
+</p>
+
+<p>
+  <b>Device:</b>
+  <%= @velocity_event.device_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_velocity_event_path(@velocity_event) %> |
+<%= link_to 'Back', velocity_events_path %>

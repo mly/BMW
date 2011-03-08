@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  latitude: 9.99
+  longitude: 9.99
+  velocity: 9.99
+  heading: 9.99
+  device_id: MyString
+
+two:
+  latitude: 9.99
+  longitude: 9.99
+  velocity: 9.99
+  heading: 9.99
+  device_id: MyString

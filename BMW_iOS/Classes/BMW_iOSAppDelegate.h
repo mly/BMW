@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ObjectiveResource.h"
 
 @class BMW_iOSViewController;
 

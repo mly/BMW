@@ -6,7 +6,7 @@
 //  Copyright 2011 Stanford University. All rights reserved.
 //
 
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #include <AssetsLibrary/AssetsLibrary.h>

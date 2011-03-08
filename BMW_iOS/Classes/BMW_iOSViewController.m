@@ -7,6 +7,8 @@
 //
 
 #import "BMW_iOSViewController.h"
+#import "ObjectiveResource.h"
+#import "VelocityEvent.h"
 
 #define UPDATE_INTERVAL 1.0f/3.0f;
 #define CONVERSION 2.23693629f/9.8f
@@ -30,7 +32,7 @@
 -(void)signalStart
 {
 	//[self getGravDataFile];
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
 	[captureManager startWriting];
 #endif
 }
@@ -38,7 +40,7 @@
 -(void)signalStop
 {
 	//[self writeToGravDataFile];
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
 	[captureManager finishWriting];
 #endif
 }
@@ -49,7 +51,7 @@
 	
 	totalDist = 0.0;
 	lastLocationUpdateTime = timeZero = CACurrentMediaTime();
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
 	captureManager = [[CaptureSessionManager alloc] init];
 	
 	// Configure capture session
@@ -71,7 +73,7 @@
 	
 	[self.view addSubview:dataOverlayVC.view];
 	
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
 	[captureManager.captureSession startRunning];
 #endif
 	
@@ -138,6 +140,14 @@
 	Vav = (totalDist / (CACurrentMediaTime() - timeZero))*METERS_SEC_MILES_HOUR_CONVERSION;
 	NSLog(@"Current gps speed: %f mph", Vgps);
 	NSLog(@"Current average speed: %f mph", Vav);
+	
+	//Send velocity event object to server...not very interesting at the moment, but makes the JSON super easy
+	VelocityEvent *ve = [[[VelocityEvent alloc]init]autorelease];
+	ve.latitude = newLocation.coordinate.latitude;
+	ve.longitude = newLocation.coordinate.longitude;
+	ve.velocity = Vgps;
+	[ve saveRemote];
+	
 }
 
 -(void)writeToGravDataFile {

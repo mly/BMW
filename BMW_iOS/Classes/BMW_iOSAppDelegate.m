@@ -9,6 +9,7 @@
 #import "BMW_iOSAppDelegate.h"
 #import "BMW_iOSViewController.h"
 
+
 @implementation BMW_iOSAppDelegate
 
 @synthesize window;
@@ -27,6 +28,9 @@
     // Add the view controller's view to the window and display.
     [self.window addSubview:viewController.view];
     [self.window makeKeyAndVisible];
+	
+	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];
+	
 	[viewController signalStart];
 
     return YES;

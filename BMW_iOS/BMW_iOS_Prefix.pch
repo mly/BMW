@@ -15,6 +15,7 @@
 #endif
 #define STATS_OVERLAY 1
 #ifdef OPEN_CV
-#define EDGE_DETECTION 0
-#define FACE_DETECTION 1
+#define EDGE_DETECTION 1
+#define FACE_DETECTION 0
+#define RENDER_PROCESSING 1
 #endif

@@ -12,6 +12,8 @@
 #include <AssetsLibrary/AssetsLibrary.h>
 #import <opencv/cv.h>
 
+@class BMW_iOSViewController;
+
 @interface CaptureSessionManager : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate> {
 	AVCaptureSession *captureSession;
 	AVCaptureVideoPreviewLayer *previewLayer;
@@ -19,6 +21,7 @@
 	AVAssetWriter *assetWriter;
 	AVAssetWriterInput *assetWriterInput;
 	NSURL *outputFileURL;
+	BMW_iOSViewController *delegate;
 }
 
 - (void) addVideoPreviewLayer;
@@ -34,6 +37,7 @@
 
 @property (retain) AVCaptureVideoPreviewLayer *previewLayer;
 @property (retain) AVCaptureSession *captureSession;
+@property (assign) BMW_iOSViewController *delegate;
 
 @end
 #else

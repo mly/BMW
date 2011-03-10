@@ -11,6 +11,7 @@
 @implementation CaptureSessionManager
 @synthesize captureSession;
 @synthesize previewLayer;
+@synthesize delegate;
 static int64_t frameNumber = 0;
 
 #pragma mark SampleBufferDelegate
@@ -70,7 +71,6 @@ static int64_t frameNumber = 0;
 	CGImageRef output = [self CGImageFromIplImage:image];
 	cvReleaseImage(&image);
 	CVPixelBufferRef pixelBuffer2 = [self pixelBufferFromCGImage:output];
-	CGImageRelease(output);
 	if(assetWriterInput.readyForMoreMediaData)
 	{
 		[pixelBufferAdaptor appendPixelBuffer:pixelBuffer2
@@ -129,7 +129,6 @@ static int64_t frameNumber = 0;
 	cvReleaseHaarClassifierCascade(&cascade);
 	
 	CVPixelBufferRef pixelBuffer2 = [self pixelBufferFromCGImage:output];
-	CGImageRelease(output);
 	if(assetWriterInput.readyForMoreMediaData)
 	{
 		[pixelBufferAdaptor appendPixelBuffer:pixelBuffer2
@@ -138,6 +137,10 @@ static int64_t frameNumber = 0;
     frameNumber++;
 	CVPixelBufferRelease(pixelBuffer2);
 #endif
+#if RENDER_PROCESSING
+	[delegate setProcessedImage:output];
+#endif
+	CGImageRelease(output);
 #endif
 	CGImageRelease(imageRef);
 }

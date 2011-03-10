@@ -17,7 +17,6 @@
 @implementation BMW_iOSViewController
 
 
-
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -28,6 +27,61 @@
     return self;
 }
 */
+
+- (CGImageRef)CGImageRotatedByAngle:(CGImageRef)imgRef angle:(CGFloat)angle
+{
+	CGFloat angleInRadians = angle * (M_PI / 180);
+	CGFloat width = CGImageGetWidth(imgRef);
+	CGFloat height = CGImageGetHeight(imgRef);
+	
+	CGRect imgRect = CGRectMake(0, 0, width, height);
+	CGAffineTransform transform = CGAffineTransformMakeRotation(angleInRadians);
+	CGRect rotatedRect = CGRectApplyAffineTransform(imgRect, transform);
+	
+	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+	
+	unsigned char *rawData = malloc(rotatedRect.size.height * rotatedRect.size.width * 4);
+	memset(rawData,0,rotatedRect.size.height * rotatedRect.size.width * 4);
+	
+	CGContextRef bmContext = CGBitmapContextCreate(rawData, rotatedRect.size.width, rotatedRect.size.height, 8, rotatedRect.size.width*4, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
+	
+	CGContextSetAllowsAntialiasing(bmContext, YES);
+	CGContextSetInterpolationQuality(bmContext, kCGInterpolationHigh);
+	CGColorSpaceRelease(colorSpace);
+	CGContextTranslateCTM(bmContext,
+						  +(rotatedRect.size.width/2),
+						  +(rotatedRect.size.height/2));
+	CGContextRotateCTM(bmContext, angleInRadians);
+	CGContextDrawImage(bmContext, CGRectMake(-width/2, -height/2, width, height),
+					   imgRef);
+	
+	CGImageRef rotatedImage = CGBitmapContextCreateImage(bmContext);
+	CFRelease(bmContext);
+	[(id)rotatedImage autorelease];
+	
+	free(rawData);
+	
+	return rotatedImage;
+}
+
+-(void) setProcessedImage:(CGImageRef)image
+{
+	//CGImageRef rot = [self CGImageRotatedByAngle:image angle:90];
+	processedImage = [UIImage imageWithCGImage:image];
+	//processedImage = [UIImage imageWithCGImage:rot];
+	//CGImageRelease(rot);
+	dirty = YES;
+}
+
+-(void) refreshDisplay
+{
+	if(dirty)
+	{
+		iv.image = processedImage;
+		dirty=NO;
+	}
+	[self performSelector:@selector(refreshDisplay) withObject:nil afterDelay:0.1];
+}
 
 -(void)signalStart
 {
@@ -53,6 +107,12 @@
 	lastLocationUpdateTime = timeZero = CACurrentMediaTime();
 #if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
 	captureManager = [[CaptureSessionManager alloc] init];
+	captureManager.delegate = self;
+#if RENDER_PROCESSING
+	dirty = NO;
+	[self performSelector:@selector(refreshDisplay) withObject:nil afterDelay:0.1];
+#endif
+	
 	
 	// Configure capture session
 	[captureManager addVideoInput];
@@ -63,8 +123,9 @@
 	CGRect layerRect = self.view.layer.bounds;
 	captureManager.previewLayer.bounds = layerRect;
 	captureManager.previewLayer.position = CGPointMake(CGRectGetMidX(layerRect), CGRectGetMidY(layerRect));
-	//[captureManager set
+#if !RENDER_PROCESSING
 	[self.view.layer addSublayer:captureManager.previewLayer];
+#endif
 #endif
 	
 	dataOverlayVC = [[DataOverlayViewController alloc] init];

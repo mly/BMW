@@ -62,6 +62,68 @@
 		7BECBB011324FFB300E9D057 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CD8D131C5FF400AD2BAA /* AssetsLibrary.framework */; };
 		7BECBB021324FFB300E9D057 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */; };
 		7BECBB031324FFB300E9D057 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B41784E1324926100BE9374 /* Accelerate.framework */; };
+		7BFA67351328497E00CF3B0E /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5CC13261DE900DCAD92 /* Connection.m */; };
+		7BFA67361328497E00CF3B0E /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5CE13261DE900DCAD92 /* ConnectionDelegate.m */; };
+		7BFA67371328497E00CF3B0E /* FromXMLElementDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60113261DE900DCAD92 /* FromXMLElementDelegate.m */; };
+		7BFA67381328497E00CF3B0E /* NSArray+JSONSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5F113261DE900DCAD92 /* NSArray+JSONSerializableSupport.m */; };
+		7BFA67391328497E00CF3B0E /* NSArray+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60313261DE900DCAD92 /* NSArray+XMLSerializableSupport.m */; };
+		7BFA673A1328497E00CF3B0E /* NSData+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5DC13261DE900DCAD92 /* NSData+Additions.m */; };
+		7BFA673B1328497E00CF3B0E /* NSDate+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5F713261DE900DCAD92 /* NSDate+Serialize.m */; };
+		7BFA673C1328497E00CF3B0E /* NSDate+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60513261DE900DCAD92 /* NSDate+XMLSerializableSupport.m */; };
+		7BFA673D1328497E00CF3B0E /* NSDictionary+JSONSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5F313261DE900DCAD92 /* NSDictionary+JSONSerializableSupport.m */; };
+		7BFA673E1328497E00CF3B0E /* NSDictionary+KeyTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5F913261DE900DCAD92 /* NSDictionary+KeyTranslation.m */; };
+		7BFA673F1328497E00CF3B0E /* NSDictionary+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60713261DE900DCAD92 /* NSDictionary+XMLSerializableSupport.m */; };
+		7BFA67401328497E00CF3B0E /* NSHTTPURLResponse+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5D013261DE900DCAD92 /* NSHTTPURLResponse+Error.m */; };
+		7BFA67411328497E00CF3B0E /* NSMutableURLRequest+ResponseType.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5D213261DE900DCAD92 /* NSMutableURLRequest+ResponseType.m */; };
+		7BFA67421328497E00CF3B0E /* NSNull+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60913261DE900DCAD92 /* NSNull+XMLSerializableSupport.m */; };
+		7BFA67431328497E00CF3B0E /* NSNumber+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60B13261DE900DCAD92 /* NSNumber+XMLSerializableSupport.m */; };
+		7BFA67441328497E00CF3B0E /* NSObject+JSONSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5F513261DE900DCAD92 /* NSObject+JSONSerializableSupport.m */; };
+		7BFA67451328497E00CF3B0E /* NSObject+ObjectiveResource.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5D413261DE900DCAD92 /* NSObject+ObjectiveResource.m */; };
+		7BFA67461328497E00CF3B0E /* NSObject+PropertySupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5DE13261DE900DCAD92 /* NSObject+PropertySupport.m */; };
+		7BFA67471328497E00CF3B0E /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5E713261DE900DCAD92 /* NSObject+SBJSON.m */; };
+		7BFA67481328497E00CF3B0E /* NSObject+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5FB13261DE900DCAD92 /* NSObject+Serialize.m */; };
+		7BFA67491328497E00CF3B0E /* NSObject+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60D13261DE900DCAD92 /* NSObject+XMLSerializableSupport.m */; };
+		7BFA674A1328497E00CF3B0E /* NSString+GSub.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5E013261DE900DCAD92 /* NSString+GSub.m */; };
+		7BFA674B1328497E00CF3B0E /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5DA13261DE900DCAD92 /* NSString+InflectionSupport.m */; };
+		7BFA674C1328497E00CF3B0E /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5E913261DE900DCAD92 /* NSString+SBJSON.m */; };
+		7BFA674D1328497E00CF3B0E /* NSString+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5FD13261DE900DCAD92 /* NSString+Serialize.m */; };
+		7BFA674E1328497E00CF3B0E /* NSString+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60F13261DE900DCAD92 /* NSString+XMLSerializableSupport.m */; };
+		7BFA674F1328497E00CF3B0E /* ObjectiveResourceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB61413261DE900DCAD92 /* ObjectiveResourceConfig.m */; };
+		7BFA67501328497E00CF3B0E /* ObjectiveResourceDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5E213261DE900DCAD92 /* ObjectiveResourceDateFormatter.m */; };
+		7BFA67511328497E00CF3B0E /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB61613261DE900DCAD92 /* Response.m */; };
+		7BFA67521328497E00CF3B0E /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5EB13261DE900DCAD92 /* SBJSON.m */; };
+		7BFA67531328497E00CF3B0E /* VelocityEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5B413261BFA00DCAD92 /* VelocityEvent.m */; };
+		7BFA67541328498900CF3B0E /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5CC13261DE900DCAD92 /* Connection.m */; };
+		7BFA67551328498900CF3B0E /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5CE13261DE900DCAD92 /* ConnectionDelegate.m */; };
+		7BFA67561328498900CF3B0E /* FromXMLElementDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60113261DE900DCAD92 /* FromXMLElementDelegate.m */; };
+		7BFA67571328498900CF3B0E /* NSArray+JSONSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5F113261DE900DCAD92 /* NSArray+JSONSerializableSupport.m */; };
+		7BFA67581328498900CF3B0E /* NSArray+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60313261DE900DCAD92 /* NSArray+XMLSerializableSupport.m */; };
+		7BFA67591328498900CF3B0E /* NSData+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5DC13261DE900DCAD92 /* NSData+Additions.m */; };
+		7BFA675A1328498900CF3B0E /* NSDate+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5F713261DE900DCAD92 /* NSDate+Serialize.m */; };
+		7BFA675B1328498900CF3B0E /* NSDate+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60513261DE900DCAD92 /* NSDate+XMLSerializableSupport.m */; };
+		7BFA675C1328498900CF3B0E /* NSDictionary+JSONSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5F313261DE900DCAD92 /* NSDictionary+JSONSerializableSupport.m */; };
+		7BFA675D1328498900CF3B0E /* NSDictionary+KeyTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5F913261DE900DCAD92 /* NSDictionary+KeyTranslation.m */; };
+		7BFA675E1328498900CF3B0E /* NSDictionary+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60713261DE900DCAD92 /* NSDictionary+XMLSerializableSupport.m */; };
+		7BFA675F1328498900CF3B0E /* NSHTTPURLResponse+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5D013261DE900DCAD92 /* NSHTTPURLResponse+Error.m */; };
+		7BFA67601328498900CF3B0E /* NSMutableURLRequest+ResponseType.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5D213261DE900DCAD92 /* NSMutableURLRequest+ResponseType.m */; };
+		7BFA67611328498900CF3B0E /* NSNull+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60913261DE900DCAD92 /* NSNull+XMLSerializableSupport.m */; };
+		7BFA67621328498900CF3B0E /* NSNumber+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60B13261DE900DCAD92 /* NSNumber+XMLSerializableSupport.m */; };
+		7BFA67631328498900CF3B0E /* NSObject+JSONSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5F513261DE900DCAD92 /* NSObject+JSONSerializableSupport.m */; };
+		7BFA67641328498900CF3B0E /* NSObject+ObjectiveResource.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5D413261DE900DCAD92 /* NSObject+ObjectiveResource.m */; };
+		7BFA67651328498900CF3B0E /* NSObject+PropertySupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5DE13261DE900DCAD92 /* NSObject+PropertySupport.m */; };
+		7BFA67661328498900CF3B0E /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5E713261DE900DCAD92 /* NSObject+SBJSON.m */; };
+		7BFA67671328498900CF3B0E /* NSObject+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5FB13261DE900DCAD92 /* NSObject+Serialize.m */; };
+		7BFA67681328498900CF3B0E /* NSObject+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60D13261DE900DCAD92 /* NSObject+XMLSerializableSupport.m */; };
+		7BFA67691328498900CF3B0E /* NSString+GSub.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5E013261DE900DCAD92 /* NSString+GSub.m */; };
+		7BFA676A1328498900CF3B0E /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5DA13261DE900DCAD92 /* NSString+InflectionSupport.m */; };
+		7BFA676B1328498900CF3B0E /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5E913261DE900DCAD92 /* NSString+SBJSON.m */; };
+		7BFA676C1328498900CF3B0E /* NSString+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5FD13261DE900DCAD92 /* NSString+Serialize.m */; };
+		7BFA676D1328498900CF3B0E /* NSString+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60F13261DE900DCAD92 /* NSString+XMLSerializableSupport.m */; };
+		7BFA676E1328498900CF3B0E /* ObjectiveResourceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB61413261DE900DCAD92 /* ObjectiveResourceConfig.m */; };
+		7BFA676F1328498900CF3B0E /* ObjectiveResourceDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5E213261DE900DCAD92 /* ObjectiveResourceDateFormatter.m */; };
+		7BFA67701328498900CF3B0E /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB61613261DE900DCAD92 /* Response.m */; };
+		7BFA67711328498900CF3B0E /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5EB13261DE900DCAD92 /* SBJSON.m */; };
+		7BFA67721328498900CF3B0E /* VelocityEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5B413261BFA00DCAD92 /* VelocityEvent.m */; };
 		7BFC771B1325078F004983A8 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC77191325078F004983A8 /* libcv.a */; };
 		7BFC771C1325078F004983A8 /* libcxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC771A1325078F004983A8 /* libcxcore.a */; };
 		7BFC771D1325078F004983A8 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC77191325078F004983A8 /* libcv.a */; };
@@ -672,12 +734,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BECBA9B1324FECB00E9D057 /* main.m in Sources */,
 				7BECBA9C1324FECB00E9D057 /* BMW_iOSAppDelegate.m in Sources */,
 				7BECBA9D1324FECB00E9D057 /* BMW_iOSViewController.m in Sources */,
-				7BECBA9E1324FECB00E9D057 /* GravityObject.m in Sources */,
 				7BECBA9F1324FECB00E9D057 /* CaptureSessionManager.m in Sources */,
+				7BFA67351328497E00CF3B0E /* Connection.m in Sources */,
+				7BFA67361328497E00CF3B0E /* ConnectionDelegate.m in Sources */,
 				7BECBAA01324FECB00E9D057 /* DataOverlayViewController.m in Sources */,
+				7BFA67371328497E00CF3B0E /* FromXMLElementDelegate.m in Sources */,
+				7BECBA9E1324FECB00E9D057 /* GravityObject.m in Sources */,
+				7BECBA9B1324FECB00E9D057 /* main.m in Sources */,
+				7BFA67381328497E00CF3B0E /* NSArray+JSONSerializableSupport.m in Sources */,
+				7BFA67391328497E00CF3B0E /* NSArray+XMLSerializableSupport.m in Sources */,
+				7BFA673A1328497E00CF3B0E /* NSData+Additions.m in Sources */,
+				7BFA673B1328497E00CF3B0E /* NSDate+Serialize.m in Sources */,
+				7BFA673C1328497E00CF3B0E /* NSDate+XMLSerializableSupport.m in Sources */,
+				7BFA673D1328497E00CF3B0E /* NSDictionary+JSONSerializableSupport.m in Sources */,
+				7BFA673E1328497E00CF3B0E /* NSDictionary+KeyTranslation.m in Sources */,
+				7BFA673F1328497E00CF3B0E /* NSDictionary+XMLSerializableSupport.m in Sources */,
+				7BFA67401328497E00CF3B0E /* NSHTTPURLResponse+Error.m in Sources */,
+				7BFA67411328497E00CF3B0E /* NSMutableURLRequest+ResponseType.m in Sources */,
+				7BFA67421328497E00CF3B0E /* NSNull+XMLSerializableSupport.m in Sources */,
+				7BFA67431328497E00CF3B0E /* NSNumber+XMLSerializableSupport.m in Sources */,
+				7BFA67441328497E00CF3B0E /* NSObject+JSONSerializableSupport.m in Sources */,
+				7BFA67451328497E00CF3B0E /* NSObject+ObjectiveResource.m in Sources */,
+				7BFA67461328497E00CF3B0E /* NSObject+PropertySupport.m in Sources */,
+				7BFA67471328497E00CF3B0E /* NSObject+SBJSON.m in Sources */,
+				7BFA67481328497E00CF3B0E /* NSObject+Serialize.m in Sources */,
+				7BFA67491328497E00CF3B0E /* NSObject+XMLSerializableSupport.m in Sources */,
+				7BFA674A1328497E00CF3B0E /* NSString+GSub.m in Sources */,
+				7BFA674B1328497E00CF3B0E /* NSString+InflectionSupport.m in Sources */,
+				7BFA674C1328497E00CF3B0E /* NSString+SBJSON.m in Sources */,
+				7BFA674D1328497E00CF3B0E /* NSString+Serialize.m in Sources */,
+				7BFA674E1328497E00CF3B0E /* NSString+XMLSerializableSupport.m in Sources */,
+				7BFA674F1328497E00CF3B0E /* ObjectiveResourceConfig.m in Sources */,
+				7BFA67501328497E00CF3B0E /* ObjectiveResourceDateFormatter.m in Sources */,
+				7BFA67511328497E00CF3B0E /* Response.m in Sources */,
+				7BFA67521328497E00CF3B0E /* SBJSON.m in Sources */,
+				7BFA67531328497E00CF3B0E /* VelocityEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,12 +778,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BECBAF01324FFB300E9D057 /* main.m in Sources */,
 				7BECBAF11324FFB300E9D057 /* BMW_iOSAppDelegate.m in Sources */,
 				7BECBAF21324FFB300E9D057 /* BMW_iOSViewController.m in Sources */,
-				7BECBAF31324FFB300E9D057 /* GravityObject.m in Sources */,
 				7BECBAF41324FFB300E9D057 /* CaptureSessionManager.m in Sources */,
+				7BFA67541328498900CF3B0E /* Connection.m in Sources */,
+				7BFA67551328498900CF3B0E /* ConnectionDelegate.m in Sources */,
 				7BECBAF51324FFB300E9D057 /* DataOverlayViewController.m in Sources */,
+				7BFA67561328498900CF3B0E /* FromXMLElementDelegate.m in Sources */,
+				7BECBAF31324FFB300E9D057 /* GravityObject.m in Sources */,
+				7BECBAF01324FFB300E9D057 /* main.m in Sources */,
+				7BFA67571328498900CF3B0E /* NSArray+JSONSerializableSupport.m in Sources */,
+				7BFA67581328498900CF3B0E /* NSArray+XMLSerializableSupport.m in Sources */,
+				7BFA67591328498900CF3B0E /* NSData+Additions.m in Sources */,
+				7BFA675A1328498900CF3B0E /* NSDate+Serialize.m in Sources */,
+				7BFA675B1328498900CF3B0E /* NSDate+XMLSerializableSupport.m in Sources */,
+				7BFA675C1328498900CF3B0E /* NSDictionary+JSONSerializableSupport.m in Sources */,
+				7BFA675D1328498900CF3B0E /* NSDictionary+KeyTranslation.m in Sources */,
+				7BFA675E1328498900CF3B0E /* NSDictionary+XMLSerializableSupport.m in Sources */,
+				7BFA675F1328498900CF3B0E /* NSHTTPURLResponse+Error.m in Sources */,
+				7BFA67601328498900CF3B0E /* NSMutableURLRequest+ResponseType.m in Sources */,
+				7BFA67611328498900CF3B0E /* NSNull+XMLSerializableSupport.m in Sources */,
+				7BFA67621328498900CF3B0E /* NSNumber+XMLSerializableSupport.m in Sources */,
+				7BFA67631328498900CF3B0E /* NSObject+JSONSerializableSupport.m in Sources */,
+				7BFA67641328498900CF3B0E /* NSObject+ObjectiveResource.m in Sources */,
+				7BFA67651328498900CF3B0E /* NSObject+PropertySupport.m in Sources */,
+				7BFA67661328498900CF3B0E /* NSObject+SBJSON.m in Sources */,
+				7BFA67671328498900CF3B0E /* NSObject+Serialize.m in Sources */,
+				7BFA67681328498900CF3B0E /* NSObject+XMLSerializableSupport.m in Sources */,
+				7BFA67691328498900CF3B0E /* NSString+GSub.m in Sources */,
+				7BFA676A1328498900CF3B0E /* NSString+InflectionSupport.m in Sources */,
+				7BFA676B1328498900CF3B0E /* NSString+SBJSON.m in Sources */,
+				7BFA676C1328498900CF3B0E /* NSString+Serialize.m in Sources */,
+				7BFA676D1328498900CF3B0E /* NSString+XMLSerializableSupport.m in Sources */,
+				7BFA676E1328498900CF3B0E /* ObjectiveResourceConfig.m in Sources */,
+				7BFA676F1328498900CF3B0E /* ObjectiveResourceDateFormatter.m in Sources */,
+				7BFA67701328498900CF3B0E /* Response.m in Sources */,
+				7BFA67711328498900CF3B0E /* SBJSON.m in Sources */,
+				7BFA67721328498900CF3B0E /* VelocityEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

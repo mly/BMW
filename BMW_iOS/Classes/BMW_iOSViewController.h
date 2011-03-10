@@ -27,9 +27,15 @@
 	float totalDist, timeZero;
 	double lastLocationUpdateTime;
 	float Vgps, Vav;
+	IBOutlet UIImageView *iv;
+	UIImage *processedImage;
+	
+	bool dirty;
 }
 -(void)signalStart;
 -(void)signalStop;
+-(void) refreshDisplay;
+-(void) setProcessedImage:(CGImageRef)image;
 
 @end
 

@@ -21,9 +21,6 @@
 		7B053D10132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B053D0C132CF35D00E2AB1C /* DirectDisplayShader.vsh */; };
 		7B053D11132CF35D00E2AB1C /* DirectDisplayShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B053D0B132CF35D00E2AB1C /* DirectDisplayShader.fsh */; };
 		7B053D12132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B053D0C132CF35D00E2AB1C /* DirectDisplayShader.vsh */; };
-		7B053DAB132CF43900E2AB1C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B053DAA132CF43900E2AB1C /* OpenGLES.framework */; };
-		7B053DAC132CF43900E2AB1C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B053DAA132CF43900E2AB1C /* OpenGLES.framework */; };
-		7B053DAD132CF43900E2AB1C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B053DAA132CF43900E2AB1C /* OpenGLES.framework */; };
 		7B053DD0132CF59500E2AB1C /* ColorTrackingCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B053DCF132CF59500E2AB1C /* ColorTrackingCamera.m */; };
 		7B053DD1132CF59500E2AB1C /* ColorTrackingCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B053DCF132CF59500E2AB1C /* ColorTrackingCamera.m */; };
 		7B053DD2132CF59500E2AB1C /* ColorTrackingCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B053DCF132CF59500E2AB1C /* ColorTrackingCamera.m */; };
@@ -33,6 +30,9 @@
 		7B053DDA132CF5A700E2AB1C /* ColorTrackingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B053DD6132CF5A700E2AB1C /* ColorTrackingGLView.m */; };
 		7B053DDB132CF5A700E2AB1C /* ColorTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B053DD4132CF5A700E2AB1C /* ColorTrackingViewController.m */; };
 		7B053DDC132CF5A700E2AB1C /* ColorTrackingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B053DD6132CF5A700E2AB1C /* ColorTrackingGLView.m */; };
+		7B053DF2132CF61200E2AB1C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B053DF1132CF61200E2AB1C /* OpenGLES.framework */; };
+		7B053DF3132CF61200E2AB1C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B053DF1132CF61200E2AB1C /* OpenGLES.framework */; };
+		7B053DF4132CF61200E2AB1C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B053DF1132CF61200E2AB1C /* OpenGLES.framework */; };
 		7B41784F1324926100BE9374 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B41784E1324926100BE9374 /* Accelerate.framework */; };
 		7B4EC7F81313516E00175D77 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4EC7F61313516E00175D77 /* CoreMotion.framework */; };
 		7B4EC7F91313516E00175D77 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4EC7F71313516E00175D77 /* CoreLocation.framework */; };
@@ -204,13 +204,13 @@
 		32CA4F630368D1EE00C91783 /* BMW_iOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMW_iOS_Prefix.pch; sourceTree = "<group>"; };
 		7B053D0B132CF35D00E2AB1C /* DirectDisplayShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DirectDisplayShader.fsh; sourceTree = "<group>"; };
 		7B053D0C132CF35D00E2AB1C /* DirectDisplayShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DirectDisplayShader.vsh; sourceTree = "<group>"; };
-		7B053DAA132CF43900E2AB1C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenGLES.framework; sourceTree = "<group>"; };
 		7B053DCE132CF59500E2AB1C /* ColorTrackingCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorTrackingCamera.h; path = ../../../Downloads/ColorTracking/Classes/ColorTrackingCamera.h; sourceTree = SOURCE_ROOT; };
 		7B053DCF132CF59500E2AB1C /* ColorTrackingCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorTrackingCamera.m; path = ../../../Downloads/ColorTracking/Classes/ColorTrackingCamera.m; sourceTree = SOURCE_ROOT; };
 		7B053DD3132CF5A700E2AB1C /* ColorTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorTrackingViewController.h; path = ../../../Downloads/ColorTracking/Classes/ColorTrackingViewController.h; sourceTree = SOURCE_ROOT; };
 		7B053DD4132CF5A700E2AB1C /* ColorTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorTrackingViewController.m; path = ../../../Downloads/ColorTracking/Classes/ColorTrackingViewController.m; sourceTree = SOURCE_ROOT; };
 		7B053DD5132CF5A700E2AB1C /* ColorTrackingGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorTrackingGLView.h; path = ../../../Downloads/ColorTracking/Classes/ColorTrackingGLView.h; sourceTree = SOURCE_ROOT; };
 		7B053DD6132CF5A700E2AB1C /* ColorTrackingGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorTrackingGLView.m; path = ../../../Downloads/ColorTracking/Classes/ColorTrackingGLView.m; sourceTree = SOURCE_ROOT; };
+		7B053DF1132CF61200E2AB1C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		7B2E4741132B478400755B8C /* BMW_iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BMW_iOS-Info.plist"; sourceTree = "<group>"; };
 		7B2E4742132B478400755B8C /* BMW_OpenCV-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BMW_OpenCV-Info.plist"; sourceTree = "<group>"; };
 		7B2E4743132B478400755B8C /* BMW_ScreenCapture-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BMW_ScreenCapture-Info.plist"; sourceTree = "<group>"; };
@@ -325,7 +325,7 @@
 				7B41784F1324926100BE9374 /* Accelerate.framework in Frameworks */,
 				7BFC771B1325078F004983A8 /* libcv.a in Frameworks */,
 				7BFC771C1325078F004983A8 /* libcxcore.a in Frameworks */,
-				7B053DAD132CF43900E2AB1C /* OpenGLES.framework in Frameworks */,
+				7B053DF4132CF61200E2AB1C /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +346,7 @@
 				7BECBAAE1324FECB00E9D057 /* Accelerate.framework in Frameworks */,
 				7BFC771D1325078F004983A8 /* libcv.a in Frameworks */,
 				7BFC771E1325078F004983A8 /* libcxcore.a in Frameworks */,
-				7B053DAC132CF43900E2AB1C /* OpenGLES.framework in Frameworks */,
+				7B053DF3132CF61200E2AB1C /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +367,7 @@
 				7BECBB031324FFB300E9D057 /* Accelerate.framework in Frameworks */,
 				7BFC771F1325078F004983A8 /* libcv.a in Frameworks */,
 				7BFC77201325078F004983A8 /* libcxcore.a in Frameworks */,
-				7B053DAB132CF43900E2AB1C /* OpenGLES.framework in Frameworks */,
+				7B053DF2132CF61200E2AB1C /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +450,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7B053DAA132CF43900E2AB1C /* OpenGLES.framework */,
+				7B053DF1132CF61200E2AB1C /* OpenGLES.framework */,
 				7B41784E1324926100BE9374 /* Accelerate.framework */,
 				7B80CD8D131C5FF400AD2BAA /* AssetsLibrary.framework */,
 				7B80CC7B131C46A800AD2BAA /* AVFoundation.framework */,

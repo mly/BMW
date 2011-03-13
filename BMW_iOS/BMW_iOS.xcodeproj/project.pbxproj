@@ -21,9 +21,6 @@
 		7B053D10132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B053D0C132CF35D00E2AB1C /* DirectDisplayShader.vsh */; };
 		7B053D11132CF35D00E2AB1C /* DirectDisplayShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B053D0B132CF35D00E2AB1C /* DirectDisplayShader.fsh */; };
 		7B053D12132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B053D0C132CF35D00E2AB1C /* DirectDisplayShader.vsh */; };
-		7B053DD0132CF59500E2AB1C /* ColorTrackingCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B053DCF132CF59500E2AB1C /* ColorTrackingCamera.m */; };
-		7B053DD1132CF59500E2AB1C /* ColorTrackingCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B053DCF132CF59500E2AB1C /* ColorTrackingCamera.m */; };
-		7B053DD2132CF59500E2AB1C /* ColorTrackingCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B053DCF132CF59500E2AB1C /* ColorTrackingCamera.m */; };
 		7B053DD7132CF5A700E2AB1C /* ColorTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B053DD4132CF5A700E2AB1C /* ColorTrackingViewController.m */; };
 		7B053DD8132CF5A700E2AB1C /* ColorTrackingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B053DD6132CF5A700E2AB1C /* ColorTrackingGLView.m */; };
 		7B053DD9132CF5A700E2AB1C /* ColorTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B053DD4132CF5A700E2AB1C /* ColorTrackingViewController.m */; };
@@ -204,8 +201,6 @@
 		32CA4F630368D1EE00C91783 /* BMW_iOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMW_iOS_Prefix.pch; sourceTree = "<group>"; };
 		7B053D0B132CF35D00E2AB1C /* DirectDisplayShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DirectDisplayShader.fsh; sourceTree = "<group>"; };
 		7B053D0C132CF35D00E2AB1C /* DirectDisplayShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DirectDisplayShader.vsh; sourceTree = "<group>"; };
-		7B053DCE132CF59500E2AB1C /* ColorTrackingCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorTrackingCamera.h; path = ../../../Downloads/ColorTracking/Classes/ColorTrackingCamera.h; sourceTree = SOURCE_ROOT; };
-		7B053DCF132CF59500E2AB1C /* ColorTrackingCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorTrackingCamera.m; path = ../../../Downloads/ColorTracking/Classes/ColorTrackingCamera.m; sourceTree = SOURCE_ROOT; };
 		7B053DD3132CF5A700E2AB1C /* ColorTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorTrackingViewController.h; path = ../../../Downloads/ColorTracking/Classes/ColorTrackingViewController.h; sourceTree = SOURCE_ROOT; };
 		7B053DD4132CF5A700E2AB1C /* ColorTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorTrackingViewController.m; path = ../../../Downloads/ColorTracking/Classes/ColorTrackingViewController.m; sourceTree = SOURCE_ROOT; };
 		7B053DD5132CF5A700E2AB1C /* ColorTrackingGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorTrackingGLView.h; path = ../../../Downloads/ColorTracking/Classes/ColorTrackingGLView.h; sourceTree = SOURCE_ROOT; };
@@ -381,8 +376,6 @@
 				7B053DD4132CF5A700E2AB1C /* ColorTrackingViewController.m */,
 				7B053DD5132CF5A700E2AB1C /* ColorTrackingGLView.h */,
 				7B053DD6132CF5A700E2AB1C /* ColorTrackingGLView.m */,
-				7B053DCE132CF59500E2AB1C /* ColorTrackingCamera.h */,
-				7B053DCF132CF59500E2AB1C /* ColorTrackingCamera.m */,
 				1D3623240D0F684500981E51 /* BMW_iOSAppDelegate.h */,
 				1D3623250D0F684500981E51 /* BMW_iOSAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* BMW_iOSViewController.h */,
@@ -780,7 +773,6 @@
 				D43DB63213261DE900DCAD92 /* NSString+XMLSerializableSupport.m in Sources */,
 				D43DB63313261DE900DCAD92 /* ObjectiveResourceConfig.m in Sources */,
 				D43DB63413261DE900DCAD92 /* Response.m in Sources */,
-				7B053DD2132CF59500E2AB1C /* ColorTrackingCamera.m in Sources */,
 				7B053DDB132CF5A700E2AB1C /* ColorTrackingViewController.m in Sources */,
 				7B053DDC132CF5A700E2AB1C /* ColorTrackingGLView.m in Sources */,
 			);
@@ -827,7 +819,6 @@
 				7BFA67511328497E00CF3B0E /* Response.m in Sources */,
 				7BFA67521328497E00CF3B0E /* SBJSON.m in Sources */,
 				7BFA67531328497E00CF3B0E /* VelocityEvent.m in Sources */,
-				7B053DD1132CF59500E2AB1C /* ColorTrackingCamera.m in Sources */,
 				7B053DD9132CF5A700E2AB1C /* ColorTrackingViewController.m in Sources */,
 				7B053DDA132CF5A700E2AB1C /* ColorTrackingGLView.m in Sources */,
 			);
@@ -874,7 +865,6 @@
 				7BFA67701328498900CF3B0E /* Response.m in Sources */,
 				7BFA67711328498900CF3B0E /* SBJSON.m in Sources */,
 				7BFA67721328498900CF3B0E /* VelocityEvent.m in Sources */,
-				7B053DD0132CF59500E2AB1C /* ColorTrackingCamera.m in Sources */,
 				7B053DD7132CF5A700E2AB1C /* ColorTrackingViewController.m in Sources */,
 				7B053DD8132CF5A700E2AB1C /* ColorTrackingGLView.m in Sources */,
 			);

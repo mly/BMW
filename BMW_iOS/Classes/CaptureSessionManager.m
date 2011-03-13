@@ -5,14 +5,11 @@
 //  Created by Aaron Sarnoff on 2/28/11.
 //  Copyright 2011 Stanford University. All rights reserved.
 //
-#if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
 #import "CaptureSessionManager.h"
 
 @implementation CaptureSessionManager
 @synthesize captureSession;
-@synthesize previewLayer;
 @synthesize delegate;
-static int64_t frameNumber = 0;
 
 #pragma mark SampleBufferDelegate
 
@@ -119,48 +116,6 @@ static int64_t frameNumber = 0;
     return pxbuffer;
 }
 
-#pragma mark Capture Session Configuration
-
-- (void) addVideoPreviewLayer {
-	self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.captureSession];
-	self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-}
-
-
-- (void) addVideoInput {
-	
-	AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];	
-	if ( videoDevice ) {
-		
-		NSError *error;
-		AVCaptureDeviceInput *videoIn = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&error];
-		if ( !error ) {
-			if ([self.captureSession canAddInput:videoIn])
-				[self.captureSession addInput:videoIn];
-			else
-				NSLog(@"Couldn't add video input");		
-		}
-		else
-			NSLog(@"Couldn't create video input");
-	}
-	else
-		NSLog(@"Couldn't create video capture device");
-}
-
-- (void) addVideoOutput {
-	//video output
-	AVCaptureVideoDataOutput *videoOut = [[AVCaptureVideoDataOutput alloc] init];
-	[videoOut setAlwaysDiscardsLateVideoFrames:YES];
-	[videoOut setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey]]; // BGRA is necessary for manual preview
-	dispatch_queue_t my_queue = dispatch_queue_create("BMW.VideoOutput", NULL);
-	[videoOut setSampleBufferDelegate:self queue:my_queue];
-	if ([self.captureSession canAddOutput:videoOut])
-		[self.captureSession addOutput:videoOut];
-	else
-		NSLog(@"Couldn't add video output");
-	[videoOut release];
-}
-
 - (void) assetWriterStart
 {
 	//Asset writing (saving the video)
@@ -196,28 +151,12 @@ static int64_t frameNumber = 0;
 
 - (void) startWriting
 {
-#ifdef SCREEN_CAPTURE
 	[self assetWriterStart];
-#endif
-#ifdef OPEN_CV
-	[self assetWriterStart];
-#endif
-#if VIDEO_SAVE
-	[self assetWriterStart];
-#endif
 }
 
 - (void) finishWriting
 {
-#ifdef SCREEN_CAPTURE
 	[assetWriter finishWriting];
-#endif
-#ifdef OPEN_CV
-	[assetWriter finishWriting];
-#endif
-#if VIDEO_SAVE
-	[assetWriter finishWriting];
-#endif
 }
 
 - (NSURL *) fileURL
@@ -241,21 +180,59 @@ static int64_t frameNumber = 0;
 
 - (id) init {
 	
-	if (self = [super init]) {
-		self.captureSession = [[AVCaptureSession alloc] init];
-		self.captureSession.sessionPreset = AVCaptureSessionPreset640x480;
-		
+	if (!(self = [super init]))
+		return nil;
+	
+	// Grab the back-facing camera
+	AVCaptureDevice *backFacingCamera = nil;
+	NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+	for (AVCaptureDevice *device in devices) 
+	{
+		if ([device position] == AVCaptureDevicePositionBack) 
+		{
+			backFacingCamera = device;
+		}
 	}
+	
+	// Create the capture session
+	self.captureSession = [[AVCaptureSession alloc] init];
+	
+	// Add the video input	
+	NSError *error = nil;
+	AVCaptureDeviceInput *videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:backFacingCamera error:&error];
+	if ([captureSession canAddInput:videoInput]) 
+		[captureSession addInput:videoInput];
+	[videoInput release];
+	
+	// Add the video frame output	
+	AVCaptureVideoDataOutput *videoOutput = [[AVCaptureVideoDataOutput alloc] init];
+	[videoOutput setAlwaysDiscardsLateVideoFrames:YES];
+	// Use RGB frames instead of YUV to ease color processing
+	[videoOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
+	
+	[videoOutput setSampleBufferDelegate:self queue:dispatch_get_main_queue()];
+	
+	if ([captureSession canAddOutput:videoOutput])
+		[captureSession addOutput:videoOutput];
+	else
+		NSLog(@"Couldn't add video output");
+	[videoOutput release];
+	
+	// Start capturing
+	//	[captureSession setSessionPreset:AVCaptureSessionPresetHigh];
+	[captureSession setSessionPreset:AVCaptureSessionPreset640x480];
+	if (![captureSession isRunning])
+	{
+		[captureSession startRunning];
+	};
 	
 	return self;
 }
 
 
 - (void)dealloc {
-	[self.previewLayer release];
 	[self.captureSession release];
 	
 	[super dealloc];
 }
-#endif
 @end

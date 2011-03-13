@@ -12,7 +12,7 @@
 #include <AssetsLibrary/AssetsLibrary.h>
 #import <opencv/cv.h>
 
-@class BMW_iOSViewController;
+@protocol ColorTrackingCameraDelegate;
 
 @interface CaptureSessionManager : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate> {
 	AVCaptureSession *captureSession;
@@ -21,7 +21,6 @@
 	AVAssetWriter *assetWriter;
 	AVAssetWriterInput *assetWriterInput;
 	NSURL *outputFileURL;
-	BMW_iOSViewController *delegate;
 }
 
 - (void) addVideoPreviewLayer;
@@ -37,12 +36,16 @@
 
 @property (retain) AVCaptureVideoPreviewLayer *previewLayer;
 @property (retain) AVCaptureSession *captureSession;
-@property (assign) BMW_iOSViewController *delegate;
+@property(nonatomic, assign) id<ColorTrackingCameraDelegate> delegate;
 
-@end
 #else
 #import <Foundation/Foundation.h>
 @interface CaptureSessionManager : NSObject
 {
 }
 #endif
+@end
+@protocol ColorTrackingCameraDelegate
+- (void)cameraHasConnected;
+- (void)processNewCameraFrame:(CVImageBufferRef)cameraFrame;
+@end

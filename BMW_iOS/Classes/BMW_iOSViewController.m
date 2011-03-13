@@ -28,22 +28,6 @@
 }
 */
 
--(void) setProcessedImage:(CGImageRef)image
-{
-	processedImage = [UIImage imageWithCGImage:image];
-	dirty = YES;
-}
-
--(void) refreshDisplay
-{
-	if(dirty)
-	{
-		iv.image = processedImage;
-		dirty=NO;
-	}
-	[self performSelector:@selector(refreshDisplay) withObject:nil afterDelay:0.1];
-}
-
 -(void)signalStart
 {
 	//[self getGravDataFile];
@@ -69,24 +53,10 @@
 #if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
 	captureManager = [[CaptureSessionManager alloc] init];
 	captureManager.delegate = self;
-#if RENDER_PROCESSING
-	dirty = NO;
-	[self performSelector:@selector(refreshDisplay) withObject:nil afterDelay:0.1];
-#endif
-	
 	
 	// Configure capture session
 	[captureManager addVideoInput];
 	[captureManager addVideoOutput];
-	
-	// Set up video preview layer
-	[captureManager addVideoPreviewLayer];
-	CGRect layerRect = self.view.layer.bounds;
-	captureManager.previewLayer.bounds = layerRect;
-	captureManager.previewLayer.position = CGPointMake(CGRectGetMidX(layerRect), CGRectGetMidY(layerRect));
-#if !RENDER_PROCESSING
-	[self.view.layer addSublayer:captureManager.previewLayer];
-#endif
 #endif
 	
 	dataOverlayVC = [[DataOverlayViewController alloc] init];

@@ -184,14 +184,21 @@
 		return nil;
 	
 	// Grab the back-facing camera
-	AVCaptureDevice *backFacingCamera = nil;
+	AVCaptureDevice *camera = nil;
 	NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
 	for (AVCaptureDevice *device in devices) 
 	{
-		if ([device position] == AVCaptureDevicePositionBack) 
+#ifdef USE_FRONT_CAMERA
+		if ([device position] == AVCaptureDevicePositionFront) 
 		{
-			backFacingCamera = device;
+			camera = device;
+		} 
+#else
+		if ([device position] == AVCaptureDevicePositionBack) {
+			camera = device;
 		}
+#endif
+		
 	}
 	
 	// Create the capture session
@@ -199,7 +206,7 @@
 	
 	// Add the video input	
 	NSError *error = nil;
-	AVCaptureDeviceInput *videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:backFacingCamera error:&error];
+	AVCaptureDeviceInput *videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:camera error:&error];
 	if ([captureSession canAddInput:videoInput]) 
 		[captureSession addInput:videoInput];
 	[videoInput release];

@@ -142,7 +142,7 @@ enum {
     // This needs to be done prior to linking.
     glBindAttribLocation(*programPointer, ATTRIB_VERTEX, "position");
     glBindAttribLocation(*programPointer, ATTRIB_TEXTUREPOSITON, "inputTextureCoordinate");
-    
+	
     // Link program.
     if (![self linkProgram:*programPointer])
     {

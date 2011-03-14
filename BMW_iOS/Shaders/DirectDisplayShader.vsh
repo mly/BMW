@@ -8,6 +8,6 @@ uniform float translate;
 void main()
 {
 	gl_Position = position;
-	gl_Position.y += sin(translate) / 3.0;
+	//gl_Position.y += sin(translate) / 3.0;
 	textureCoordinate = inputTextureCoordinate.xy;
 }

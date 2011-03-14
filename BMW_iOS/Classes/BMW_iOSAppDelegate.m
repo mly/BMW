@@ -8,7 +8,7 @@
 
 #import "BMW_iOSAppDelegate.h"
 #import "BMW_iOSViewController.h"
-#import "ColorTrackingViewController.h"
+#import "ImageProcessingViewController.h"
 
 
 @implementation BMW_iOSAppDelegate
@@ -26,7 +26,7 @@
 	[UIApplication sharedApplication].statusBarHidden = YES;
 	[UIApplication sharedApplication].idleTimerDisabled = YES;
     // Add the view controller's view to the window and display.
-	ColorTrackingViewController *ctvc = [[ColorTrackingViewController alloc] init];
+	ImageProcessingViewController *ctvc = [[ImageProcessingViewController alloc] init];
 	[self.window addSubview:ctvc.view];
     //[self.window addSubview:viewController.view];
     [self.window makeKeyAndVisible];

@@ -11,7 +11,7 @@
 #include <AssetsLibrary/AssetsLibrary.h>
 #import <opencv/cv.h>
 
-@protocol ColorTrackingCameraDelegate;
+@protocol ImageProcessingCameraDelegate;
 
 @interface CaptureSessionManager : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate> {
 	AVCaptureSession *captureSession;
@@ -32,10 +32,10 @@
 - (IplImage *) CreateIplImageFromCGImage:(CGImageRef)imageRef;
 
 @property (retain) AVCaptureSession *captureSession;
-@property(nonatomic, assign) id<ColorTrackingCameraDelegate> delegate;
+@property(nonatomic, assign) id<ImageProcessingCameraDelegate> delegate;
 @end
 
-@protocol ColorTrackingCameraDelegate
+@protocol ImageProcessingCameraDelegate
 - (void)cameraHasConnected;
 - (void)processNewCameraFrame:(CVImageBufferRef)cameraFrame;
 @end

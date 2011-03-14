@@ -226,7 +226,7 @@
 	[videoOutput release];
 	
 	// Start capturing
-	//	[captureSession setSessionPreset:AVCaptureSessionPresetHigh];
+	//[captureSession setSessionPreset:AVCaptureSessionPresetHigh];
 	[captureSession setSessionPreset:AVCaptureSessionPreset640x480];
 	if (![captureSession isRunning])
 	{

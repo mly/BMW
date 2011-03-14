@@ -50,29 +50,6 @@
 	
 	totalDist = 0.0;
 	lastLocationUpdateTime = timeZero = CACurrentMediaTime();
-#if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
-	captureManager = [[CaptureSessionManager alloc] init];
-	captureManager.delegate = self;
-	
-	// Configure capture session
-	[captureManager addVideoInput];
-	[captureManager addVideoOutput];
-#endif
-	
-	dataOverlayVC = [[DataOverlayViewController alloc] init];
-	[dataOverlayVC.view setFrame:CGRectMake(-230, 200, 500, 100)];
-	dataOverlayVC.view.transform = CGAffineTransformMakeRotation(M_PI/2);
-	
-	[self.view addSubview:dataOverlayVC.view];
-	
-#if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
-	[captureManager.captureSession startRunning];
-#endif
-	
-	
-	
-	//Location
-	//[self getGravDataFile];
 	
 	if (motionDataArry) {
 		[motionDataArry release];

@@ -31,12 +31,15 @@
 		7B80CC6E131C466900AD2BAA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CC6D131C466900AD2BAA /* CoreVideo.framework */; };
 		7B80CC7C131C46A800AD2BAA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CC7B131C46A800AD2BAA /* AVFoundation.framework */; };
 		7B80CD8E131C5FF400AD2BAA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CD8D131C5FF400AD2BAA /* AssetsLibrary.framework */; };
-		7BD13508132D9E9600150AA0 /* ColorTrackingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13505132D9E9600150AA0 /* ColorTrackingGLView.m */; };
-		7BD13509132D9E9600150AA0 /* ColorTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13507132D9E9600150AA0 /* ColorTrackingViewController.m */; };
-		7BD1350A132D9E9600150AA0 /* ColorTrackingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13505132D9E9600150AA0 /* ColorTrackingGLView.m */; };
-		7BD1350B132D9E9600150AA0 /* ColorTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13507132D9E9600150AA0 /* ColorTrackingViewController.m */; };
-		7BD1350C132D9E9600150AA0 /* ColorTrackingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13505132D9E9600150AA0 /* ColorTrackingGLView.m */; };
-		7BD1350D132D9E9600150AA0 /* ColorTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13507132D9E9600150AA0 /* ColorTrackingViewController.m */; };
+		7BD13508132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13505132D9E9600150AA0 /* ImageProcessingGLView.m */; };
+		7BD13509132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13507132D9E9600150AA0 /* ImageProcessingViewController.m */; };
+		7BD1350A132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13505132D9E9600150AA0 /* ImageProcessingGLView.m */; };
+		7BD1350B132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13507132D9E9600150AA0 /* ImageProcessingViewController.m */; };
+		7BD1350C132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13505132D9E9600150AA0 /* ImageProcessingGLView.m */; };
+		7BD1350D132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13507132D9E9600150AA0 /* ImageProcessingViewController.m */; };
+		7BD13579132DB86600150AA0 /* StatsCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13578132DB86600150AA0 /* StatsCollector.m */; };
+		7BD1357A132DB86600150AA0 /* StatsCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13578132DB86600150AA0 /* StatsCollector.m */; };
+		7BD1357B132DB86600150AA0 /* StatsCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13578132DB86600150AA0 /* StatsCollector.m */; };
 		7BECBA971324FECB00E9D057 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		7BECBA981324FECB00E9D057 /* BMW_iOSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* BMW_iOSViewController.xib */; };
 		7BECBA991324FECB00E9D057 /* DataOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4B8F364131E3D61002C1A44 /* DataOverlayViewController.xib */; };
@@ -212,10 +215,12 @@
 		7B80CC6D131C466900AD2BAA /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		7B80CC7B131C46A800AD2BAA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7B80CD8D131C5FF400AD2BAA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		7BD13504132D9E9600150AA0 /* ColorTrackingGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorTrackingGLView.h; sourceTree = "<group>"; };
-		7BD13505132D9E9600150AA0 /* ColorTrackingGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorTrackingGLView.m; sourceTree = "<group>"; };
-		7BD13506132D9E9600150AA0 /* ColorTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorTrackingViewController.h; sourceTree = "<group>"; };
-		7BD13507132D9E9600150AA0 /* ColorTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorTrackingViewController.m; sourceTree = "<group>"; };
+		7BD13504132D9E9600150AA0 /* ImageProcessingGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingGLView.h; sourceTree = "<group>"; };
+		7BD13505132D9E9600150AA0 /* ImageProcessingGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcessingGLView.m; sourceTree = "<group>"; };
+		7BD13506132D9E9600150AA0 /* ImageProcessingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingViewController.h; sourceTree = "<group>"; };
+		7BD13507132D9E9600150AA0 /* ImageProcessingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcessingViewController.m; sourceTree = "<group>"; };
+		7BD13577132DB86600150AA0 /* StatsCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsCollector.h; sourceTree = "<group>"; };
+		7BD13578132DB86600150AA0 /* StatsCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsCollector.m; sourceTree = "<group>"; };
 		7BECBAB21324FECB00E9D057 /* BMW_SC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMW_SC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BECBB071324FFB300E9D057 /* BMW_CV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMW_CV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BFC77191325078F004983A8 /* libcv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcv.a; path = opencv_device/lib/libcv.a; sourceTree = "<group>"; };
@@ -372,22 +377,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7BD13504132D9E9600150AA0 /* ColorTrackingGLView.h */,
-				7BD13505132D9E9600150AA0 /* ColorTrackingGLView.m */,
-				7BD13506132D9E9600150AA0 /* ColorTrackingViewController.h */,
-				7BD13507132D9E9600150AA0 /* ColorTrackingViewController.m */,
-				1D3623240D0F684500981E51 /* BMW_iOSAppDelegate.h */,
-				1D3623250D0F684500981E51 /* BMW_iOSAppDelegate.m */,
-				28D7ACF60DDB3853001CB0EB /* BMW_iOSViewController.h */,
-				28D7ACF70DDB3853001CB0EB /* BMW_iOSViewController.m */,
-				D4B8F223131CF44E002C1A44 /* GravityObject.h */,
-				D4B8F224131CF44E002C1A44 /* GravityObject.m */,
-				D4B8F278131D6588002C1A44 /* CaptureSessionManager.h */,
-				D4B8F279131D6588002C1A44 /* CaptureSessionManager.m */,
-				D4B8F362131E3D61002C1A44 /* DataOverlayViewController.h */,
-				D4B8F363131E3D61002C1A44 /* DataOverlayViewController.m */,
-				D43DB5B313261BFA00DCAD92 /* VelocityEvent.h */,
-				D43DB5B413261BFA00DCAD92 /* VelocityEvent.m */,
+				7BD13588132DBCF800150AA0 /* AppDelegate */,
+				7BD13563132DB79200150AA0 /* Image Processing */,
+				7BD13573132DB7A800150AA0 /* Stats Tracking */,
+				7BD13589132DBD1600150AA0 /* Camera Input */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -475,6 +468,52 @@
 				7BFC771A1325078F004983A8 /* libcxcore.a */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		7BD13563132DB79200150AA0 /* Image Processing */ = {
+			isa = PBXGroup;
+			children = (
+				7BD13504132D9E9600150AA0 /* ImageProcessingGLView.h */,
+				7BD13505132D9E9600150AA0 /* ImageProcessingGLView.m */,
+				7BD13506132D9E9600150AA0 /* ImageProcessingViewController.h */,
+				7BD13507132D9E9600150AA0 /* ImageProcessingViewController.m */,
+			);
+			name = "Image Processing";
+			sourceTree = "<group>";
+		};
+		7BD13573132DB7A800150AA0 /* Stats Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				28D7ACF60DDB3853001CB0EB /* BMW_iOSViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* BMW_iOSViewController.m */,
+				D4B8F362131E3D61002C1A44 /* DataOverlayViewController.h */,
+				D4B8F363131E3D61002C1A44 /* DataOverlayViewController.m */,
+				D4B8F223131CF44E002C1A44 /* GravityObject.h */,
+				D4B8F224131CF44E002C1A44 /* GravityObject.m */,
+				7BD13577132DB86600150AA0 /* StatsCollector.h */,
+				7BD13578132DB86600150AA0 /* StatsCollector.m */,
+				D43DB5B313261BFA00DCAD92 /* VelocityEvent.h */,
+				D43DB5B413261BFA00DCAD92 /* VelocityEvent.m */,
+			);
+			name = "Stats Tracking";
+			sourceTree = "<group>";
+		};
+		7BD13588132DBCF800150AA0 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* BMW_iOSAppDelegate.h */,
+				1D3623250D0F684500981E51 /* BMW_iOSAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7BD13589132DBD1600150AA0 /* Camera Input */ = {
+			isa = PBXGroup;
+			children = (
+				D4B8F278131D6588002C1A44 /* CaptureSessionManager.h */,
+				D4B8F279131D6588002C1A44 /* CaptureSessionManager.m */,
+			);
+			name = "Camera Input";
 			sourceTree = "<group>";
 		};
 		D43DB5CA13261DE900DCAD92 /* objective_resource */ = {
@@ -773,8 +812,9 @@
 				D43DB63213261DE900DCAD92 /* NSString+XMLSerializableSupport.m in Sources */,
 				D43DB63313261DE900DCAD92 /* ObjectiveResourceConfig.m in Sources */,
 				D43DB63413261DE900DCAD92 /* Response.m in Sources */,
-				7BD1350C132D9E9600150AA0 /* ColorTrackingGLView.m in Sources */,
-				7BD1350D132D9E9600150AA0 /* ColorTrackingViewController.m in Sources */,
+				7BD1350C132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */,
+				7BD1350D132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */,
+				7BD1357A132DB86600150AA0 /* StatsCollector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,8 +859,9 @@
 				7BFA67511328497E00CF3B0E /* Response.m in Sources */,
 				7BFA67521328497E00CF3B0E /* SBJSON.m in Sources */,
 				7BFA67531328497E00CF3B0E /* VelocityEvent.m in Sources */,
-				7BD1350A132D9E9600150AA0 /* ColorTrackingGLView.m in Sources */,
-				7BD1350B132D9E9600150AA0 /* ColorTrackingViewController.m in Sources */,
+				7BD1350A132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */,
+				7BD1350B132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */,
+				7BD13579132DB86600150AA0 /* StatsCollector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,8 +906,9 @@
 				7BFA67701328498900CF3B0E /* Response.m in Sources */,
 				7BFA67711328498900CF3B0E /* SBJSON.m in Sources */,
 				7BFA67721328498900CF3B0E /* VelocityEvent.m in Sources */,
-				7BD13508132D9E9600150AA0 /* ColorTrackingGLView.m in Sources */,
-				7BD13509132D9E9600150AA0 /* ColorTrackingViewController.m in Sources */,
+				7BD13508132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */,
+				7BD13509132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */,
+				7BD1357B132DB86600150AA0 /* StatsCollector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

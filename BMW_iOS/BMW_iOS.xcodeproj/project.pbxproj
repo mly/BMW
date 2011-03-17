@@ -164,6 +164,8 @@
 		D43DB63213261DE900DCAD92 /* NSString+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60F13261DE900DCAD92 /* NSString+XMLSerializableSupport.m */; };
 		D43DB63313261DE900DCAD92 /* ObjectiveResourceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB61413261DE900DCAD92 /* ObjectiveResourceConfig.m */; };
 		D43DB63413261DE900DCAD92 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB61613261DE900DCAD92 /* Response.m */; };
+		D445E47C1331C6050036DEB7 /* RoutingOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D445E47A1331C6050036DEB7 /* RoutingOverlayViewController.m */; };
+		D445E47D1331C6050036DEB7 /* RoutingOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D445E47B1331C6050036DEB7 /* RoutingOverlayViewController.xib */; };
 		D4B8F1CC131CE519002C1A44 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */; };
 		D4B8F225131CF44E002C1A44 /* GravityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F224131CF44E002C1A44 /* GravityObject.m */; };
 		D4B8F27A131D6588002C1A44 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F279131D6588002C1A44 /* CaptureSessionManager.m */; };
@@ -270,6 +272,9 @@
 		D43DB61413261DE900DCAD92 /* ObjectiveResourceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveResourceConfig.m; sourceTree = "<group>"; };
 		D43DB61513261DE900DCAD92 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
 		D43DB61613261DE900DCAD92 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+		D445E4791331C6050036DEB7 /* RoutingOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutingOverlayViewController.h; sourceTree = "<group>"; };
+		D445E47A1331C6050036DEB7 /* RoutingOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutingOverlayViewController.m; sourceTree = "<group>"; };
+		D445E47B1331C6050036DEB7 /* RoutingOverlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RoutingOverlayViewController.xib; path = Classes/RoutingOverlayViewController.xib; sourceTree = "<group>"; };
 		D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D4B8F223131CF44E002C1A44 /* GravityObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GravityObject.h; sourceTree = "<group>"; };
 		D4B8F224131CF44E002C1A44 /* GravityObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GravityObject.m; sourceTree = "<group>"; };
@@ -359,6 +364,8 @@
 				D4B8F363131E3D61002C1A44 /* DataOverlayViewController.m */,
 				D43DB5B313261BFA00DCAD92 /* VelocityEvent.h */,
 				D43DB5B413261BFA00DCAD92 /* VelocityEvent.m */,
+				D445E4791331C6050036DEB7 /* RoutingOverlayViewController.h */,
+				D445E47A1331C6050036DEB7 /* RoutingOverlayViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -400,6 +407,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D445E47B1331C6050036DEB7 /* RoutingOverlayViewController.xib */,
 				D4B8F364131E3D61002C1A44 /* DataOverlayViewController.xib */,
 				2899E5210DE3E06400AC0155 /* BMW_iOSViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -658,6 +666,7 @@
 				2899E5220DE3E06400AC0155 /* BMW_iOSViewController.xib in Resources */,
 				D4B8F366131E3D61002C1A44 /* DataOverlayViewController.xib in Resources */,
 				7BFC783813251D00004983A8 /* haarcascade_frontalface_default.xml in Resources */,
+				D445E47D1331C6050036DEB7 /* RoutingOverlayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +736,7 @@
 				D43DB63213261DE900DCAD92 /* NSString+XMLSerializableSupport.m in Sources */,
 				D43DB63313261DE900DCAD92 /* ObjectiveResourceConfig.m in Sources */,
 				D43DB63413261DE900DCAD92 /* Response.m in Sources */,
+				D445E47C1331C6050036DEB7 /* RoutingOverlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

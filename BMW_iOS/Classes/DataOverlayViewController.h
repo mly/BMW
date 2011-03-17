@@ -12,6 +12,7 @@
 
 @interface DataOverlayViewController : UIViewController {
 	IBOutlet UILabel *accel, *vaccel, *vgps, *altitude, *latlong, *vaverage;
+	
 }
 
 -(void)populateLabelsWithAccel:(CMAcceleration)a Location:(CLLocation *)l GPSVelocity:(float)vg AverageVelocity:(float)vav andAccelerometerVelocity:(float *)va;

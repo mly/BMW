@@ -12,6 +12,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "GravityObject.h"
 #import "DataOverlayViewController.h"
+#import "RoutingOverlayViewController.h"
 #if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
 #include "CaptureSessionManager.h"
 #endif
@@ -21,6 +22,7 @@
 	CaptureSessionManager *captureManager;
 #endif
 	DataOverlayViewController *dataOverlayVC;
+	RoutingOverlayViewController *routingOverlayVC;
 	float v[3];
 	NSMutableArray *motionDataArry;
 		

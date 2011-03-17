@@ -132,7 +132,12 @@
 	[dataOverlayVC.view setFrame:CGRectMake(-230, 200, 500, 100)];
 	dataOverlayVC.view.transform = CGAffineTransformMakeRotation(M_PI/2);
 	
+	routingOverlayVC = [[RoutingOverlayViewController alloc] init];
+	[routingOverlayVC.view setFrame:CGRectMake(55, 215, 480, 50)];
+	routingOverlayVC.view.transform = CGAffineTransformMakeRotation(M_PI/2);
+	
 	[self.view addSubview:dataOverlayVC.view];
+	[self.view addSubview:routingOverlayVC.view];
 	
 #if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
 	[captureManager.captureSession startRunning];
@@ -201,6 +206,8 @@
 	Vav = (totalDist / (CACurrentMediaTime() - timeZero))*METERS_SEC_MILES_HOUR_CONVERSION;
 	NSLog(@"Current gps speed: %f mph", Vgps);
 	NSLog(@"Current average speed: %f mph", Vav);
+	
+	[routingOverlayVC locationDidUpdate:newLocation];
 	
 	//Send velocity event object to server...not very interesting at the moment, but makes the JSON super easy
 	VelocityEvent *ve = [[[VelocityEvent alloc]init]autorelease];

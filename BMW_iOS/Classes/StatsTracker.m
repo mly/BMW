@@ -7,7 +7,8 @@
 //
 
 #import "StatsTracker.h"
-
+#import <CoreLocation/CoreLocation.h>
+#import <CoreMotion/CMMotionManager.h>
 
 @implementation StatsTracker
 @synthesize currentStats;
@@ -33,11 +34,11 @@ static StatsTracker *sharedTracker;
 
 -(void)addStats:(NSMutableDictionary *)stat
 {
+	NSLog(@"prev stats:%@",currentStats);
 	[currentStats release];
 	currentStats = stat;
 	[currentStats retain];
 	[stats addObject:currentStats];
-	NSLog(@"%@",currentStats);
 	curIndex++;
 }
 
@@ -52,5 +53,46 @@ static StatsTracker *sharedTracker;
 	[currentStats release];
 	
 	[super dealloc];
+}
+
+#pragma mark -
+#pragma mark Stats Processing
+
+-(void)processStats
+{
+	if(currentStats == nil)
+		return;
+	[self maxSpeed];
+	[self altitudeRange];
+}
+
+-(void)maxSpeed
+{
+	CLLocation *l = [currentStats objectForKey:LOCATION];
+	double prev = 0;
+	if(curIndex >= 1)
+		prev = [[[stats objectAtIndex:curIndex-1] objectForKey:MAX_SPEED] doubleValue];
+	[self addStat:MAX_SPEED withValue:[NSNumber numberWithDouble:l.speed>prev?l.speed:prev]];
+}
+
+-(void)altitudeRange
+{
+	CLLocation *l = [currentStats objectForKey:LOCATION];
+	if(curIndex < 1)
+	{
+		[self addStat:MAX_ALTITUDE withValue:[NSNumber numberWithDouble:l.altitude]];
+		[self addStat:MIN_ALTITUDE withValue:[NSNumber numberWithDouble:l.altitude]];
+	}
+	else
+	{
+		double max = [[[stats objectAtIndex:curIndex-1] objectForKey:MAX_ALTITUDE] doubleValue];
+		double min = [[[stats objectAtIndex:curIndex-1] objectForKey:MIN_ALTITUDE] doubleValue];
+		[self addStat:MAX_ALTITUDE withValue:[NSNumber numberWithDouble:l.altitude>max?l.altitude:max]];
+		[self addStat:MIN_ALTITUDE withValue:[NSNumber numberWithDouble:l.altitude<min?l.altitude:min]];
+	}
+}
+
+-(void)averageSpeed
+{
 }
 @end

@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#define DEVICE_MOTION @"Device Motion"
+#define LOCATION @"Location"
+#define HEADING @"Heading"
+#define DATE @"Date"
+#define MAX_SPEED @"Max Speed"
+#define AVERAGE_SPEED @"Average Speed"
+#define MAX_ALTITUDE @"Max Altitude"
+#define MIN_ALTITUDE @"Min Altitude"
 
 @interface StatsTracker : NSObject {
 	NSMutableArray *stats;

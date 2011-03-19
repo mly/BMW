@@ -7,7 +7,6 @@
 //
 
 #import "BMW_iOSAppDelegate.h"
-#import "BMW_iOSViewController.h"
 #import "ImageProcessingViewController.h"
 
 
@@ -26,12 +25,10 @@
 	[UIApplication sharedApplication].statusBarHidden = YES;
 	[UIApplication sharedApplication].idleTimerDisabled = YES;
     // Add the view controller's view to the window and display.
-	ImageProcessingViewController *ctvc = [[ImageProcessingViewController alloc] init];
-	[self.window addSubview:ctvc.view];
-    //[self.window addSubview:viewController.view];
+	[self.window addSubview:viewController.view];
     [self.window makeKeyAndVisible];
 	
-	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];
+//	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];
 	
 	[[[SensorReader alloc] init] startReading];
 

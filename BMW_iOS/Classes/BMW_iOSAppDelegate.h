@@ -10,15 +10,15 @@
 #import "ObjectiveResource.h"
 #include "SensorReader.h"
 
-@class BMW_iOSViewController;
+@class ImageProcessingViewController;
 
 @interface BMW_iOSAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    BMW_iOSViewController *viewController;
+    ImageProcessingViewController *viewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet BMW_iOSViewController *viewController;
+@property (nonatomic, retain) IBOutlet ImageProcessingViewController *viewController;
 
 @end
 

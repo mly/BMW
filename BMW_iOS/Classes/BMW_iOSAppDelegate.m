@@ -33,7 +33,7 @@
 	
 	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];
 	
-	//[viewController signalStart];
+	[[[SensorReader alloc] init] startReading];
 
     return YES;
 }

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ObjectiveResource.h"
+#include "SensorReader.h"
 
 @class BMW_iOSViewController;
 

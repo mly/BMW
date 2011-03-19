@@ -7,7 +7,6 @@
 #import "CaptureSessionManager.h"
 #import "ImageProcessingGLView.h"
 
-
 @interface ImageProcessingViewController : UIViewController <ImageProcessingCameraDelegate>
 {
 	CaptureSessionManager *camera;
@@ -15,9 +14,13 @@
 	
 	GLuint directDisplayProgram;
 	GLuint videoFrameTexture;
+	GLubyte *rawPositionPixels;
 }
 
 @property(readonly) ImageProcessingGLView *glView;
+
+- (void) assetWriterStart;
+- (NSURL *) fileURL;
 
 // OpenGL ES 2.0 setup methods
 - (BOOL)loadVertexShader:(NSString *)vertexShaderName fragmentShader:(NSString *)fragmentShaderName forProgram:(GLuint *)programPointer;

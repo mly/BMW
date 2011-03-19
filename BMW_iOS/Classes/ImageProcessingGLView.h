@@ -8,8 +8,8 @@
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 
-#define FBO_HEIGHT 480
-#define FBO_WIDTH 320
+#define FBO_HEIGHT 640
+#define FBO_WIDTH 480
 
 @interface ImageProcessingGLView : UIView 
 {

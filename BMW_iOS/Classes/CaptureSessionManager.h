@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
-#include <AssetsLibrary/AssetsLibrary.h>
 #import <opencv/cv.h>
 
 @protocol ImageProcessingCameraDelegate;

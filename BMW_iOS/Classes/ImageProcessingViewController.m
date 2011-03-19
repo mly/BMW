@@ -44,20 +44,25 @@ enum {
 	camera.delegate = self;
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+}
+
 - (void)didReceiveMemoryWarning 
 {
-//    [super didReceiveMemoryWarning];
+    [super didReceiveMemoryWarning];
 }
 
 - (void)dealloc 
 {
+	free(rawPositionPixels);
 	[camera release];
     [super dealloc];
 }
 
 #pragma mark -
 #pragma mark OpenGL ES 2.0 rendering methods
-
 - (void)drawFrame
 {    
     // Replace the implementation of this method to do your own custom drawing.

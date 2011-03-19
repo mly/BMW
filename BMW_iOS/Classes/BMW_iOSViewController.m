@@ -68,23 +68,11 @@
     [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue]
 									   withHandler: ^(CMDeviceMotion *motionData, NSError *error)
 	 {
-		 CMAcceleration gravity = motionData.gravity;
-		 CMAcceleration userAcceleration = motionData.userAcceleration;
-		 CMRotationRate rot = motionData.rotationRate;
-		 CMAttitude *att = motionData.attitude;
-		 
-		 //NSData *data = [[NSData alloc] initWithBytes:<#(const void *)bytes#> length:<#(NSUInteger)length#>
-		 //[gravData addObject:[[GravityObject alloc] initWithX:gravity.x Y:gravity.y andZ:gravity.z]];
-		 //NSData *motionData = [NSData dataWithBytes: length:sizeof(CMAcceleration)];
 		 [motionDataArry addObject:motionData];
-		 [dataOverlayVC populateLabelsWithAccel:userAcceleration Location:locationManager.location GPSVelocity:Vgps AverageVelocity:Vav andAccelerometerVelocity:&v ];
 		 
-		 
-		 //-(id)initWithX:(float)x Y:(float)y andZ:(float)z;
-		 
-		 v[0] += userAcceleration.x*UPDATE_INTERVAL;
-		 v[1] += userAcceleration.y*UPDATE_INTERVAL;
-		 v[2] += userAcceleration.z*UPDATE_INTERVAL;
+//		 v[0] += userAcceleration.x*UPDATE_INTERVAL;
+//		 v[1] += userAcceleration.y*UPDATE_INTERVAL;
+//		 v[2] += userAcceleration.z*UPDATE_INTERVAL;
 		 
 #if CM_DEBUG
 		 NSLog(@"gravity = [%f, %f, %f]", gravity.x, gravity.y, gravity.z);

@@ -115,65 +115,6 @@
     CVPixelBufferUnlockBaseAddress(pxbuffer, 0);
     return pxbuffer;
 }
-
-- (void) assetWriterStart
-{
-	//Asset writing (saving the video)
-	NSDictionary *outputSettings =
-    [NSDictionary dictionaryWithObjectsAndKeys:
-	 [NSNumber numberWithInt:640], AVVideoWidthKey,
-	 [NSNumber numberWithInt:480], AVVideoHeightKey,
-	 AVVideoCodecH264, AVVideoCodecKey,
-	 
-	 nil];
-	assetWriterInput = [AVAssetWriterInput 
-						assetWriterInputWithMediaType:AVMediaTypeVideo
-						outputSettings:outputSettings];
-	pixelBufferAdaptor =
-	[[AVAssetWriterInputPixelBufferAdaptor alloc] 
-	 initWithAssetWriterInput:assetWriterInput 
-	 sourcePixelBufferAttributes:
-	 [NSDictionary dictionaryWithObjectsAndKeys:
-	  [NSNumber numberWithInt:kCVPixelFormatType_32BGRA], 
-	  kCVPixelBufferPixelFormatTypeKey,
-	  nil]];
-	outputFileURL = [self fileURL];
-	assetWriter = [[AVAssetWriter alloc]
-				   initWithURL:outputFileURL
-				   fileType:AVFileTypeMPEG4
-				   error:nil];
-	[assetWriter addInput:assetWriterInput];
-	assetWriterInput.expectsMediaDataInRealTime = YES;
-	
-	[assetWriter startWriting];
-	[assetWriter startSessionAtSourceTime:kCMTimeZero];
-}
-
-- (void) startWriting
-{
-	[self assetWriterStart];
-}
-
-- (void) finishWriting
-{
-	[assetWriter finishWriting];
-}
-
-- (NSURL *) fileURL
-{
-	NSString *outputPath = [[NSString alloc] initWithFormat:@"%@%@%f%@", NSHomeDirectory(), @"/Documents/Drive",[[NSDate date] timeIntervalSince1970],@".mov"];
-#ifdef SCREEN_CAPTURE
-	outputPath = [[NSString alloc] initWithFormat:@"%@%@%f%@", NSHomeDirectory(), @"/Documents/Drive",[[NSDate date] timeIntervalSince1970],@"_OVERLAY.mov"];
-
-#endif
-	NSURL *outputURL = [[NSURL alloc] initFileURLWithPath:outputPath];
-	NSFileManager *fileManager = [NSFileManager defaultManager];
-	if ([fileManager fileExistsAtPath:outputPath]) {
-		[[NSFileManager defaultManager] removeItemAtPath:outputPath error:nil];
-		[outputPath release];
-	}
-	return [outputURL autorelease];
-}
 	
 	
 #pragma mark init/dealloc

@@ -14,8 +14,9 @@
 	NSMutableDictionary *currentStats;
 	int curIndex;
 }
--(void)addStats:(NSMutableDictionary *)stats;
+-(void)addStats:(NSMutableDictionary *)stat;
 -(void)addStat:(id)stat withValue:(id)value;
 
+@property(readonly) NSDictionary *currentStats;
 
 @end

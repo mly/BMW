@@ -64,6 +64,7 @@ static StatsTracker *sharedTracker;
 		return;
 	[self maxSpeed];
 	[self altitudeRange];
+	[self averageSpeed];
 }
 
 -(void)maxSpeed
@@ -94,5 +95,11 @@ static StatsTracker *sharedTracker;
 
 -(void)averageSpeed
 {
+	CLLocation *l = [currentStats objectForKey:LOCATION];
+	double prev = 0;
+	if(curIndex >= 1)
+		prev = [[[stats objectAtIndex:curIndex-1] objectForKey:MAX_SPEED] doubleValue];
+	double average = (l.speed+prev*([stats count]-1))/[stats count];
+	[self addStat:AVERAGE_SPEED withValue:[NSNumber numberWithDouble:average]];
 }
 @end

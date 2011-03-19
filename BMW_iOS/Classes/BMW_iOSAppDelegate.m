@@ -14,6 +14,7 @@
 
 @synthesize window;
 @synthesize viewController;
+@synthesize tracker;
 
 
 #pragma mark -
@@ -30,7 +31,8 @@
 	
 //	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];
 	
-	[[[SensorReader alloc] init] startReading];
+	reader = [[SensorReader alloc] init];
+	[reader startReading];
 
     return YES;
 }
@@ -41,6 +43,7 @@
      See also applicationDidEnterBackground:.
      */
 	[viewController signalStop];
+	[reader stopReading];
 }
 
 
@@ -58,6 +61,7 @@
 
 - (void)dealloc {
     [viewController release];
+	[reader release];
     [window release];
     [super dealloc];
 }

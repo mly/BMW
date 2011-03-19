@@ -9,16 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "ObjectiveResource.h"
 #include "SensorReader.h"
+#include "StatsTracker.h"
 
 @class ImageProcessingViewController;
 
 @interface BMW_iOSAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     ImageProcessingViewController *viewController;
+	SensorReader *reader;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet ImageProcessingViewController *viewController;
+@property (readonly) StatsTracker *tracker;
 
 @end
 

@@ -16,6 +16,7 @@
 }
 -(void)addStats:(NSMutableDictionary *)stat;
 -(void)addStat:(id)stat withValue:(id)value;
++(StatsTracker *)sharedTracker;//for simplicity's sake - eventually we probably just want to pass this, not do it as a singleton
 
 @property(readonly) NSDictionary *currentStats;
 

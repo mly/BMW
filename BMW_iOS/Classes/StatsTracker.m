@@ -12,6 +12,15 @@
 @implementation StatsTracker
 @synthesize currentStats;
 
+//for simplicity's sake - eventually we probably just want to pass this, not do it as a singleton
+static StatsTracker *sharedTracker;
++(StatsTracker *)sharedTracker
+{
+	if(!sharedTracker)
+		sharedTracker = [[StatsTracker alloc] init];
+	return sharedTracker;
+}
+
 -(id)init
 {
 	if(self=[super init])
@@ -28,6 +37,7 @@
 	currentStats = stat;
 	[currentStats retain];
 	[stats addObject:currentStats];
+	NSLog(@"%@",currentStats);
 	curIndex++;
 }
 

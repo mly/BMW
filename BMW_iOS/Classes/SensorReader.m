@@ -7,6 +7,7 @@
 //
 
 #import "SensorReader.h"
+#include "StatsTracker.h"
 
 #define UPDATE_INTERVAL 5.0f/1.0f;
 #define METERS_SEC_MILES_HOUR_CONVERSION 2.2369
@@ -42,7 +43,7 @@
 			[stats setObject:locationManager.location forKey:@"Location"];
 			[stats setObject:locationManager.heading forKey:@"Heading"];
 			[stats setObject:[NSDate date] forKey:@"Date"];
-			NSLog(@"%@",stats);
+			[[StatsTracker sharedTracker] addStats:stats];
 			[stats release];
 		}
 	}];

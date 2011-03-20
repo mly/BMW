@@ -43,7 +43,8 @@
 
 -(void)endCurrentRoute {
 	[currentRoute addWaypoint:currentLocation];
-	//save
+	//save route
+	//create user run for that route (including time for each waypoint)
 	[currentRoute release];
 	currentRoute = nil;
 }

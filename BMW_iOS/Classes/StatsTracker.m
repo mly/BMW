@@ -65,6 +65,7 @@ static StatsTracker *sharedTracker;
 	[self maxSpeed];
 	[self altitudeRange];
 	[self averageSpeed];
+	[self stopTime];
 }
 
 -(void)maxSpeed
@@ -101,5 +102,29 @@ static StatsTracker *sharedTracker;
 		prev = [[[stats objectAtIndex:curIndex-1] objectForKey:MAX_SPEED] doubleValue];
 	double average = (l.speed+prev*([stats count]-1))/[stats count];
 	[self addStat:AVERAGE_SPEED withValue:[NSNumber numberWithDouble:average]];
+}
+
+-(void)stopTime
+{
+	if(curIndex < 1)
+	{
+		[self addStat:CURRENT_STOP_TIME withValue:[NSNumber numberWithDouble:0]];
+		[self addStat:LIFETIME_STOP_TIME withValue:[NSNumber numberWithDouble:0]];
+		return;
+	}
+	CLLocation *l = [currentStats objectForKey:LOCATION];
+	double lifetime = [[[stats objectAtIndex:curIndex-1] objectForKey:LIFETIME_STOP_TIME] doubleValue];
+	if((double)l.speed != 0)
+	{
+		[self addStat:CURRENT_STOP_TIME withValue:[NSNumber numberWithDouble:0]];
+		[self addStat:LIFETIME_STOP_TIME withValue:[NSNumber numberWithDouble:lifetime]];
+		return;
+	}
+	NSDate *prevD = [[stats objectAtIndex:curIndex-1] objectForKey:DATE];
+	NSDate *curD = [currentStats objectForKey:DATE];
+	double curStopTime = [[[stats objectAtIndex:curIndex-1] objectForKey:CURRENT_STOP_TIME] doubleValue];
+	double timeDiff = [prevD timeIntervalSinceDate:curD];
+	[self addStat:CURRENT_STOP_TIME withValue:[NSNumber numberWithDouble:curStopTime+timeDiff]];
+	[self addStat:LIFETIME_STOP_TIME withValue:[NSNumber numberWithDouble:lifetime+timeDiff]];
 }
 @end

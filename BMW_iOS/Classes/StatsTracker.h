@@ -15,6 +15,8 @@
 #define AVERAGE_SPEED @"Average Speed"
 #define MAX_ALTITUDE @"Max Altitude"
 #define MIN_ALTITUDE @"Min Altitude"
+#define CURRENT_STOP_TIME @"Current Stop Time"
+#define LIFETIME_STOP_TIME @"Lifetime Stop Time"
 
 @interface StatsTracker : NSObject {
 	NSMutableArray *stats;

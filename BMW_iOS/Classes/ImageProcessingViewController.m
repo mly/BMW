@@ -9,6 +9,7 @@
 enum {
 	UNIFORM_TRANSLATE,
     UNIFORM_VIDEOFRAME,
+	UNIFORM_PHASE,
     NUM_UNIFORMS
 };
 GLint uniforms[NUM_UNIFORMS];
@@ -94,9 +95,10 @@ enum {
 	
 	// Update uniform values
 	glUniform1f(uniforms[UNIFORM_TRANSLATE], transY);
-	glUniform1i(uniforms[UNIFORM_VIDEOFRAME], 0);	
+	glUniform1i(uniforms[UNIFORM_VIDEOFRAME], 0);
+	glUniform1f(uniforms[UNIFORM_PHASE], transY);
 	
-	transY += 0.01f;
+	transY += 0.1f;
 		
 	// Update attribute values.
 	glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
@@ -175,6 +177,7 @@ enum {
     // Get uniform locations.
     uniforms[UNIFORM_TRANSLATE] = glGetUniformLocation(*programPointer, "translate");
 	uniforms[UNIFORM_VIDEOFRAME] = glGetUniformLocation(*programPointer, "videoFrame");
+	uniforms[UNIFORM_PHASE] = glGetUniformLocation(*programPointer, "phase");
     
     // Release vertex and fragment shaders.
     if (vertexShader)

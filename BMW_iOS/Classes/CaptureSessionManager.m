@@ -129,7 +129,7 @@
 	NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
 	for (AVCaptureDevice *device in devices) 
 	{
-#ifdef USE_FRONT_CAMERA
+#if USE_FRONT_CAMERA
 		if ([device position] == AVCaptureDevicePositionFront) 
 		{
 			camera = device;

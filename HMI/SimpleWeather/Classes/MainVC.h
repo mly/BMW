@@ -21,6 +21,8 @@
 	IDLoadingLabel* stateLabel;
 	
 	MenuVC* menuVC;
+	NSTimer *imageTimer;
+	IBOutlet UIView *dashboardView;
 }
 @property(retain) IDButton* homeButton;
 @property(retain) IDButton* currentButton;

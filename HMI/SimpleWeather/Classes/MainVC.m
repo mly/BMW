@@ -158,6 +158,8 @@
 	// Display View
 	[viewImage setImage: [UIImage imageNamed:@"Dashboard.png"]];
 	[stateLabel setText: nil];
+	
+	//imageTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(updateDashboardImage:) userInfo:nil repeats:YES];
 	//[stateLabel stopAnimating];
 }
 
@@ -180,6 +182,32 @@
 	[stateLabel setText: @"Leaderboards"];
 	
 	[menuVC show]; // This doesn't actually present the view as it was originally desinged to do. That is hard-coded into the xml file.
+}
+
+-(void)updateDashboardImage:(id)sender {
+	if (!dashboardView) {
+		[[NSBundle mainBundle] loadNibNamed:@"Dashboard" owner:self options:nil];
+		//dashboardView = [[UIView alloc] init];
+		NSLog(@"WTF view not initialized");
+	}
+	
+	
+	
+	
+	NSLog(@"updating dash image");
+	//UIView *myView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 400, 400)];
+	//myView.backgroundColor = [UIColor clearColor];
+	//UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 30)];
+	//myLabel.text = @"Hello World";
+	//myLabel.textColor = [UIColor whiteColor];
+	//[myView addSubview:myLabel];				  
+	
+	UIGraphicsBeginImageContext(dashboardView.bounds.size);
+	[dashboardView.layer renderInContext:UIGraphicsGetCurrentContext()];
+	UIImage *dashImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	[viewImage setImage:dashImage];
 }
 
 

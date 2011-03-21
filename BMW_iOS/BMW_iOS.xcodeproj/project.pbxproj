@@ -133,6 +133,11 @@
 		7BFC783813251D00004983A8 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7BFC783713251D00004983A8 /* haarcascade_frontalface_default.xml */; };
 		7BFC783913251D00004983A8 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7BFC783713251D00004983A8 /* haarcascade_frontalface_default.xml */; };
 		7BFC783A13251D00004983A8 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7BFC783713251D00004983A8 /* haarcascade_frontalface_default.xml */; };
+		D409CECC133716CE0078F9DC /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D409CECA133716CE0078F9DC /* MapViewController.m */; };
+		D409CECD133716CE0078F9DC /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D409CECB133716CE0078F9DC /* MapViewController.xib */; };
+		D409CFA0133753010078F9DC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D409CF9F133753010078F9DC /* MapKit.framework */; };
+		D409D013133758450078F9DC /* AnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D409D010133758450078F9DC /* AnnotationView.m */; };
+		D409D014133758450078F9DC /* CurrentLocationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D409D012133758450078F9DC /* CurrentLocationAnnotation.m */; };
 		D43DB5B513261BFA00DCAD92 /* VelocityEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5B413261BFA00DCAD92 /* VelocityEvent.m */; };
 		D43DB61713261DE900DCAD92 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5CC13261DE900DCAD92 /* Connection.m */; };
 		D43DB61813261DE900DCAD92 /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5CE13261DE900DCAD92 /* ConnectionDelegate.m */; };
@@ -201,6 +206,14 @@
 		7BFC77191325078F004983A8 /* libcv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcv.a; path = opencv_device/lib/libcv.a; sourceTree = "<group>"; };
 		7BFC771A1325078F004983A8 /* libcxcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcxcore.a; path = opencv_device/lib/libcxcore.a; sourceTree = "<group>"; };
 		7BFC783713251D00004983A8 /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = haarcascade_frontalface_default.xml; path = opencv_device/share/opencv/haarcascades/haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		D409CEC9133716CE0078F9DC /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		D409CECA133716CE0078F9DC /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		D409CECB133716CE0078F9DC /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		D409CF9F133753010078F9DC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D409D00F133758450078F9DC /* AnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationView.h; sourceTree = "<group>"; };
+		D409D010133758450078F9DC /* AnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationView.m; sourceTree = "<group>"; };
+		D409D011133758450078F9DC /* CurrentLocationAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationAnnotation.h; sourceTree = "<group>"; };
+		D409D012133758450078F9DC /* CurrentLocationAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationAnnotation.m; sourceTree = "<group>"; };
 		D43DB5B313261BFA00DCAD92 /* VelocityEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VelocityEvent.h; sourceTree = "<group>"; };
 		D43DB5B413261BFA00DCAD92 /* VelocityEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VelocityEvent.m; sourceTree = "<group>"; };
 		D43DB5CB13261DE900DCAD92 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
@@ -303,6 +316,7 @@
 				7B41784F1324926100BE9374 /* Accelerate.framework in Frameworks */,
 				7BFC771B1325078F004983A8 /* libcv.a in Frameworks */,
 				7BFC771C1325078F004983A8 /* libcxcore.a in Frameworks */,
+				D409CFA0133753010078F9DC /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +380,7 @@
 				D43DB5B413261BFA00DCAD92 /* VelocityEvent.m */,
 				D445E4791331C6050036DEB7 /* RoutingOverlayViewController.h */,
 				D445E47A1331C6050036DEB7 /* RoutingOverlayViewController.m */,
+				D409CFC8133755460078F9DC /* Map Stuff */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -432,6 +447,7 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 				D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */,
+				D409CF9F133753010078F9DC /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -443,6 +459,20 @@
 				7BFC771A1325078F004983A8 /* libcxcore.a */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		D409CFC8133755460078F9DC /* Map Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				D409D00F133758450078F9DC /* AnnotationView.h */,
+				D409D010133758450078F9DC /* AnnotationView.m */,
+				D409D011133758450078F9DC /* CurrentLocationAnnotation.h */,
+				D409D012133758450078F9DC /* CurrentLocationAnnotation.m */,
+				D409CEC9133716CE0078F9DC /* MapViewController.h */,
+				D409CECA133716CE0078F9DC /* MapViewController.m */,
+				D409CECB133716CE0078F9DC /* MapViewController.xib */,
+			);
+			name = "Map Stuff";
 			sourceTree = "<group>";
 		};
 		D43DB5CA13261DE900DCAD92 /* objective_resource */ = {
@@ -667,6 +697,7 @@
 				D4B8F366131E3D61002C1A44 /* DataOverlayViewController.xib in Resources */,
 				7BFC783813251D00004983A8 /* haarcascade_frontalface_default.xml in Resources */,
 				D445E47D1331C6050036DEB7 /* RoutingOverlayViewController.xib in Resources */,
+				D409CECD133716CE0078F9DC /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +768,9 @@
 				D43DB63313261DE900DCAD92 /* ObjectiveResourceConfig.m in Sources */,
 				D43DB63413261DE900DCAD92 /* Response.m in Sources */,
 				D445E47C1331C6050036DEB7 /* RoutingOverlayViewController.m in Sources */,
+				D409CECC133716CE0078F9DC /* MapViewController.m in Sources */,
+				D409D013133758450078F9DC /* AnnotationView.m in Sources */,
+				D409D014133758450078F9DC /* CurrentLocationAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

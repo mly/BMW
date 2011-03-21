@@ -16,6 +16,8 @@
 
 @implementation BMW_iOSViewController
 
+@synthesize currentLocation;
+
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -195,6 +197,11 @@
 		 NSLog(@"Altitude: %f",locationManager.location.altitude);
 #endif
 	}];
+	
+#if MAP_VIEW
+	MapViewController *mapVC = [[MapViewController alloc] init];
+	[self.view addSubview:mapVC.view];
+#endif
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
@@ -206,6 +213,8 @@
 	Vav = (totalDist / (CACurrentMediaTime() - timeZero))*METERS_SEC_MILES_HOUR_CONVERSION;
 	NSLog(@"Current gps speed: %f mph", Vgps);
 	NSLog(@"Current average speed: %f mph", Vav);
+	
+	currentLocation = newLocation;
 	
 	[routingOverlayVC locationDidUpdate:newLocation];
 	

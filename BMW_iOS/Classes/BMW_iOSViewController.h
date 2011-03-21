@@ -13,6 +13,7 @@
 #import "GravityObject.h"
 #import "DataOverlayViewController.h"
 #import "RoutingOverlayViewController.h"
+#import "MapViewController.h"
 #if TARGET_OS_IPHONE &&!TARGET_IPHONE_SIMULATOR
 #include "CaptureSessionManager.h"
 #endif
@@ -32,12 +33,16 @@
 	IBOutlet UIImageView *iv;
 	UIImage *processedImage;
 	
+	CLLocation *currentLocation;
+	
 	bool dirty;
 }
 -(void)signalStart;
 -(void)signalStop;
 -(void) refreshDisplay;
 -(void) setProcessedImage:(CGImageRef)image;
+
+@property (nonatomic, retain) CLLocation *currentLocation;
 
 @end
 

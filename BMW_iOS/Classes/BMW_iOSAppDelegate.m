@@ -15,7 +15,6 @@
 @synthesize window;
 @synthesize viewController;
 
-
 #pragma mark -
 #pragma mark Application lifecycle
 
@@ -53,6 +52,10 @@
      */
 	//[viewController signalStop];
 	//[viewController signalStart];
+}
+
+-(CLLocation *)currentLocation {
+	return viewController.currentLocation;
 }
 
 

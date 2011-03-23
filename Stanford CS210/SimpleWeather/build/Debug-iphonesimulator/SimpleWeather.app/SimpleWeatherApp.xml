@@ -1,0 +1,57 @@
+<pluginApps>
+    <pluginApp applicationType="OnlineServices" applicationWeight="10" text="MINI 360">
+        <actions>
+            <hmiAction id="20" target="1" />
+            <raAction id="12" />
+            <raAction id="13" />
+            <raAction id="14" />
+            <combinedAction id="10">
+                <actions>
+                    <hmiAction id="11" target="23" />
+                    <raAction id="15" />
+                </actions>
+            </combinedAction>
+            <combinedAction id="25">
+                <actions>
+                    <hmiAction id="26" target="0" targetModel="28" />
+                    <raAction id="27" />
+                </actions>
+            </combinedAction>
+        </actions>
+        <models>
+            <raImageModel id="2" />
+            <imageIdModel id="4" imageId="55002" />
+            <imageIdModel id="5" imageId="55003" />
+            <imageIdModel id="6" imageId="55001" />
+            <imageIdModel id="7" imageId="55004" />
+            <raDataModel id="8" />
+            <raListModel id="21" />
+            <raIntModel id="28" value="0" />
+        </models>
+        <hmiStates>
+            <toolbarHmiState id="1" text="MINI 360">
+                <components>
+                    <image id="3" model="2" />
+                    <label id="9" model="8" />
+                </components>
+                <optionComponents>
+                </optionComponents>
+                <toolbarComponents>
+                    <button id="16" action="12" imageModel="6" />
+                    <button id="17" action="13" imageModel="4" />
+                    <button id="18" action="14" imageModel="5" />
+                    <button id="19" action="10" imageModel="7" />
+                </toolbarComponents>
+            </toolbarHmiState>
+            <hmiState id="23" text="Current MINI Rankings">
+                <components>
+                    <list id="24" model="21" action="25" />
+                </components>
+            </hmiState>
+        </hmiStates>
+        <events>
+            <actionEvent id="22" action="20" />
+        </events>
+        <entryButton id="33" text="MINI 360" action="20" />
+    </pluginApp>
+</pluginApps>

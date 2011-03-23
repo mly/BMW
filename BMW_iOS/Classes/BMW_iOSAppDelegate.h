@@ -9,18 +9,22 @@
 #import <UIKit/UIKit.h>
 #import "ObjectiveResource.h"
 #import <CoreLocation/CoreLocation.h>
+#include "SensorReader.h"
+#include "StatsTracker.h"
 
-@class BMW_iOSViewController;
+@class ImageProcessingViewController;
 
 @interface BMW_iOSAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    BMW_iOSViewController *viewController;
+    ImageProcessingViewController *viewController;
+	SensorReader *reader;
 }
 
 -(CLLocation *)currentLocation;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet BMW_iOSViewController *viewController;
+@property (nonatomic, retain) IBOutlet ImageProcessingViewController *viewController;
+@property (readonly) StatsTracker *tracker;
 
 
 

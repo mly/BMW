@@ -25,10 +25,6 @@
 		7B236137132FD38700548F13 /* StatsTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B236136132FD38700548F13 /* StatsTracker.m */; };
 		7B236138132FD38700548F13 /* StatsTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B236136132FD38700548F13 /* StatsTracker.m */; };
 		7B236139132FD38700548F13 /* StatsTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B236136132FD38700548F13 /* StatsTracker.m */; };
-		7B2362DD133068FF00548F13 /* mblue.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362D9133068FF00548F13 /* mblue.fsh */; };
-		7B2362DE133068FF00548F13 /* mblue.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DA133068FF00548F13 /* mblue.vsh */; };
-		7B2362DF133068FF00548F13 /* mred.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DB133068FF00548F13 /* mred.fsh */; };
-		7B2362E0133068FF00548F13 /* mred.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DC133068FF00548F13 /* mred.vsh */; };
 		7B2362E1133068FF00548F13 /* mblue.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362D9133068FF00548F13 /* mblue.fsh */; };
 		7B2362E2133068FF00548F13 /* mblue.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DA133068FF00548F13 /* mblue.vsh */; };
 		7B2362E3133068FF00548F13 /* mred.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DB133068FF00548F13 /* mred.fsh */; };
@@ -37,6 +33,18 @@
 		7B2362E6133068FF00548F13 /* mblue.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DA133068FF00548F13 /* mblue.vsh */; };
 		7B2362E7133068FF00548F13 /* mred.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DB133068FF00548F13 /* mred.fsh */; };
 		7B2362E8133068FF00548F13 /* mred.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DC133068FF00548F13 /* mred.vsh */; };
+		7B383EDA133B3D4B0018B146 /* mblue.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362D9133068FF00548F13 /* mblue.fsh */; };
+		7B383EDB133B3D4B0018B146 /* mblue.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362DA133068FF00548F13 /* mblue.vsh */; };
+		7B383EDC133B3D4B0018B146 /* mred.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362DB133068FF00548F13 /* mred.fsh */; };
+		7B383EDD133B3D4B0018B146 /* mred.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362DC133068FF00548F13 /* mred.vsh */; };
+		7B383EEC133B40570018B146 /* mblue.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362D9133068FF00548F13 /* mblue.fsh */; };
+		7B383EED133B40570018B146 /* mblue.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362DA133068FF00548F13 /* mblue.vsh */; };
+		7B383EEE133B40570018B146 /* mred.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362DB133068FF00548F13 /* mred.fsh */; };
+		7B383EEF133B40570018B146 /* mred.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362DC133068FF00548F13 /* mred.vsh */; };
+		7B383EF0133B405E0018B146 /* mblue.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362D9133068FF00548F13 /* mblue.fsh */; };
+		7B383EF1133B405E0018B146 /* mblue.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362DA133068FF00548F13 /* mblue.vsh */; };
+		7B383EF2133B405E0018B146 /* mred.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362DB133068FF00548F13 /* mred.fsh */; };
+		7B383EF3133B405E0018B146 /* mred.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362DC133068FF00548F13 /* mred.vsh */; };
 		7B41784F1324926100BE9374 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B41784E1324926100BE9374 /* Accelerate.framework */; };
 		7B4EC7F81313516E00175D77 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4EC7F61313516E00175D77 /* CoreMotion.framework */; };
 		7B4EC7F91313516E00175D77 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4EC7F71313516E00175D77 /* CoreLocation.framework */; };
@@ -802,6 +810,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B383EF0133B405E0018B146 /* mblue.fsh in Resources */,
+				7B383EF1133B405E0018B146 /* mblue.vsh in Resources */,
+				7B383EF2133B405E0018B146 /* mred.fsh in Resources */,
+				7B383EF3133B405E0018B146 /* mred.vsh in Resources */,
 				7B053D11132CF35D00E2AB1C /* DirectDisplayShader.fsh in Resources */,
 				7B053D12132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */,
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
@@ -816,6 +828,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B383EEC133B40570018B146 /* mblue.fsh in Resources */,
+				7B383EED133B40570018B146 /* mblue.vsh in Resources */,
+				7B383EEE133B40570018B146 /* mred.fsh in Resources */,
+				7B383EEF133B40570018B146 /* mred.vsh in Resources */,
 				7B053D0F132CF35D00E2AB1C /* DirectDisplayShader.fsh in Resources */,
 				7B053D10132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */,
 				7BECBA971324FECB00E9D057 /* MainWindow.xib in Resources */,
@@ -830,6 +846,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B383EDA133B3D4B0018B146 /* mblue.fsh in Resources */,
+				7B383EDB133B3D4B0018B146 /* mblue.vsh in Resources */,
+				7B383EDC133B3D4B0018B146 /* mred.fsh in Resources */,
+				7B383EDD133B3D4B0018B146 /* mred.vsh in Resources */,
 				7B053D0D132CF35D00E2AB1C /* DirectDisplayShader.fsh in Resources */,
 				7B053D0E132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */,
 				7BECBAEC1324FFB300E9D057 /* MainWindow.xib in Resources */,
@@ -997,10 +1017,6 @@
 				7BD13509132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */,
 				7BD1357B132DB86600150AA0 /* SensorReader.m in Sources */,
 				7B236137132FD38700548F13 /* StatsTracker.m in Sources */,
-				7B2362DD133068FF00548F13 /* mblue.fsh in Sources */,
-				7B2362DE133068FF00548F13 /* mblue.vsh in Sources */,
-				7B2362DF133068FF00548F13 /* mred.fsh in Sources */,
-				7B2362E0133068FF00548F13 /* mred.vsh in Sources */,
 				7BD472EA133A5FFC001A9741 /* RoutingOverlayViewController.m in Sources */,
 				7BD472F5133A6060001A9741 /* MapViewController.m in Sources */,
 				7BD47300133A607C001A9741 /* AnnotationView.m in Sources */,

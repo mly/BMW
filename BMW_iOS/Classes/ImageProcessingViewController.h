@@ -13,6 +13,8 @@
 	ImageProcessingGLView *glView;
 	
 	GLuint directDisplayProgram;
+	GLuint redProgram;
+	GLuint blueProgram;
 	GLuint videoFrameTexture;
 	GLubyte *rawPositionPixels;
 }

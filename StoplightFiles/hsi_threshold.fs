@@ -8,6 +8,10 @@ float GH_MIN = 150.0;
 float GH_MAX = 180.0;
 float GS_THRESHOLD = .6;
 
+float YH_MIN = 20.0;
+float YH_MAX = 60.0;
+float YS_THRESHOLD = .5;
+
 float I_THRESHOLD = 100.0;
 
 float RED_THRESHOLD = 200.0;
@@ -64,6 +68,13 @@ void main()
 			gl_FragColor = vec4(0, pixel.g, 0, 1);
 		} else gl_FragColor = vec4(0,0,0,1);	
 
-	}
+	//Check for yellow traffic lights
+	} else if (hue >= YH_MIN && hue <= YH_MAX && sat >= YS_THRESHOLD && ins >= I_THRESHOLD) {
+		
+		if (pixel.r > RED_THRESHOLD && pixel.g > RED_THRESHOLD && pixel.b < GY_THRESHOLD) {
+			gl_FragColor = vec4(pixel.r, pixel.g, 0, 1);
+		} else gl_FragColor = vec4(0,0,0,1);
+
+	} else gl_FragColor = vec4(0,0,0,1);
 	
 }

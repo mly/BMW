@@ -5,6 +5,7 @@
             <raAction id="12" />
             <raAction id="13" />
             <raAction id="14" />
+            <raAction id="29" />
             <combinedAction id="10">
                 <actions>
                     <hmiAction id="11" target="23" />
@@ -23,6 +24,7 @@
             <imageIdModel id="4" imageId="55002" />
             <imageIdModel id="5" imageId="55003" />
             <imageIdModel id="6" imageId="55001" />
+            <imageIdModel id="31" imageId="55005" />
             <imageIdModel id="7" imageId="55004" />
             <raDataModel id="8" />
             <raListModel id="21" />
@@ -38,6 +40,7 @@
                 </optionComponents>
                 <toolbarComponents>
                     <button id="16" action="12" imageModel="6" />
+                    <button id="30" action="29" imageModel="31" />
                     <button id="17" action="13" imageModel="4" />
                     <button id="18" action="14" imageModel="5" />
                     <button id="19" action="10" imageModel="7" />

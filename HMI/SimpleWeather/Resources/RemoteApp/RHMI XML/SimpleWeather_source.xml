@@ -54,6 +54,11 @@
         <id>ACT_Destination_Clicked</id>
         <numericId>14</numericId>
       </raAction>
+      <raAction>
+        <id>ACT_Route_Clicked</id>
+        <actionType></actionType>
+        <numericId>29</numericId>
+      </raAction>
       <combinedAction>
         <id>CAC_Lookup_Clicked</id>
         <numericId>10</numericId>
@@ -106,6 +111,11 @@
         <imageId>RES_Home</imageId>
       </imageIdModel>
       <imageIdModel>
+        <id>MDL_Image_Route</id>
+        <numericId>31</numericId>
+        <imageId>RES_Route</imageId>
+      </imageIdModel>
+      <imageIdModel>
         <id>MDL_Image_Search</id>
         <numericId>7</numericId>
         <imageId>RES_Search</imageId>
@@ -156,6 +166,12 @@
             <tooltipText></tooltipText>
             <action>ACT_Home_Clicked</action>
             <imageModel>MDL_Image_Home</imageModel>
+          </button>
+          <button>
+            <id>BTN_Route</id>
+            <numericId>30</numericId>
+            <action>ACT_Route_Clicked</action>
+            <imageModel>MDL_Image_Route</imageModel>
           </button>
           <button>
             <id>BTN_Current</id>
@@ -222,6 +238,13 @@
         <numericId>55004</numericId>
         <imageInstance>
           <uri>Bitmaps\icon_leaderboards.png</uri>
+        </imageInstance>
+      </imageResource>
+      <imageResource>
+        <id>RES_Route</id>
+        <numericId>55005</numericId>
+        <imageInstance>
+          <uri>Bitmaps\icon_route.png</uri>
         </imageInstance>
       </imageResource>
     </resources>

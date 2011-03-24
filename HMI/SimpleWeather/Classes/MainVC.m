@@ -13,6 +13,7 @@
 
 @implementation MainVC
 @synthesize homeButton;
+@synthesize routeButton;
 @synthesize currentButton;
 @synthesize destButton;
 @synthesize lookupButton;
@@ -35,6 +36,7 @@
 		// Widgets
 		
 		self.homeButton = [[[IDButton alloc] initWithViewController:self	widgetID:BTN_Home			modelID:-1	imageModelID:-1	actionID:ACT_Home_Clicked targetModelID:-1] autorelease];
+		self.routeButton = [[[IDButton alloc] initWithViewController:self   widgetID:BTN_Route          modelID:-1  imageModelID:-1 actionID:ACT_Route_Clicked targetModelID:-1] autorelease];
 		self.currentButton = [[[IDButton alloc] initWithViewController:self	widgetID:BTN_Current		modelID:-1	imageModelID:-1	actionID:ACT_Current_Clicked targetModelID:-1] autorelease];
 		self.destButton = [[[IDButton alloc] initWithViewController:self	widgetID:BTN_Destination	modelID:-1	imageModelID:-1	actionID:ACT_Destination_Clicked targetModelID:-1] autorelease];
 		self.lookupButton = [[[IDButton alloc] initWithViewController:self	widgetID:BTN_Lookup			modelID:-1	imageModelID:-1	actionID:ACT_Lookup_Clicked targetModelID:-1] autorelease];
@@ -45,6 +47,7 @@
 //		[[[IDLabel alloc] initWithViewController:self widgetID:LBL_State modelID:MDL_Text_State] autorelease];
 
 		[self addWidget: homeButton];
+		[self addWidget: routeButton];
 		[self addWidget: currentButton];
 		[self addWidget: destButton];
 		[self addWidget: lookupButton];
@@ -81,11 +84,12 @@
 -(void)rhmiDidStart
 {
 	[homeButton		setTarget:self	selector:@selector(homeButtonClicked:)];
+	[routeButton setTarget:self selector:@selector(routeButtonClicked:)];
 	[currentButton	setTarget:self	selector:@selector(currentButtonClicked:)];
 	[destButton		setTarget:self	selector:@selector(destButtonClicked:)];
 	[lookupButton	setTarget:self	selector:@selector(lookupButtonClicked:)];
 	
-	[viewImage setPosition: CGPointMake(10, 10)];
+	[viewImage setPosition: CGPointMake(-50, 20)];
 	[stateLabel setPosition: CGPointMake(50, 50)];
 	[stateLabel setHidesWhenStopped:NO];
 	
@@ -161,6 +165,11 @@
 	
 	//imageTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(updateDashboardImage:) userInfo:nil repeats:YES];
 	//[stateLabel stopAnimating];
+}
+
+-(void)routeButtonClicked:(IDButton *)button {
+	[viewImage setImage:[UIImage imageNamed:@"Routing.png"]];
+	[stateLabel setText:@""];
 }
 
 -(void)currentButtonClicked:(IDButton*)button

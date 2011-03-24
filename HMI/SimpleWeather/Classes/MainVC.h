@@ -13,6 +13,7 @@
 @interface MainVC : IDViewController {
 	
 	IDButton* homeButton;
+	IDButton* routeButton;
 	IDButton* currentButton;
 	IDButton* destButton;
 	IDButton* lookupButton;
@@ -25,6 +26,7 @@
 	IBOutlet UIView *dashboardView;
 }
 @property(retain) IDButton* homeButton;
+@property(retain) IDButton* routeButton;
 @property(retain) IDButton* currentButton;
 @property(retain) IDButton* destButton;
 @property(retain) IDButton* lookupButton;
@@ -37,6 +39,7 @@
 
 // Button Callbacks
 -(void)homeButtonClicked:(IDButton*)button;
+-(void)routeButtonClicked:(IDButton*)button;
 -(void)currentButtonClicked:(IDButton*)button;
 -(void)destButtonClicked:(IDButton*)button;
 -(void)lookupButtonClicked:(IDButton*)button;

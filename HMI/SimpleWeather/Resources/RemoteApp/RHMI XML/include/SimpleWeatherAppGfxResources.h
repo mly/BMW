@@ -18,5 +18,6 @@
 #define RES_Current          55002
 #define RES_Dest          55003
 #define RES_Search          55004
+#define RES_Route          55005
   
 #endif /*__SimpleWeatherAppGfxResources_h__*/

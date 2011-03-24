@@ -89,7 +89,7 @@ static BOOL sm_showDebugging = NO;
 }
 
 - (GLint)indexForUniform:(NSString*)a_uniformName {
-    NSNumber* result = [m_attributeMap objectForKey:a_uniformName];
+    NSNumber* result = [m_uniformMap objectForKey:a_uniformName];
     if(result) {
         return [result intValue];
     }

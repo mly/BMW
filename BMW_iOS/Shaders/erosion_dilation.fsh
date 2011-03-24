@@ -1,23 +1,21 @@
-default precision highp;
-
 uniform sampler2D inputImage;
 
-varying vec2 pos;
+varying highp vec2 pos;
 
-uniform vec2 pixelSize;
+uniform highp vec2 pixelSize;
 
-uniform float elementWidth;
-uniform float elementHeight;
-uniform float anchorWidth;
-uniform float anchorHeight;
+uniform highp float elementWidth;
+uniform highp float elementHeight;
+uniform highp float anchorWidth;
+uniform highp float anchorHeight;
 
-uniform int erosion;
+uniform lowp int erosion;
 void main()
 {
 	
-	for (float i = 1.0 - anchorWidth; i < elementWidth - anchorWidth; i++)  {
-		for(float j = 1.0 - anchorHeight; j < elementHeight - anchorHeight; j++) {
-			vec4 pixel = texture2D(inputImage, pos + vec2(pixelSize.x * i, pixelSize.y*j));
+	for (highp float i = 1.0 - anchorWidth; i < elementWidth - anchorWidth; i++)  {
+		for(highp float j = 1.0 - anchorHeight; j < elementHeight - anchorHeight; j++) {
+			highp vec4 pixel = texture2D(inputImage, pos + vec2(pixelSize.x * i, pixelSize.y*j));
 			if (pixel.r > 0.0 || pixel.g > 0.0) {
 				if (erosion < 0) {
 					gl_FragColor = pixel;
@@ -25,7 +23,7 @@ void main()
 				}
 			} else {
 				if (erosion > 0) {
-					gl_FragColor = vec4(0,0,0,1);
+					gl_FragColor = vec4(0.0,0.0,0.0,1.0);
 					return;
 				}
 			}

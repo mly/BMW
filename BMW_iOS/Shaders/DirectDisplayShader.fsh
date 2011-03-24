@@ -1,7 +1,8 @@
-varying highp vec2 textureCoordinate;
+varying highp vec2 pos;
 
-uniform sampler2D videoFrame;
+uniform sampler2D image;
 uniform highp float phase;
+uniform highp vec4 colorFilter;
 
 void main()
 {
@@ -16,9 +17,9 @@ void main()
 //
 //ripple
 	highp vec2 r = vec2(0.5,0.5);
-	highp float dist = length((textureCoordinate-vec2(.5,.5))/r);
+	highp float dist = length((pos-vec2(.5,.5))/r);
 	highp float amplitude = 0.03;
 	highp float period = 0.3;
 	highp float delta = amplitude*sin(2.0*3.14159*dist/period-phase);
-	gl_FragColor = texture2D(videoFrame, textureCoordinate+vec2(delta,delta));
+	gl_FragColor = texture2D(image, pos+vec2(delta,delta));
 }

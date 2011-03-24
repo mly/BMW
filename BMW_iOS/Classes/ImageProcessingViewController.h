@@ -6,6 +6,7 @@
 #import <UIKit/UIKit.h>
 #import "CaptureSessionManager.h"
 #import "ImageProcessingGLView.h"
+#import "ShaderProgram.h"
 
 @interface ImageProcessingViewController : UIViewController <ImageProcessingCameraDelegate>
 {
@@ -15,6 +16,10 @@
 	GLuint directDisplayProgram;
 	GLuint redProgram;
 	GLuint blueProgram;
+	
+	NSMutableArray *shaders;
+	ShaderProgram *shader;
+	
 	GLuint videoFrameTexture;
 	GLubyte *rawPositionPixels;
 }
@@ -23,12 +28,6 @@
 
 - (void) assetWriterStart;
 - (NSURL *) fileURL;
-
-// OpenGL ES 2.0 setup methods
-- (BOOL)loadVertexShader:(NSString *)vertexShaderName fragmentShader:(NSString *)fragmentShaderName forProgram:(GLuint *)programPointer;
-- (BOOL)compileShader:(GLuint *)shader type:(GLenum)type file:(NSString *)file;
-- (BOOL)linkProgram:(GLuint)prog;
-- (BOOL)validateProgram:(GLuint)prog;
 
 @end
 

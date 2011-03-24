@@ -39,9 +39,13 @@ enum {
 	[self.view addSubview:glView];
 	[glView release];
 	
-	[self loadVertexShader:@"DirectDisplayShader" fragmentShader:@"DirectDisplayShader" forProgram:&directDisplayProgram];
-	[self loadVertexShader:@"mred" fragmentShader:@"mred" forProgram:&redProgram];
-	[self loadVertexShader:@"mblue" fragmentShader:@"mblue" forProgram:&blueProgram];
+	//shaders = [[NSMutableArray alloc] init];
+	
+	//ShaderProgram *
+	[ShaderProgram enableDebugging:YES];
+	shader = [ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"DirectDisplayShader.fsh"];
+	//[shaders addObject:shader];
+	//[shader release];
 	
 	camera = [[CaptureSessionManager alloc] init];
 	camera.delegate = self;
@@ -61,6 +65,7 @@ enum {
 {
 	free(rawPositionPixels);
 	[camera release];
+	[shaders release];
     [super dealloc];
 }
 
@@ -96,20 +101,17 @@ enum {
     glClear(GL_COLOR_BUFFER_BIT);
     
 	// Use shader program.
-	[glView setPositionThresholdFramebuffer];
-	glUseProgram(directDisplayProgram);	
-	
+	[glView setDisplayFramebuffer];	
+	[shader setAsActive];
+	 
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, videoFrameTexture);
 	
 	// Update uniform values
-	glUniform1f(uniforms[UNIFORM_TRANSLATE], transY);
-	glUniform1i(uniforms[UNIFORM_VIDEOFRAME], 0);
-	glUniform1f(uniforms[UNIFORM_PHASE], transY);
+	glUniform1i([shader indexForUniform:@"videoFrame"], 0);
+	glUniform1f([shader indexForUniform:@"phase"], transY);
 	
 	transY += 0.1f;
-		
-	NSLog(@"%f",transY);
 	
 	// Update attribute values.
 	glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
@@ -119,195 +121,30 @@ enum {
 	
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 	
-	
-	[glView setPositionThresholdFramebuffer];
-	glUseProgram(redProgram);
-	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, glView.positionRenderTexture);
-	glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
-	glEnableVertexAttribArray(ATTRIB_VERTEX);
-	glVertexAttribPointer(ATTRIB_TEXTUREPOSITON, 2, GL_FLOAT, 0, 0, passthroughTextureVertices);
-	glEnableVertexAttribArray(ATTRIB_TEXTUREPOSITON);
-	
-	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-	
-	[glView setDisplayFramebuffer];
-	glUseProgram(blueProgram);
-	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, glView.positionRenderTexture);
-	glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
-	glEnableVertexAttribArray(ATTRIB_VERTEX);
-	glVertexAttribPointer(ATTRIB_TEXTUREPOSITON, 2, GL_FLOAT, 0, 0, passthroughTextureVertices);
-	glEnableVertexAttribArray(ATTRIB_TEXTUREPOSITON);
-	
-	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+//multiple passes	
+//	[glView setPositionThresholdFramebuffer];
+//	glUseProgram(redProgram);
+//	glActiveTexture(GL_TEXTURE0);
+//	glBindTexture(GL_TEXTURE_2D, glView.positionRenderTexture);
+//	glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
+//	glEnableVertexAttribArray(ATTRIB_VERTEX);
+//	glVertexAttribPointer(ATTRIB_TEXTUREPOSITON, 2, GL_FLOAT, 0, 0, passthroughTextureVertices);
+//	glEnableVertexAttribArray(ATTRIB_TEXTUREPOSITON);
+//	
+//	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+//	
+//	[glView setDisplayFramebuffer];
+//	glUseProgram(blueProgram);
+//	glActiveTexture(GL_TEXTURE0);
+//	glBindTexture(GL_TEXTURE_2D, glView.positionRenderTexture);
+//	glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
+//	glEnableVertexAttribArray(ATTRIB_VERTEX);
+//	glVertexAttribPointer(ATTRIB_TEXTUREPOSITON, 2, GL_FLOAT, 0, 0, passthroughTextureVertices);
+//	glEnableVertexAttribArray(ATTRIB_TEXTUREPOSITON);
+//	
+//	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 	
     [glView presentFramebuffer];
-}
-
-#pragma mark -
-#pragma mark OpenGL ES 2.0 setup methods
-
-- (BOOL)loadVertexShader:(NSString *)vertexShaderName fragmentShader:(NSString *)fragmentShaderName forProgram:(GLuint *)programPointer;
-{
-    GLuint vertexShader, fragShader;
-	
-    NSString *vertShaderPathname, *fragShaderPathname;
-    
-    // Create shader program.
-    *programPointer = glCreateProgram();
-    
-    // Create and compile vertex shader.
-    vertShaderPathname = [[NSBundle mainBundle] pathForResource:vertexShaderName ofType:@"vsh"];
-    if (![self compileShader:&vertexShader type:GL_VERTEX_SHADER file:vertShaderPathname])
-    {
-        NSLog(@"Failed to compile vertex shader");
-        return FALSE;
-    }
-    
-    // Create and compile fragment shader.
-    fragShaderPathname = [[NSBundle mainBundle] pathForResource:fragmentShaderName ofType:@"fsh"];
-    if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER file:fragShaderPathname])
-    {
-        NSLog(@"Failed to compile fragment shader");
-        return FALSE;
-    }
-    
-    // Attach vertex shader to program.
-    glAttachShader(*programPointer, vertexShader);
-    
-    // Attach fragment shader to program.
-    glAttachShader(*programPointer, fragShader);
-    
-    // Bind attribute locations.
-    // This needs to be done prior to linking.
-    glBindAttribLocation(*programPointer, ATTRIB_VERTEX, "position");
-    glBindAttribLocation(*programPointer, ATTRIB_TEXTUREPOSITON, "inputTextureCoordinate");
-    
-    // Link program.
-    if (![self linkProgram:*programPointer])
-    {
-        NSLog(@"Failed to link program: %d", *programPointer);
-        
-        if (vertexShader)
-        {
-            glDeleteShader(vertexShader);
-            vertexShader = 0;
-        }
-        if (fragShader)
-        {
-            glDeleteShader(fragShader);
-            fragShader = 0;
-        }
-        if (*programPointer)
-        {
-            glDeleteProgram(*programPointer);
-            *programPointer = 0;
-        }
-        
-        return FALSE;
-    }
-    
-    // Get uniform locations.
-    uniforms[UNIFORM_TRANSLATE] = glGetUniformLocation(*programPointer, "translate");
-	uniforms[UNIFORM_VIDEOFRAME] = glGetUniformLocation(*programPointer, "videoFrame");
-	uniforms[UNIFORM_PHASE] = glGetUniformLocation(*programPointer, "phase");
-    
-    // Release vertex and fragment shaders.
-    if (vertexShader)
-	{
-        glDeleteShader(vertexShader);
-	}
-    if (fragShader)
-	{
-        glDeleteShader(fragShader);		
-	}
-    
-    return TRUE;
-}
-
-- (BOOL)compileShader:(GLuint *)shader type:(GLenum)type file:(NSString *)file
-{
-    GLint status;
-    const GLchar *source;
-    
-    source = (GLchar *)[[NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil] UTF8String];
-    if (!source)
-    {
-        NSLog(@"Failed to load vertex shader");
-        return FALSE;
-    }
-    
-    *shader = glCreateShader(type);
-    glShaderSource(*shader, 1, &source, NULL);
-    glCompileShader(*shader);
-    
-#if defined(DEBUG)
-    GLint logLength;
-    glGetShaderiv(*shader, GL_INFO_LOG_LENGTH, &logLength);
-    if (logLength > 0)
-    {
-        GLchar *log = (GLchar *)malloc(logLength);
-        glGetShaderInfoLog(*shader, logLength, &logLength, log);
-        NSLog(@"Shader compile log:\n%s", log);
-        free(log);
-    }
-#endif
-    
-    glGetShaderiv(*shader, GL_COMPILE_STATUS, &status);
-    if (status == 0)
-    {
-        glDeleteShader(*shader);
-        return FALSE;
-    }
-    
-    return TRUE;
-}
-
-- (BOOL)linkProgram:(GLuint)prog
-{
-    GLint status;
-    
-    glLinkProgram(prog);
-    
-#if defined(DEBUG)
-    GLint logLength;
-    glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
-    if (logLength > 0)
-    {
-        GLchar *log = (GLchar *)malloc(logLength);
-        glGetProgramInfoLog(prog, logLength, &logLength, log);
-        NSLog(@"Program link log:\n%s", log);
-        free(log);
-    }
-#endif
-    
-    glGetProgramiv(prog, GL_LINK_STATUS, &status);
-    if (status == 0)
-        return FALSE;
-    
-    return TRUE;
-}
-
-- (BOOL)validateProgram:(GLuint)prog
-{
-    GLint logLength, status;
-    
-    glValidateProgram(prog);
-    glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
-    if (logLength > 0)
-    {
-        GLchar *log = (GLchar *)malloc(logLength);
-        glGetProgramInfoLog(prog, logLength, &logLength, log);
-        NSLog(@"Program validate log:\n%s", log);
-        free(log);
-    }
-    
-    glGetProgramiv(prog, GL_VALIDATE_STATUS, &status);
-    if (status == 0)
-        return FALSE;
-    
-    return TRUE;
 }
 
 #pragma mark -

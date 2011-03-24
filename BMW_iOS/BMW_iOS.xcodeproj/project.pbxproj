@@ -52,6 +52,9 @@
 		7B80CC6E131C466900AD2BAA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CC6D131C466900AD2BAA /* CoreVideo.framework */; };
 		7B80CC7C131C46A800AD2BAA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CC7B131C46A800AD2BAA /* AVFoundation.framework */; };
 		7B80CD8E131C5FF400AD2BAA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CD8D131C5FF400AD2BAA /* AssetsLibrary.framework */; };
+		7BA6FF4A133B506900940874 /* ShaderProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6FF49133B506900940874 /* ShaderProgram.m */; };
+		7BA6FF4B133B506900940874 /* ShaderProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6FF49133B506900940874 /* ShaderProgram.m */; };
+		7BA6FF4C133B506900940874 /* ShaderProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6FF49133B506900940874 /* ShaderProgram.m */; };
 		7BD13508132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13505132D9E9600150AA0 /* ImageProcessingGLView.m */; };
 		7BD13509132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13507132D9E9600150AA0 /* ImageProcessingViewController.m */; };
 		7BD1350A132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13505132D9E9600150AA0 /* ImageProcessingGLView.m */; };
@@ -186,9 +189,6 @@
 		7BFC771E1325078F004983A8 /* libcxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC771A1325078F004983A8 /* libcxcore.a */; };
 		7BFC771F1325078F004983A8 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC77191325078F004983A8 /* libcv.a */; };
 		7BFC77201325078F004983A8 /* libcxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFC771A1325078F004983A8 /* libcxcore.a */; };
-		7BFC783813251D00004983A8 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7BFC783713251D00004983A8 /* haarcascade_frontalface_default.xml */; };
-		7BFC783913251D00004983A8 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7BFC783713251D00004983A8 /* haarcascade_frontalface_default.xml */; };
-		7BFC783A13251D00004983A8 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7BFC783713251D00004983A8 /* haarcascade_frontalface_default.xml */; };
 		D43DB5B513261BFA00DCAD92 /* VelocityEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5B413261BFA00DCAD92 /* VelocityEvent.m */; };
 		D43DB61713261DE900DCAD92 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5CC13261DE900DCAD92 /* Connection.m */; };
 		D43DB61813261DE900DCAD92 /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB5CE13261DE900DCAD92 /* ConnectionDelegate.m */; };
@@ -256,6 +256,10 @@
 		7B80CC6D131C466900AD2BAA /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		7B80CC7B131C46A800AD2BAA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7B80CD8D131C5FF400AD2BAA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		7BA6FF23133B461F00940874 /* default.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = default.vsh; sourceTree = "<group>"; };
+		7BA6FF24133B461F00940874 /* erosion_dilation.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = erosion_dilation.fsh; sourceTree = "<group>"; };
+		7BA6FF48133B506900940874 /* ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderProgram.h; sourceTree = "<group>"; };
+		7BA6FF49133B506900940874 /* ShaderProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShaderProgram.m; sourceTree = "<group>"; };
 		7BD13504132D9E9600150AA0 /* ImageProcessingGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingGLView.h; sourceTree = "<group>"; };
 		7BD13505132D9E9600150AA0 /* ImageProcessingGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcessingGLView.m; sourceTree = "<group>"; };
 		7BD13506132D9E9600150AA0 /* ImageProcessingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingViewController.h; sourceTree = "<group>"; };
@@ -277,7 +281,6 @@
 		7BECBB071324FFB300E9D057 /* BMW_CV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMW_CV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BFC77191325078F004983A8 /* libcv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcv.a; path = opencv_device/lib/libcv.a; sourceTree = "<group>"; };
 		7BFC771A1325078F004983A8 /* libcxcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcxcore.a; path = opencv_device/lib/libcxcore.a; sourceTree = "<group>"; };
-		7BFC783713251D00004983A8 /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = haarcascade_frontalface_default.xml; path = opencv_device/share/opencv/haarcascades/haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
 		D43DB5B313261BFA00DCAD92 /* VelocityEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VelocityEvent.h; sourceTree = "<group>"; };
 		D43DB5B413261BFA00DCAD92 /* VelocityEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VelocityEvent.m; sourceTree = "<group>"; };
 		D43DB5CB13261DE900DCAD92 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
@@ -468,7 +471,6 @@
 			isa = PBXGroup;
 			children = (
 				7B053D0A132CF35D00E2AB1C /* Shaders */,
-				7BFC783713251D00004983A8 /* haarcascade_frontalface_default.xml */,
 				32CA4F630368D1EE00C91783 /* BMW_iOS_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -512,6 +514,8 @@
 		7B053D0A132CF35D00E2AB1C /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				7BA6FF23133B461F00940874 /* default.vsh */,
+				7BA6FF24133B461F00940874 /* erosion_dilation.fsh */,
 				7B2362D9133068FF00548F13 /* mblue.fsh */,
 				7B2362DA133068FF00548F13 /* mblue.vsh */,
 				7B2362DB133068FF00548F13 /* mred.fsh */,
@@ -539,6 +543,8 @@
 				7BD13505132D9E9600150AA0 /* ImageProcessingGLView.m */,
 				7BD13506132D9E9600150AA0 /* ImageProcessingViewController.h */,
 				7BD13507132D9E9600150AA0 /* ImageProcessingViewController.m */,
+				7BA6FF48133B506900940874 /* ShaderProgram.h */,
+				7BA6FF49133B506900940874 /* ShaderProgram.m */,
 			);
 			name = "Image Processing";
 			sourceTree = "<group>";
@@ -818,7 +824,6 @@
 				7B053D12132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */,
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				D4B8F366131E3D61002C1A44 /* DataOverlayViewController.xib in Resources */,
-				7BFC783813251D00004983A8 /* haarcascade_frontalface_default.xml in Resources */,
 				7BD472F2133A6031001A9741 /* RoutingOverlayViewController.xib in Resources */,
 				7BD472FB133A606D001A9741 /* MapViewController.xib in Resources */,
 			);
@@ -836,7 +841,6 @@
 				7B053D10132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */,
 				7BECBA971324FECB00E9D057 /* MainWindow.xib in Resources */,
 				7BECBA991324FECB00E9D057 /* DataOverlayViewController.xib in Resources */,
-				7BFC783913251D00004983A8 /* haarcascade_frontalface_default.xml in Resources */,
 				7BD472F1133A6031001A9741 /* RoutingOverlayViewController.xib in Resources */,
 				7BD472FA133A606D001A9741 /* MapViewController.xib in Resources */,
 			);
@@ -854,7 +858,6 @@
 				7B053D0E132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */,
 				7BECBAEC1324FFB300E9D057 /* MainWindow.xib in Resources */,
 				7BECBAEE1324FFB300E9D057 /* DataOverlayViewController.xib in Resources */,
-				7BFC783A13251D00004983A8 /* haarcascade_frontalface_default.xml in Resources */,
 				7BD472F0133A6031001A9741 /* RoutingOverlayViewController.xib in Resources */,
 				7BD472F9133A606D001A9741 /* MapViewController.xib in Resources */,
 			);
@@ -915,6 +918,7 @@
 				7BD472F7133A6060001A9741 /* MapViewController.m in Sources */,
 				7BD47304133A607C001A9741 /* AnnotationView.m in Sources */,
 				7BD47305133A607C001A9741 /* CurrentLocationAnnotation.m in Sources */,
+				7BA6FF4C133B506900940874 /* ShaderProgram.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -970,6 +974,7 @@
 				7BD472F6133A6060001A9741 /* MapViewController.m in Sources */,
 				7BD47302133A607C001A9741 /* AnnotationView.m in Sources */,
 				7BD47303133A607C001A9741 /* CurrentLocationAnnotation.m in Sources */,
+				7BA6FF4B133B506900940874 /* ShaderProgram.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1021,6 +1026,7 @@
 				7BD472F5133A6060001A9741 /* MapViewController.m in Sources */,
 				7BD47300133A607C001A9741 /* AnnotationView.m in Sources */,
 				7BD47301133A607C001A9741 /* CurrentLocationAnnotation.m in Sources */,
+				7BA6FF4A133B506900940874 /* ShaderProgram.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,1115 @@
+TSimpleWeather
+v7
+r0
+t322570208.476086
+cCheck dependencies
+cProcessInfoPlistFile "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/Info.plist" SimpleWeather-Info.plist
+cCompileXIB "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/MainWindow.xib"
+cCompileXIB "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/SimpleWeatherViewController.xib"
+cCpResource build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp_dev.p12 Resources/RemoteApp/SimpleWeatherApp_dev.p12
+cCpResource build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp_dev.p7b Resources/RemoteApp/SimpleWeatherApp_dev.p7b
+cCpResource build/Debug-iphonesimulator/SimpleWeather.app/Sunny-Interval-icon.png Resources/RemoteApp/Sunny-Interval-icon.png
+cCpResource build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp_ALL_Images.zip "Resources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp_ALL_Images.zip"
+cCpResource build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp.xml "Resources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp.xml"
+cCpResource build/Debug-iphonesimulator/SimpleWeather.app/DrivingProfile.png Images/DrivingProfile.png
+cCpResource build/Debug-iphonesimulator/SimpleWeather.app/Dashboard.png Images/Dashboard.png
+cCpResource build/Debug-iphonesimulator/SimpleWeather.app/Achievements.png Images/Achievements.png
+cProcessPCH /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch.gch SimpleWeather_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/main.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherAppDelegate.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherViewController.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherAppController.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherApp.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherApp.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/MainVC.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/WeatherRenderer.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/WeatherRenderer.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/Forecast.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Forecast.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/Day.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Day.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/MenuVC.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MenuVC.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeather" normal i386
+cGenerateDSYMFile "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app.dSYM" "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeather"
+cTouch "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app"
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c000000004CC1288A00000000000F34A0
+t1287727242
+s996512
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000004CC1224600000000001EA9C0
+t1287725638
+s2009536
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c000000004CC1220900000000000A8450
+t1287725577
+s689232
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreTelephony.framework/CoreTelephony
+c000000004CC122BC00000000000C2CC0
+t1287725756
+s797888
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/ExternalAccessory.framework/ExternalAccessory
+c000000004CC127FD00000000000196D0
+t1287727101
+s104144
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/ExternalAccessory.framework/Headers/ExternalAccessory.h
+c000000004CC127FB0000000000000126
+t1287727099
+s294
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Security.framework/Security
+c000000004CC121E20000000000088320
+t1287725538
+s557856
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/CommonCrypto/CommonDigest.h
+c000000004A11E8210000000000002407
+t1242687521
+s9223
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Day.h
+c000000004D875A4E000000000000020E
+t1300716110
+s526
+i<Foundation/Foundation.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Day.m
+c000000004D875A4E0000000000000122
+t1300716110
+s290
+i"Day.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Forecast.h
+c000000004D875A4E000000000000015E
+t1300716110
+s350
+i<Foundation/Foundation.h>
+i"Day.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Forecast.m
+c000000004D875A4E00000000000000EE
+t1300716110
+s238
+i"Forecast.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.h
+c000000004D875A4E0000000000000395
+t1300716110
+s917
+i<Foundation/Foundation.h>
+i<iDrive/iDrive.h>
+i"MenuVC.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.m
+c000000004D875A4E0000000000001296
+t1300716110
+s4758
+i"MainVC.h"
+i"SimpleWeatherAppIDs.h"
+i"SimpleWeatherAppDelegate.h"
+i"WeatherRenderer.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MenuVC.h
+c000000004D875A4E000000000000016F
+t1300716110
+s367
+i<Foundation/Foundation.h>
+i<iDrive/iDrive.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MenuVC.m
+c000000004D875A4E0000000000000A7C
+t1300716110
+s2684
+i"MenuVC.h"
+i"SimpleWeatherAppIDs.h"
+i"SimpleWeatherApp.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherApp.h
+c000000004D875A4E000000000000014F
+t1300716110
+s335
+i<Foundation/Foundation.h>
+i"MainVC.h"
+i<iDrive/iDrive.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherApp.m
+c000000004D875A4E00000000000003BA
+t1300716110
+s954
+i"SimpleWeatherApp.h"
+i"SimpleWeatherAppIDs.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppController.h
+c000000004D875A4E000000000000034A
+t1300716110
+s842
+i<Foundation/Foundation.h>
+i<iDrive/iDrive.h>
+i"SimpleWeatherApp.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppController.m
+c000000004D875A4E0000000000000E8A
+t1300716110
+s3722
+i"SimpleWeatherAppController.h"
+i"SimpleWeatherAppDelegate.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppDelegate.h
+c000000004D875A4E00000000000002CB
+t1300716110
+s715
+i<UIKit/UIKit.h>
+i"SimpleWeatherAppController.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppDelegate.m
+c000000004D875A4E0000000000000BD0
+t1300716110
+s3024
+i"SimpleWeatherAppDelegate.h"
+i"SimpleWeatherViewController.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherViewController.h
+c000000004D875A4E0000000000000129
+t1300716110
+s297
+i<UIKit/UIKit.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherViewController.m
+c000000004D875A4E0000000000000674
+t1300716110
+s1652
+i"SimpleWeatherViewController.h"
+i"SimpleWeatherAppDelegate.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/WeatherRenderer.h
+c000000004D875A4E0000000000000132
+t1300716110
+s306
+i<Foundation/Foundation.h>
+i"Forecast.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/WeatherRenderer.m
+c000000004D875A4E0000000000000AA5
+t1300716110
+s2725
+i"WeatherRenderer.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Images/Achievements.png
+c000000004D875A4E0000000000007242
+t1300716110
+s29250
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Images/Dashboard.png
+c000000004D875A4E000000000001B38D
+t1300716110
+s111501
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Images/DrivingProfile.png
+c000000004D875A4E0000000000018958
+t1300716110
+s100696
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/MainWindow.xib
+c000000004D875A4E000000000000570C
+t1300716110
+s22284
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/RHMI XML/include/SimpleWeatherAppIDs.h
+c000000004D875A4E000000000000032D
+t1300716110
+s813
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp.xml
+c000000004D875A4E000000000000088A
+t1300716110
+s2186
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp_ALL_Images.zip
+c000000004D875A4E000000000000260B
+t1300716110
+s9739
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/SimpleWeatherApp_dev.p12
+c000000004D875A4E000000000000078E
+t1300716110
+s1934
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/SimpleWeatherApp_dev.p7b
+c000000004D875A4E000000000000095A
+t1300716110
+s2394
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/Sunny-Interval-icon.png
+c000000004D875A4E00000000000066E8
+t1300716110
+s26344
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/SimpleWeatherViewController.xib
+c000000004D875A4E0000000000005152
+t1300716110
+s20818
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/SimpleWeather_Prefix.pch
+c000000004D875A4E00000000000000C3
+t1300716110
+s195
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app
+t1300717569
+s510
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app.dSYM
+t1300717569
+s102
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/Achievements.png
+t1300717565
+s29250
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/Dashboard.png
+t1300717565
+s111501
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/DrivingProfile.png
+t1300717565
+s100696
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/Info.plist
+t1300717564
+s677
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/MainWindow.nib
+t1300717565
+s1135
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/PkgInfo
+t1300717564
+s8
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeather
+t1300717568
+s1343864
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp.xml
+t1300717565
+s2186
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp_ALL_Images.zip
+t1300717565
+s9739
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp_dev.p12
+t1300717565
+s1934
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp_dev.p7b
+t1300717565
+s2394
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherViewController.nib
+t1300717565
+s1551
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/Sunny-Interval-icon.png
+t1300717565
+s26344
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/Day.o
+t1300717567
+s10216
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/Forecast.o
+t1300717567
+s8304
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/MainVC.o
+t1300717567
+s35844
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/MenuVC.o
+t1300717567
+s23252
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeather.LinkFileList
+c000000004D7826970000000000000659
+t1299719831
+s1625
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherApp.o
+t1300717567
+s20252
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherAppController.o
+t1300717567
+s28672
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherAppDelegate.o
+t1300717567
+s59476
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherViewController.o
+t1300717567
+s41172
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/WeatherRenderer.o
+t1300717567
+s15072
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/main.o
+t1300717566
+s6340
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/CDSPropertyDefines.h
+c000000004D875A4E0000000000000303
+t1300716110
+s771
+i<Foundation/Foundation.h>
+i"CDSPropertyDefinesClimate.h"
+i"CDSPropertyDefinesCommunication.h"
+i"CDSPropertyDefinesControls.h"
+i"CDSPropertyDefinesDriving.h"
+i"CDSPropertyDefinesEngine.h"
+i"CDSPropertyDefinesEntertainment.h"
+i"CDSPropertyDefinesNavigation.h"
+i"CDSPropertyDefinesSensors.h"
+i"CDSPropertyDefinesVehicle.h"
+i"CDSPropertyDefinesHMI.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/CDSPropertyDefinesClimate.h
+c000000004D875A4E000000000000200B
+t1300716110
+s8203
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/CDSPropertyDefinesCommunication.h
+c000000004D875A4E0000000000000369
+t1300716110
+s873
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/CDSPropertyDefinesControls.h
+c000000004D875A4E000000000000274E
+t1300716110
+s10062
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/CDSPropertyDefinesDriving.h
+c000000004D875A4E0000000000002877
+t1300716110
+s10359
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/CDSPropertyDefinesEngine.h
+c000000004D875A4E0000000000001461
+t1300716110
+s5217
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/CDSPropertyDefinesEntertainment.h
+c000000004D875A4E0000000000000B15
+t1300716110
+s2837
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/CDSPropertyDefinesHMI.h
+c000000004D875A4E0000000000000566
+t1300716110
+s1382
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/CDSPropertyDefinesNavigation.h
+c000000004D875A4E000000000000178D
+t1300716110
+s6029
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/CDSPropertyDefinesSensors.h
+c000000004D875A4E0000000000001BE1
+t1300716110
+s7137
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/CDSPropertyDefinesVehicle.h
+c000000004D875A4E0000000000002ABC
+t1300716110
+s10940
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/ExternalAccessoryMonitor.h
+c000000004D875A4E0000000000000B5F
+t1300716110
+s2911
+i<Foundation/Foundation.h>
+i<ExternalAccessory/ExternalAccessory.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDAVService.h
+c000000004D875A4E0000000000000922
+t1300716110
+s2338
+i<Foundation/Foundation.h>
+i"IDService.h"
+i"IDEventHandler.h"
+i"IDAVServiceIncludes.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDAVServiceIncludes.h
+c000000004D875A4E0000000000000601
+t1300716110
+s1537
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDApplication.h
+c000000004D875A4E0000000000001C20
+t1300716110
+s7200
+i<Foundation/Foundation.h>
+i"IDEventHandler.h"
+i"IDResourceIdentifier.h"
+i"IDPropertyTypes.h"
+i"IDHmiService.h"
+i"IDSecurityAuthService.h"
+i"IDApplicationDelegate.h"
+i"IDViewController.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDApplicationDelegate.h
+c000000004D875A4E0000000000000198
+t1300716110
+s408
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDApplicationWatchdog.h
+c000000004D875A4E00000000000001BE
+t1300716110
+s446
+i<Foundation/Foundation.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDAudioLine.h
+c000000004D875A4E0000000000000744
+t1300716110
+s1860
+i<Foundation/Foundation.h>
+i"iDrive.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDButton.h
+c000000004D875A4E0000000000000725
+t1300716110
+s1829
+i<Foundation/Foundation.h>
+i"IDWidget.h"
+i"iDrive.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDCarDataService.h
+c000000004D875A4E000000000000052F
+t1300716110
+s1327
+i<Foundation/Foundation.h>
+i"IDService.h"
+i"IDEventHandler.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDCarInfo.h
+c000000004D875A4E0000000000000260
+t1300716110
+s608
+i<Foundation/Foundation.h>
+i"IDConnection.h"
+i"IDVersionInfo.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDConnection.h
+c000000004D875A4E0000000000001483
+t1300716110
+s5251
+i<Foundation/Foundation.h>
+i"IDResourceIdentifier.h"
+i"IDPropertyTypes.h"
+i"IDLogger.h"
+i"IDAVService.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDEventHandler.h
+c000000004D875A4E0000000000000434
+t1300716110
+s1076
+i<Foundation/Foundation.h>
+i"IDAVServiceIncludes.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDEventTypes.h
+c000000004D875A4E00000000000015F2
+t1300716110
+s5618
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDFlushProtocol.h
+c000000004D875A4E000000000000026A
+t1300716110
+s618
+i<UIKit/UIKit.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDHmiService.h
+c000000004D875A4E00000000000009E6
+t1300716110
+s2534
+i<Foundation/Foundation.h>
+i"IDService.h"
+i"IDPropertyTypes.h"
+i"IDResourceIdentifier.h"
+i"IDEventHandler.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDImage.h
+c000000004D875A4E00000000000003AD
+t1300716110
+s941
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i"IDWidget.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDKeyCodes.h
+c000000004D875A4E00000000000002F2
+t1300716110
+s754
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDLabel.h
+c000000004D875A4E00000000000004CC
+t1300716110
+s1228
+i<Foundation/Foundation.h>
+i"IDWidget.h"
+i"IDVariantMap.h"
+i"IDVariantData.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDLoadingLabel.h
+c000000004D875A4E00000000000001AB
+t1300716110
+s427
+i<Foundation/Foundation.h>
+i"IDLabel.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDLogger.h
+c000000004D875A4E0000000000000683
+t1300716110
+s1667
+i<Foundation/Foundation.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDMultimediaInfo.h
+c000000004D875A4E00000000000004B1
+t1300716110
+s1201
+i<Foundation/Foundation.h>
+i"IDFlushProtocol.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDOffBoardAVService.h
+c000000004D875A4E000000000000025C
+t1300716110
+s604
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDParameterTypes.h
+c000000004D875A4E0000000000000383
+t1300716110
+s899
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDPropertyTypes.h
+c000000004D875A4E0000000000002D81
+t1300716110
+s11649
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDReflectedImage.h
+c000000004D875A4E000000000000027A
+t1300716110
+s634
+i<Foundation/Foundation.h>
+i"IDImage.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDResourceIdentifier.h
+c000000004D875A4E000000000000025F
+t1300716110
+s607
+i<Foundation/Foundation.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDSecureApp.h
+c000000004D875A4E000000000000016A
+t1300716110
+s362
+i<Foundation/Foundation.h>
+i"IDApplication.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDSecurityAuthService.h
+c000000004D875A4E0000000000000312
+t1300716110
+s786
+i<Foundation/Foundation.h>
+i<CommonCrypto/CommonDigest.h>
+i"IDService.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDService.h
+c000000004D875A4E000000000000024C
+t1300716110
+s588
+i<Foundation/Foundation.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDSocketLogAppender.h
+c000000004D875A4E0000000000000210
+t1300716110
+s528
+i<Foundation/Foundation.h>
+i"IDLogger.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDStatusBar.h
+c000000004D875A4E00000000000003FD
+t1300716110
+s1021
+i<Foundation/Foundation.h>
+i"IDFlushProtocol.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDTable.h
+c000000004D875A4E0000000000000A36
+t1300716110
+s2614
+i<Foundation/Foundation.h>
+i"iDrive.h"
+i"IDWidget.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDTableCell.h
+c000000004D875A4E0000000000000737
+t1300716110
+s1847
+i<Foundation/Foundation.h>
+i"iDrive.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDTableData.h
+c000000004D875A4E00000000000002A3
+t1300716110
+s675
+i<Foundation/Foundation.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDTableRow.h
+c000000004D875A4E0000000000000297
+t1300716110
+s663
+i<Foundation/Foundation.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDVariantData.h
+c000000004D875A4E0000000000000803
+t1300716110
+s2051
+i<Foundation/Foundation.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDVariantMap.h
+c000000004D875A4E0000000000000341
+t1300716110
+s833
+i<Foundation/Foundation.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDVersionInfo.h
+c000000004D875A4E000000000000028C
+t1300716110
+s652
+i<Foundation/Foundation.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDViewController.h
+c000000004D875A4E000000000000084E
+t1300716110
+s2126
+i<Foundation/Foundation.h>
+i"IDWidget.h"
+i"IDFlushProtocol.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDViewControllerLayer.h
+c000000004D875A4E000000000000015C
+t1300716110
+s348
+i"IDViewController.h"
+i"IDWidget.h"
+i"IDImage.h"
+i"IDReflectedImage.h"
+i"IDLabel.h"
+i"IDLoadingLabel.h"
+i"IDButton.h"
+i"IDTable.h"
+i"IDTableCell.h"
+i"IDAudioLine.h"
+i"IDMultimediaInfo.h"
+i"IDStatusBar.h"
+i"UIImage+Reflection.h"
+i"IDFlushProtocol.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/IDWidget.h
+c000000004D875A4E0000000000000474
+t1300716110
+s1140
+i<Foundation/Foundation.h>
+i"IDFlushProtocol.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/NSString+IDSBJSON.h
+c000000004D875A4E0000000000000918
+t1300716110
+s2328
+i<Foundation/Foundation.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/UIImage+Reflection.h
+c000000004D875A4E00000000000003B6
+t1300716110
+s950
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/Headers/iDrive.h
+c000000004D875A4E00000000000004E3
+t1300716110
+s1251
+i<Foundation/Foundation.h>
+i"IDVersionInfo.h"
+i"IDEventTypes.h"
+i"IDPropertyTypes.h"
+i"IDParameterTypes.h"
+i"IDKeyCodes.h"
+i"IDResourceIdentifier.h"
+i"IDVariantData.h"
+i"IDVariantMap.h"
+i"IDTableRow.h"
+i"IDTableData.h"
+i"IDConnection.h"
+i"IDApplication.h"
+i"IDSecureApp.h"
+i"IDViewControllerLayer.h"
+i"IDCarDataService.h"
+i"IDService.h"
+i"IDHmiService.h"
+i"IDSecurityAuthService.h"
+i"IDCarDataService.h"
+i"NSString+IDSBJSON.h"
+i"IDCarInfo.h"
+i"CDSPropertyDefines.h"
+i"ExternalAccessoryMonitor.h"
+i"IDAVService.h"
+i"IDOffBoardAVService.h"
+i"IDSocketLogAppender.h"
+i"IDApplicationWatchdog.h"
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/iDrive
+c000000004D875A4E0000000000FFEC74
+t1300716110
+s16772212
+
+N/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/main.m
+c000000004D875A4E000000000000016E
+t1300716110
+s366
+i<UIKit/UIKit.h>
+
+N/var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch.gch
+t1300717566
+s15453392
+
+N/var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-gcherhuepqgazebeqetnqozqvbhm/SimpleWeather_Prefix.pch.gch
+t1299719833
+s15453392
+
+NSimpleWeather-Info.plist
+c000000004D875A4E00000000000003F1
+t1300716110
+s1009
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies322570208#322570208#0(0"0(0#1#0"32651513917735028#0"0#
+
+CCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/Day.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Day.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s322410367.409669
+e322410367.503473
+r1
+xCompileC
+xbuild/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/Day.o
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Day.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Day.m322410367#322410367#0(0"0(0#0#71"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Day.m8602820000#2412"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-generated-files.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-own-target-headers.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-all-target-headers.hmap" -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-project-headers.hmap" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/include" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources/i386" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources" -include /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Day.m" -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/Day.o"0#
+
+CCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/Forecast.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Forecast.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s322410367.346631
+e322410367.409569
+r1
+xCompileC
+xbuild/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/Forecast.o
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Forecast.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Forecast.m322410367#322410367#0(0"0(0#0#76"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Forecast.m8606047744#2422"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-generated-files.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-own-target-headers.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-all-target-headers.hmap" -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-project-headers.hmap" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/include" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources/i386" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources" -include /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/Forecast.m" -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/Forecast.o"0#
+
+CCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/MainVC.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s322410367.239571
+e322410367.434695
+r1
+xCompileC
+xbuild/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/MainVC.o
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.m: In function '-[MainVC homeButtonClicked:]':
+o/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.m:154: warning: unused variable 'view'
+lSLF07#2@82"Compile /Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.m322410367#322410367#0(232"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.m: In function '-[MainVC homeButtonClicked:]':/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.m:154: warning: unused variable 'view'1(22@22"Unused variable 'view'322410367#120#112#0(6@74"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.m322408910#154#0#154#0#19"unused variable '*'0(0#0#74"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.m8600042432#2418"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-generated-files.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-own-target-headers.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-all-target-headers.hmap" -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-project-headers.hmap" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/include" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources/i386" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources" -include /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MainVC.m" -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/MainVC.o"0#
+
+CCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/MenuVC.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MenuVC.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s322410367.434795
+e322410367.526849
+r1
+xCompileC
+xbuild/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/MenuVC.o
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MenuVC.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@82"Compile /Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MenuVC.m322410367#322410367#0(0"0(0#0#74"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MenuVC.m8601377280#2418"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-generated-files.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-own-target-headers.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-all-target-headers.hmap" -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-project-headers.hmap" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/include" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources/i386" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources" -include /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/MenuVC.m" -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/MenuVC.o"0#
+
+CCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherApp.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherApp.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s322410367.138041
+e322410367.239482
+r1
+xCompileC
+xbuild/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherApp.o
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherApp.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@92"Compile /Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherApp.m322410367#322410367#0(0"0(0#0#84"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherApp.m8601349952#2438"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-generated-files.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-own-target-headers.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-all-target-headers.hmap" -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-project-headers.hmap" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/include" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources/i386" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources" -include /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherApp.m" -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherApp.o"0#
+
+CCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherAppController.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s322410367.105539
+e322410367.270046
+r1
+xCompileC
+xbuild/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherAppController.o
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@102"Compile /Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppController.m322410367#322410367#0(0"0(0#0#94"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppController.m8603093792#2458"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-generated-files.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-own-target-headers.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-all-target-headers.hmap" -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-project-headers.hmap" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/include" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources/i386" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources" -include /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppController.m" -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherAppController.o"0#
+
+CCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherAppDelegate.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s322410366.902113
+e322410367.137951
+r1
+xCompileC
+xbuild/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherAppDelegate.o
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@100"Compile /Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppDelegate.m322410366#322410367#0(0"0(0#0#92"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppDelegate.m8603321728#2454"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-generated-files.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-own-target-headers.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-all-target-headers.hmap" -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-project-headers.hmap" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/include" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources/i386" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources" -include /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherAppDelegate.m" -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherAppDelegate.o"0#
+
+CCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherViewController.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s322410366.969469
+e322410367.105441
+r1
+xCompileC
+xbuild/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherViewController.o
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@103"Compile /Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherViewController.m322410366#322410367#0(0"0(0#0#95"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherViewController.m8593739936#2460"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-generated-files.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-own-target-headers.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-all-target-headers.hmap" -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-project-headers.hmap" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/include" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources/i386" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources" -include /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/SimpleWeatherViewController.m" -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeatherViewController.o"0#
+
+CCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/WeatherRenderer.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/WeatherRenderer.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s322410367.270137
+e322410367.346537
+r1
+xCompileC
+xbuild/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/WeatherRenderer.o
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/WeatherRenderer.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@91"Compile /Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/WeatherRenderer.m322410367#322410367#0(0"0(0#0#83"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/WeatherRenderer.m8598796032#2436"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-generated-files.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-own-target-headers.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-all-target-headers.hmap" -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-project-headers.hmap" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/include" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources/i386" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources" -include /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Classes/WeatherRenderer.m" -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/WeatherRenderer.o"0#
+
+CCompileC build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/main.o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s322410366.901068
+e322410366.969359
+r1
+xCompileC
+xbuild/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/main.o
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/main.m322410366#322410366#0(0"0(0#0#64"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/main.m8606472576#2406"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-generated-files.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-own-target-headers.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-all-target-headers.hmap" -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-project-headers.hmap" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/include" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources/i386" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources" -include /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/main.m" -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/main.o"0#
+
+CCompileXIB "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/MainWindow.xib"
+s322410364.299389
+e322410365.239824
+r1
+xCompileXIB
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib322410364#322410365#0(0"0(0#0#72"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/MainWindow.xib8599548704#639"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/MainWindow.nib" "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/MainWindow.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/SimpleWeatherViewController.xib"
+s322410364.300330
+e322410365.400283
+r1
+xCompileXIB
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/SimpleWeatherViewController.xib
+lSLF07#2@42"CompileXIB SimpleWeatherViewController.xib322410364#322410365#0(0"0(0#0#89"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/SimpleWeatherViewController.xib8600937088#673"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherViewController.nib" "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/SimpleWeatherViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCpResource build/Debug-iphonesimulator/SimpleWeather.app/Achievements.png Images/Achievements.png
+s322410365.250037
+e322410365.285709
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/SimpleWeather.app/Achievements.png
+xImages/Achievements.png
+lSLF07#2@28"Copy Images/Achievements.png322410365#322410365#0(0"0(0#0#81"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Images/Achievements.png8603153696#550"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Images/Achievements.png" "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app"0#
+
+CCpResource build/Debug-iphonesimulator/SimpleWeather.app/Dashboard.png Images/Dashboard.png
+s322410365.248378
+e322410365.381656
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/SimpleWeather.app/Dashboard.png
+xImages/Dashboard.png
+lSLF07#2@25"Copy Images/Dashboard.png322410365#322410365#0(0"0(0#0#78"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Images/Dashboard.png8599556864#547"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Images/Dashboard.png" "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app"0#
+
+CCpResource build/Debug-iphonesimulator/SimpleWeather.app/DrivingProfile.png Images/DrivingProfile.png
+s322410365.247422
+e322410365.382493
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/SimpleWeather.app/DrivingProfile.png
+xImages/DrivingProfile.png
+lSLF07#2@30"Copy Images/DrivingProfile.png322410365#322410365#0(0"0(0#0#83"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Images/DrivingProfile.png8601260608#552"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Images/DrivingProfile.png" "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app"0#
+
+CCpResource build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp.xml "Resources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp.xml"
+s322410365.245657
+e322410365.336638
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp.xml
+xResources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp.xml
+lSLF07#2@64"Copy Resources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp.xml322410365#322410365#0(0"0(0#0#117"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp.xml8600968384#586"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp.xml" "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app"0#
+
+CCpResource build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp_ALL_Images.zip "Resources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp_ALL_Images.zip"
+s322410365.243902
+e322410365.345187
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp_ALL_Images.zip
+xResources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp_ALL_Images.zip
+lSLF07#2@75"Copy Resources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp_ALL_Images.zip322410365#322410365#0(0"0(0#0#128"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp_ALL_Images.zip8602599296#597"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/RHMI XML/res/build/SimpleWeatherApp_ALL_Images.zip" "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app"0#
+
+CCpResource build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp_dev.p12 Resources/RemoteApp/SimpleWeatherApp_dev.p12
+s322410365.239903
+e322410365.335396
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp_dev.p12
+xResources/RemoteApp/SimpleWeatherApp_dev.p12
+lSLF07#2@49"Copy Resources/RemoteApp/SimpleWeatherApp_dev.p12322410365#322410365#0(0"0(0#0#102"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/SimpleWeatherApp_dev.p128603175904#571"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/SimpleWeatherApp_dev.p12" "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app"0#
+
+CCpResource build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp_dev.p7b Resources/RemoteApp/SimpleWeatherApp_dev.p7b
+s322410365.241377
+e322410365.336057
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/SimpleWeather.app/SimpleWeatherApp_dev.p7b
+xResources/RemoteApp/SimpleWeatherApp_dev.p7b
+lSLF07#2@49"Copy Resources/RemoteApp/SimpleWeatherApp_dev.p7b322410365#322410365#0(0"0(0#0#102"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/SimpleWeatherApp_dev.p7b8603004864#571"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/SimpleWeatherApp_dev.p7b" "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app"0#
+
+CCpResource build/Debug-iphonesimulator/SimpleWeather.app/Sunny-Interval-icon.png Resources/RemoteApp/Sunny-Interval-icon.png
+s322410365.242136
+e322410365.281576
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/SimpleWeather.app/Sunny-Interval-icon.png
+xResources/RemoteApp/Sunny-Interval-icon.png
+lSLF07#2@48"Copy Resources/RemoteApp/Sunny-Interval-icon.png322410365#322410365#0(0"0(0#0#101"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/Sunny-Interval-icon.png8602799552#570"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/Resources/RemoteApp/Sunny-Interval-icon.png" "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app"0#
+
+CGenerateDSYMFile "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app.dSYM" "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeather"
+s322410369.320554
+e322410369.355841
+r1
+xGenerateDSYMFile
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app.dSYM
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeather
+lSLF07#2@127"GenerateDSYMFile build/Debug-iphonesimulator/SimpleWeather.app.dSYM build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeather322410369#322410369#0(0"0(0#0#117"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeather8607121792#464"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeather" -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app.dSYM"0#
+
+CLd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeather" normal i386
+s322410367.526935
+e322410369.320349
+r1
+xLd
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeather
+xnormal
+xi386
+lSLF07#2@122"Link /Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeather322410367#322410369#0(0"0(0#0#0"8600058464#1433"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk "-L/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" -filelist "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/Objects-normal/i386/SimpleWeather.LinkFileList" -mmacosx-version-min=10.6 -force_load "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework/iDrive" -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreAudio -framework CoreTelephony -framework AVFoundation -framework Security -framework ExternalAccessory -framework AudioToolbox -framework iDrive -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/SimpleWeather"0#
+
+CProcessInfoPlistFile "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/Info.plist" SimpleWeather-Info.plist
+s322410364.254021
+e322410364.299296
+r1
+xProcessInfoPlistFile
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/Info.plist
+xSimpleWeather-Info.plist
+lSLF07#2@32"Process SimpleWeather-Info.plist322410364#322410364#0(0"0(0#0#82"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/SimpleWeather-Info.plist7813865652622405632#560"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility SimpleWeather-Info.plist -genpkginfo "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app/Info.plist"0#
+
+CProcessPCH /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch.gch SimpleWeather_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s322410365.400424
+e322410366.900932
+r1
+xProcessPCH
+x/var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch.gch
+xSimpleWeather_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@35"Precompile SimpleWeather_Prefix.pch322410365#322410366#0(0"0(0#0#82"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/SimpleWeather_Prefix.pch8606621824#2271"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-generated-files.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-own-target-headers.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-all-target-headers.hmap" -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-project-headers.hmap" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/include" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources/i386" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources" -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/SimpleWeather_Prefix.pch" -o /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-cugoqfbioejfnwbcmuzhesqhpgem/SimpleWeather_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-gcherhuepqgazebeqetnqozqvbhm/SimpleWeather_Prefix.pch.gch SimpleWeather_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s321412632.338189
+e321412633.511096
+r1
+xProcessPCH
+x/var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-gcherhuepqgazebeqetnqozqvbhm/SimpleWeather_Prefix.pch.gch
+xSimpleWeather_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@35"Precompile SimpleWeather_Prefix.pch321412632#321412633#0(0"0(0#0#82"/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/SimpleWeather_Prefix.pch8628025056#2271"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-generated-files.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-own-target-headers.hmap" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-all-target-headers.hmap" -iquote "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/SimpleWeather-project-headers.hmap" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather" "-F/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/iDrive.framework" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/include" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources/i386" "-I/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/SimpleWeather.build/Debug-iphonesimulator/SimpleWeather.build/DerivedSources" -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/SimpleWeather_Prefix.pch" -o /var/folders/us/usr6k8nZEGC9vX1zwinFPU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleWeather_Prefix-gcherhuepqgazebeqetnqozqvbhm/SimpleWeather_Prefix.pch.gch0#
+
+CTouch "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app"
+s322410369.355919
+e322410369.359014
+r1
+xTouch
+x/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app
+lSLF07#2@109"Touch /Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app322410369#322410369#0(0"0(0#0#0"8601215488#326"    cd "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/sarnoff/Documents/BMW/Stanford CS210/SimpleWeather/build/Debug-iphonesimulator/SimpleWeather.app"0#
+

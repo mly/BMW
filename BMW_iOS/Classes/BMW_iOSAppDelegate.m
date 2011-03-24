@@ -7,13 +7,14 @@
 //
 
 #import "BMW_iOSAppDelegate.h"
-#import "BMW_iOSViewController.h"
+#import "ImageProcessingViewController.h"
 
 
 @implementation BMW_iOSAppDelegate
 
 @synthesize window;
 @synthesize viewController;
+@synthesize tracker;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -24,12 +25,13 @@
 	[UIApplication sharedApplication].statusBarHidden = YES;
 	[UIApplication sharedApplication].idleTimerDisabled = YES;
     // Add the view controller's view to the window and display.
-    [self.window addSubview:viewController.view];
+	[self.window addSubview:viewController.view];
     [self.window makeKeyAndVisible];
 	
-	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];
+//	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];
 	
-	[viewController signalStart];
+	reader = [[SensorReader alloc] init];
+	[reader startReading];
 
     return YES;
 }
@@ -39,7 +41,7 @@
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */
-	[viewController signalStop];
+	[reader stopReading];
 }
 
 
@@ -55,12 +57,13 @@
 }
 
 -(CLLocation *)currentLocation {
-	return viewController.currentLocation;
+	return nil;//viewController.currentLocation;
 }
 
 
 - (void)dealloc {
     [viewController release];
+	[reader release];
     [window release];
     [super dealloc];
 }

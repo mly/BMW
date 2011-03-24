@@ -13,12 +13,7 @@
 	CaptureSessionManager *camera;
 	ImageProcessingGLView *glView;
 	
-	GLuint directDisplayProgram;
-	GLuint redProgram;
-	GLuint blueProgram;
-	
 	NSMutableArray *shaders;
-	ShaderProgram *shader;
 	
 	GLuint videoFrameTexture;
 	GLubyte *rawPositionPixels;

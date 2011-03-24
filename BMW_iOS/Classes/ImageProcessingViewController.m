@@ -43,7 +43,8 @@ enum {
 	
 	//ShaderProgram *
 	[ShaderProgram enableDebugging:YES];
-	shader = [ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"DirectDisplayShader.fsh"];
+//	[ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"DirectDisplayShader.fsh"];
+//	[ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"mred.fsh"];
 	//[shaders addObject:shader];
 	//[shader release];
 	
@@ -96,12 +97,13 @@ enum {
     };
 	
 	static float transY = 0.0f;
-	
+	ShaderProgram *shader;
     glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     
 	// Use shader program.
-	[glView setDisplayFramebuffer];	
+	[glView setPositionThresholdFramebuffer];	
+	shader = [ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"mred.fsh"];
 	[shader setAsActive];
 	 
 	glActiveTexture(GL_TEXTURE0);
@@ -111,7 +113,7 @@ enum {
 	glUniform1i([shader indexForUniform:@"videoFrame"], 0);
 	glUniform1f([shader indexForUniform:@"phase"], transY);
 	
-	transY += 0.1f;
+//	transY += 0.1f;
 	
 	// Update attribute values.
 	glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
@@ -121,17 +123,18 @@ enum {
 	
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 	
+	shader = [ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"mblue.fsh"];
 //multiple passes	
-//	[glView setPositionThresholdFramebuffer];
-//	glUseProgram(redProgram);
-//	glActiveTexture(GL_TEXTURE0);
-//	glBindTexture(GL_TEXTURE_2D, glView.positionRenderTexture);
-//	glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
-//	glEnableVertexAttribArray(ATTRIB_VERTEX);
-//	glVertexAttribPointer(ATTRIB_TEXTUREPOSITON, 2, GL_FLOAT, 0, 0, passthroughTextureVertices);
-//	glEnableVertexAttribArray(ATTRIB_TEXTUREPOSITON);
-//	
-//	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+	[glView setDisplayFramebuffer];
+	[shader setAsActive];
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, glView.positionRenderTexture);
+	glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
+	glEnableVertexAttribArray(ATTRIB_VERTEX);
+	glVertexAttribPointer(ATTRIB_TEXTUREPOSITON, 2, GL_FLOAT, 0, 0, passthroughTextureVertices);
+	glEnableVertexAttribArray(ATTRIB_TEXTUREPOSITON);
+	
+	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 //	
 //	[glView setDisplayFramebuffer];
 //	glUseProgram(blueProgram);

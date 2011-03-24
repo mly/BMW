@@ -8,6 +8,7 @@
 - (BOOL)compileShader:(NSString*)a_file withType:(GLenum)a_type;
 - (BOOL)linkProgram;
 - (BOOL)loadAttributeMap;
+- (BOOL)loadUniformMap;
 + (ShaderProgram*)findProgramWithKey:(NSString*)a_key;
 + (GLint)findShaderWithName:(NSString*)a_name andType:(GLenum)a_type;
 @end

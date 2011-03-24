@@ -52,6 +52,12 @@
 		7B80CC6E131C466900AD2BAA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CC6D131C466900AD2BAA /* CoreVideo.framework */; };
 		7B80CC7C131C46A800AD2BAA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CC7B131C46A800AD2BAA /* AVFoundation.framework */; };
 		7B80CD8E131C5FF400AD2BAA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B80CD8D131C5FF400AD2BAA /* AssetsLibrary.framework */; };
+		7B9BB91A133BC40000A58F52 /* default.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7BA6FF23133B461F00940874 /* default.vsh */; };
+		7B9BB91B133BC40000A58F52 /* erosion_dilation.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7BA6FF24133B461F00940874 /* erosion_dilation.fsh */; };
+		7B9BB91C133BC40A00A58F52 /* default.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7BA6FF23133B461F00940874 /* default.vsh */; };
+		7B9BB91D133BC40A00A58F52 /* erosion_dilation.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7BA6FF24133B461F00940874 /* erosion_dilation.fsh */; };
+		7B9BB91E133BC41100A58F52 /* default.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7BA6FF23133B461F00940874 /* default.vsh */; };
+		7B9BB91F133BC41100A58F52 /* erosion_dilation.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7BA6FF24133B461F00940874 /* erosion_dilation.fsh */; };
 		7BA6FF4A133B506900940874 /* ShaderProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6FF49133B506900940874 /* ShaderProgram.m */; };
 		7BA6FF4B133B506900940874 /* ShaderProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6FF49133B506900940874 /* ShaderProgram.m */; };
 		7BA6FF4C133B506900940874 /* ShaderProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6FF49133B506900940874 /* ShaderProgram.m */; };
@@ -816,6 +822,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9BB91E133BC41100A58F52 /* default.vsh in Resources */,
+				7B9BB91F133BC41100A58F52 /* erosion_dilation.fsh in Resources */,
 				7B383EF0133B405E0018B146 /* mblue.fsh in Resources */,
 				7B383EF1133B405E0018B146 /* mblue.vsh in Resources */,
 				7B383EF2133B405E0018B146 /* mred.fsh in Resources */,
@@ -833,6 +841,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9BB91C133BC40A00A58F52 /* default.vsh in Resources */,
+				7B9BB91D133BC40A00A58F52 /* erosion_dilation.fsh in Resources */,
 				7B383EEC133B40570018B146 /* mblue.fsh in Resources */,
 				7B383EED133B40570018B146 /* mblue.vsh in Resources */,
 				7B383EEE133B40570018B146 /* mred.fsh in Resources */,
@@ -850,12 +860,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9BB91A133BC40000A58F52 /* default.vsh in Resources */,
+				7B053D0D132CF35D00E2AB1C /* DirectDisplayShader.fsh in Resources */,
+				7B053D0E132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */,
+				7B9BB91B133BC40000A58F52 /* erosion_dilation.fsh in Resources */,
 				7B383EDA133B3D4B0018B146 /* mblue.fsh in Resources */,
 				7B383EDB133B3D4B0018B146 /* mblue.vsh in Resources */,
 				7B383EDC133B3D4B0018B146 /* mred.fsh in Resources */,
 				7B383EDD133B3D4B0018B146 /* mred.vsh in Resources */,
-				7B053D0D132CF35D00E2AB1C /* DirectDisplayShader.fsh in Resources */,
-				7B053D0E132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */,
 				7BECBAEC1324FFB300E9D057 /* MainWindow.xib in Resources */,
 				7BECBAEE1324FFB300E9D057 /* DataOverlayViewController.xib in Resources */,
 				7BD472F0133A6031001A9741 /* RoutingOverlayViewController.xib in Resources */,

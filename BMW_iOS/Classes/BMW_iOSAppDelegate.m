@@ -25,7 +25,9 @@
 	[UIApplication sharedApplication].statusBarHidden = YES;
 	[UIApplication sharedApplication].idleTimerDisabled = YES;
     // Add the view controller's view to the window and display.
-	[self.window addSubview:viewController.view];
+	//To save battery on the plane
+	//Aaron TODO: remove the commented version of this.
+	//[self.window addSubview:viewController.view];
     [self.window makeKeyAndVisible];
 	
 //	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];

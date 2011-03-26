@@ -123,7 +123,7 @@ static StatsTracker *sharedTracker;
 	NSDate *prevD = [[stats objectAtIndex:curIndex-1] objectForKey:DATE];
 	NSDate *curD = [currentStats objectForKey:DATE];
 	double curStopTime = [[[stats objectAtIndex:curIndex-1] objectForKey:CURRENT_STOP_TIME] doubleValue];
-	double timeDiff = [prevD timeIntervalSinceDate:curD];
+	double timeDiff = -[prevD timeIntervalSinceDate:curD];
 	[self addStat:CURRENT_STOP_TIME withValue:[NSNumber numberWithDouble:curStopTime+timeDiff]];
 	[self addStat:LIFETIME_STOP_TIME withValue:[NSNumber numberWithDouble:lifetime+timeDiff]];
 }

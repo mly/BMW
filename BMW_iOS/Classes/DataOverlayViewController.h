@@ -9,12 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CMMotionManager.h>
 #import <CoreLocation/CoreLocation.h>
+#import "StatsTracker.h"
 
 @interface DataOverlayViewController : UIViewController {
-	IBOutlet UILabel *accel, *vaccel, *vgps, *altitude, *latlong, *vaverage;
-	
+	IBOutlet UITextView *textView;
 }
 
--(void)populateLabelsWithAccel:(CMAcceleration)a Location:(CLLocation *)l GPSVelocity:(float)vg AverageVelocity:(float)vav andAccelerometerVelocity:(float *)va;
-
+-(void)populateLabelsFromsStatsTracker;
 @end

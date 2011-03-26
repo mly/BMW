@@ -2,7 +2,6 @@ varying highp vec2 pos;
 
 uniform sampler2D image;
 uniform highp float phase;
-uniform highp vec4 colorFilter;
 
 void main()
 {

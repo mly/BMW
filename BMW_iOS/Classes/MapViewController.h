@@ -15,7 +15,7 @@
 
 @interface MapViewController : UIViewController <MKMapViewDelegate> {
 	IBOutlet MKMapView *mapView;
-	
+	NSMutableArray *coords;
 	
 }
 - (IBAction)addPin:(id)sender;

@@ -34,6 +34,7 @@
 	UIImage *processedImage;
 	
 	CLLocation *currentLocation;
+	MapViewController *mapVC;
 	
 	bool dirty;
 }

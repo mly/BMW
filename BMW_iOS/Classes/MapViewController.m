@@ -17,6 +17,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
+		coords = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -31,13 +32,20 @@
 	MKPolygon *dummyOverlay = [MKPolygon polygonWithPoints:nil count:0];
 	[mapView addOverlay:dummyOverlay];
 	
+	BMW_iOSAppDelegate *del = [[UIApplication sharedApplication] delegate];
+	[mapView setCenterCoordinate:del.currentLocation.coordinate];
+	//MKCoordinateSpan span = [mapView coordinateSpanWithMapView:self centerCoordinate:centerCoordinate andZoomLevel:zoomLevel];
+    //MKCoordinateRegion region = MKCoordinateRegionMake(centerCoordinate, span);
+    
+    // set the region like normal
+    //[self setRegion:region animated:animated];
 	    
 	[super viewDidLoad];
 }
 
-- (IBAction)addPin:(id)sender {
-	BMW_iOSAppDelegate *del = [[UIApplication sharedApplication] delegate];
-	CLLocation *loc = [del currentLocation];
+- (IBAction)addPinToCoordinate:(CLLocation *)pinLoc {
+	//BMW_iOSAppDelegate *del = [[UIApplication sharedApplication] delegate];
+	//CLLocation *loc = [del currentLocation];
     //MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:loc.coordinate addressDictionary:nil];
 	//MKAnnotation *ano = [[MKAnnotation alloc] initWithCoordinate:loc.coordinate];
 	//MKPinAnnotationView *ano = [[MKPinAnnotationView alloc] initWithAnnotation:placemark reuseIdentifier:@"pin"];
@@ -45,7 +53,7 @@
 	
 	
 	
-	CurrentLocationAnnotation *annotation = [[[CurrentLocationAnnotation alloc] initWithCoordinate:loc.coordinate addressDictionary:nil] autorelease];
+	CurrentLocationAnnotation *annotation = [[[CurrentLocationAnnotation alloc] initWithCoordinate:pinLoc.coordinate addressDictionary:nil] autorelease];
 	annotation.title = @"Drag Me!";
 	annotation.subtitle = @"Drag pin to get desired location..";
 	// = [mapView.annotations count];
@@ -70,16 +78,16 @@
 		//}
 	}
 	
-	NSInteger arrayCount = [mapView.annotations count];
-	CLLocationCoordinate2D coords[arrayCount];
+	NSInteger arrayCount = [coords count];
+	CLLocationCoordinate2D coords2D[arrayCount];
     NSInteger i;
     for (i=0;i<arrayCount;i++) {
-        MKPlacemark *placeMark = [mapView.annotations objectAtIndex:i];
-        coords[i] = placeMark.coordinate;
-        NSLog(@"%f, %f", coords[i].latitude, coords[i].longitude);
+        //MKPlacemark *placeMark = [coords objectAtIndex:i];
+        coords2D[i] = ((CLLocation *)[coords objectAtIndex:i]).coordinate;
+        NSLog(@"%f, %f", coords2D[i].latitude, coords2D[i].longitude);
     }
 	
-	MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coords count:[mapView.annotations count]];
+	MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coords2D count:arrayCount];
 	[mapView addOverlay:polyLine];
 	//[polyLine release];	
 }
@@ -118,7 +126,7 @@
 	{
 		MKPolylineView *polyLineView = [[[MKPolylineView alloc] initWithOverlay:overlay] autorelease];
 		polyLineView.strokeColor = [UIColor redColor];
-		polyLineView.lineWidth = 5.0;
+		//polyLineView.lineWidth = 1.0*[mapView ;
 		return polyLineView;
 	}
 	else if ([overlay isKindOfClass: [MKPolygon class]])
@@ -133,6 +141,14 @@
 	else
 	{
 		return nil;
+	}
+}
+
+-(void)locationDidUpdate:(CLLocation *)loc {
+	[coords addObject:loc];
+	[self addPinToCoordinate:loc];
+	if ([coords count] % 5 == 0) {
+		[self connectPoints];
 	}
 }
 

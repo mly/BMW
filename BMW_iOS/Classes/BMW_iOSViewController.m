@@ -199,7 +199,7 @@
 	}];
 	
 #if MAP_VIEW
-	MapViewController *mapVC = [[MapViewController alloc] init];
+	mapVC = [[MapViewController alloc] init];
 	[self.view addSubview:mapVC.view];
 #endif
 }
@@ -217,6 +217,7 @@
 	currentLocation = newLocation;
 	
 	[routingOverlayVC locationDidUpdate:newLocation];
+	[mapVC locationDidUpdate:newLocation];
 	
 	//Send velocity event object to server...not very interesting at the moment, but makes the JSON super easy
 	VelocityEvent *ve = [[[VelocityEvent alloc]init]autorelease];

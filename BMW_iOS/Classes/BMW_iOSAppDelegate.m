@@ -8,6 +8,7 @@
 
 #import "BMW_iOSAppDelegate.h"
 #import "ImageProcessingViewController.h"
+#import "DataOverlayViewController.h"
 
 
 @implementation BMW_iOSAppDelegate
@@ -25,7 +26,13 @@
 	[UIApplication sharedApplication].statusBarHidden = YES;
 	[UIApplication sharedApplication].idleTimerDisabled = YES;
     // Add the view controller's view to the window and display.
-	[self.window addSubview:viewController.view];
+	//To save battery on the plane
+	//Aaron TODO: remove the commented version of this.
+	//[self.window addSubview:viewController.view];
+	DataOverlayViewController *dataOverlayVC = [[DataOverlayViewController alloc] init];
+	[dataOverlayVC.view setFrame:CGRectMake(-230, 200, 500, 100)];
+	dataOverlayVC.view.transform = CGAffineTransformMakeRotation(M_PI/2);
+	[self.window addSubview:dataOverlayVC.view];
     [self.window makeKeyAndVisible];
 	
 //	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];

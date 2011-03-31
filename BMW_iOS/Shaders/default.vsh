@@ -6,6 +6,5 @@ varying vec2 pos;
 void main()
 {
 	gl_Position = position;
-	//gl_Position.y += sin(translate) / 3.0;
 	pos = inputTextureCoordinate.xy;
 }

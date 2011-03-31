@@ -103,7 +103,7 @@ enum {
     
 	// Use shader program.
 	[glView setDisplayFramebuffer];	
-	shader = [ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"erosion_dilation.fsh"];
+	shader = [ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"hsi_threshold.fsh"];
 	[shader setAsActive];
 	 
 	glActiveTexture(GL_TEXTURE0);
@@ -111,13 +111,15 @@ enum {
 	
 	// Update uniform values
 	transY += 0.1f;
+	glUniform1i([shader indexForUniform:@"inputImage"], 0);
+	/*
 	glUniform1f([shader indexForUniform:@"anchorWidth"], 13.0);
 	glUniform1f([shader indexForUniform:@"elementWidth"], 13.0);
 	glUniform1f([shader indexForUniform:@"anchorHeight"], 7.0);
 	glUniform1f([shader indexForUniform:@"elementHeight"], 7.0);
-	glUniform1i([shader indexForUniform:@"inputImage"], 0);
 	glUniform2f([shader indexForUniform:@"pixelSize"], 1.0/FBO_HEIGHT,1.0/FBO_WIDTH);
 	glUniform1i([shader indexForUniform:@"erosion"], 0);
+	 */
 	
 	// Update attribute values.
 	glVertexAttribPointer([shader indexForAttribute:@"position"], 2, GL_FLOAT, 0, 0, squareVertices);

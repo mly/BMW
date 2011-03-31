@@ -1,3 +1,5 @@
+precision highp float;
+
 float RH_MIN1 = 0.0;
 float RH_MAX1 = 40.0;
 float RH_MIN2 = 350.0;
@@ -76,5 +78,5 @@ void main()
 		} else gl_FragColor = vec4(0,0,0,1);
 
 	} else gl_FragColor = vec4(0,0,0,1);
-	
+	gl_FragColor=pixel;
 }

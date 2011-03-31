@@ -28,5 +28,7 @@
 +(StatsTracker *)sharedTracker;//for simplicity's sake - eventually we probably just want to pass this, not do it as a singleton
 
 @property(readonly) NSDictionary *currentStats;
+//for temporary debug display in StatsTakingTableViewController
+@property(readonly) NSArray *stats;
 
 @end

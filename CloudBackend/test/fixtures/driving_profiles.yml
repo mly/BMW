@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  user_name: MyString
+  mileage: 
+  redlight_count: 
+  mpg: 1.5
+  carma_points: 
+
+two:
+  id: 
+  user_name: MyString
+  mileage: 
+  redlight_count: 
+  mpg: 1.5
+  carma_points: 

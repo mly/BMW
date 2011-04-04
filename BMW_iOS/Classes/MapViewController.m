@@ -18,8 +18,23 @@
     if (self) {
         // Custom initialization.
 		coords = [[NSMutableArray alloc] init];
+		[coords addObject:[[CLLocation alloc] initWithLatitude:-121.222 longitude:39.44]];
+		[coords addObject:[[CLLocation alloc] initWithLatitude:-121.222 longitude:39.41]];
+		[coords addObject:[[CLLocation alloc] initWithLatitude:-121.222 longitude:39.54]];
+		[coords addObject:[[CLLocation alloc] initWithLatitude:-121.222 longitude:38.44]];
+		[coords addObject:[[CLLocation alloc] initWithLatitude:-121.222 longitude:31.44]];
+		[coords addObject:[[CLLocation alloc] initWithLatitude:-121.222 longitude:40.44]];
+		
+		[self addPins];
     }
     return self;
+}
+
+-(void)addPins {
+	for (CLLocation *loc in coords) {
+		[self addPinToCoordinate:loc];
+	}
+	[self connectPoints];
 }
 
 
@@ -43,7 +58,11 @@
 	[super viewDidLoad];
 }
 
-- (IBAction)addPinToCoordinate:(CLLocation *)pinLoc {
+-(IBAction)addPin {
+	
+}
+
+- (void)addPinToCoordinate:(CLLocation *)pinLoc {
 	//BMW_iOSAppDelegate *del = [[UIApplication sharedApplication] delegate];
 	//CLLocation *loc = [del currentLocation];
     //MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:loc.coordinate addressDictionary:nil];

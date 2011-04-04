@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #include "SensorReader.h"
 #include "StatsTracker.h"
+#import "MapViewController.h"
 
 @class ImageProcessingViewController;
 

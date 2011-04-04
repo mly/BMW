@@ -14,7 +14,7 @@
 #define VIDEO_SAVE 1
 #endif
 #endif
-#define STATS_OVERLAY 1
+#define STATS_OVERLAY 0
 #ifdef OPEN_CV
 #define EDGE_DETECTION 1
 #define FACE_DETECTION 0

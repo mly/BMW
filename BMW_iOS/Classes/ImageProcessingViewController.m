@@ -4,7 +4,7 @@
 //
 
 #import "ImageProcessingViewController.h"
-
+#ifdef OPEN_CV
 // Uniform index.
 enum {
 	UNIFORM_TRANSLATE,
@@ -199,3 +199,4 @@ enum {
 @synthesize glView;
 
 @end
+#endif

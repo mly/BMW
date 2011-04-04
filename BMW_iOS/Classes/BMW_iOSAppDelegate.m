@@ -30,6 +30,7 @@
 	//Aaron TODO: remove the commented version of this.
 	//[self.window addSubview:viewController.view];
 #ifndef MAP_VIEW
+	[self.window addSubview:viewController.view];
 	DataOverlayViewController *dataOverlayVC = [[DataOverlayViewController alloc] init];
 	[dataOverlayVC.view setFrame:CGRectMake(-230, 200, 500, 100)];
 	dataOverlayVC.view.transform = CGAffineTransformMakeRotation(M_PI/2);	
@@ -38,11 +39,8 @@
 	MapViewController *mapVC = [[MapViewController alloc] init];
 	[self.window addSubview:mapVC.view];
 #endif
-	
     [self.window makeKeyAndVisible];
-	
-//	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];
-	
+		
 	reader = [[SensorReader alloc] init];
 	[reader startReading];
 

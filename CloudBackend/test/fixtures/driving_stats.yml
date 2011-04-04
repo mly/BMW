@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  timestamp: 
+  velocity: 1.5
+  acceleration: 1.5
+  latitude: 1.5
+  longitude: 1.5
+  num_redlights: 
+
+two:
+  id: 
+  timestamp: 
+  velocity: 1.5
+  acceleration: 1.5
+  latitude: 1.5
+  longitude: 1.5
+  num_redlights: 

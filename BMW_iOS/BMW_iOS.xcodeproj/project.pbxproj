@@ -25,14 +25,9 @@
 		7B236137132FD38700548F13 /* StatsTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B236136132FD38700548F13 /* StatsTracker.m */; };
 		7B236138132FD38700548F13 /* StatsTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B236136132FD38700548F13 /* StatsTracker.m */; };
 		7B236139132FD38700548F13 /* StatsTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B236136132FD38700548F13 /* StatsTracker.m */; };
-		7B2362E1133068FF00548F13 /* mblue.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362D9133068FF00548F13 /* mblue.fsh */; };
-		7B2362E2133068FF00548F13 /* mblue.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DA133068FF00548F13 /* mblue.vsh */; };
-		7B2362E3133068FF00548F13 /* mred.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DB133068FF00548F13 /* mred.fsh */; };
-		7B2362E4133068FF00548F13 /* mred.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DC133068FF00548F13 /* mred.vsh */; };
-		7B2362E5133068FF00548F13 /* mblue.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362D9133068FF00548F13 /* mblue.fsh */; };
-		7B2362E6133068FF00548F13 /* mblue.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DA133068FF00548F13 /* mblue.vsh */; };
-		7B2362E7133068FF00548F13 /* mred.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DB133068FF00548F13 /* mred.fsh */; };
-		7B2362E8133068FF00548F13 /* mred.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 7B2362DC133068FF00548F13 /* mred.vsh */; };
+		7B36E51F13442776002C9DE7 /* hsi_threshold.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B36E51E13442776002C9DE7 /* hsi_threshold.fsh */; };
+		7B36E52013442776002C9DE7 /* hsi_threshold.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B36E51E13442776002C9DE7 /* hsi_threshold.fsh */; };
+		7B36E52113442776002C9DE7 /* hsi_threshold.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B36E51E13442776002C9DE7 /* hsi_threshold.fsh */; };
 		7B383EDA133B3D4B0018B146 /* mblue.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362D9133068FF00548F13 /* mblue.fsh */; };
 		7B383EDB133B3D4B0018B146 /* mblue.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362DA133068FF00548F13 /* mblue.vsh */; };
 		7B383EDC133B3D4B0018B146 /* mred.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7B2362DB133068FF00548F13 /* mred.fsh */; };
@@ -61,6 +56,9 @@
 		7BA6FF4A133B506900940874 /* ShaderProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6FF49133B506900940874 /* ShaderProgram.m */; };
 		7BA6FF4B133B506900940874 /* ShaderProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6FF49133B506900940874 /* ShaderProgram.m */; };
 		7BA6FF4C133B506900940874 /* ShaderProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6FF49133B506900940874 /* ShaderProgram.m */; };
+		7BAA5532133E63010054836B /* StatsTrackingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAA5531133E63010054836B /* StatsTrackingTableViewController.m */; };
+		7BAA5533133E63010054836B /* StatsTrackingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAA5531133E63010054836B /* StatsTrackingTableViewController.m */; };
+		7BAA5534133E63010054836B /* StatsTrackingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAA5531133E63010054836B /* StatsTrackingTableViewController.m */; };
 		7BD13508132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13505132D9E9600150AA0 /* ImageProcessingGLView.m */; };
 		7BD13509132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13507132D9E9600150AA0 /* ImageProcessingViewController.m */; };
 		7BD1350A132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13505132D9E9600150AA0 /* ImageProcessingGLView.m */; };
@@ -255,6 +253,7 @@
 		7B2E4741132B478400755B8C /* BMW_iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BMW_iOS-Info.plist"; sourceTree = "<group>"; };
 		7B2E4742132B478400755B8C /* BMW_OpenCV-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BMW_OpenCV-Info.plist"; sourceTree = "<group>"; };
 		7B2E4743132B478400755B8C /* BMW_ScreenCapture-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BMW_ScreenCapture-Info.plist"; sourceTree = "<group>"; };
+		7B36E51E13442776002C9DE7 /* hsi_threshold.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = hsi_threshold.fsh; sourceTree = "<group>"; };
 		7B41784E1324926100BE9374 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		7B4EC7F61313516E00175D77 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		7B4EC7F71313516E00175D77 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -266,6 +265,8 @@
 		7BA6FF24133B461F00940874 /* erosion_dilation.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = erosion_dilation.fsh; sourceTree = "<group>"; };
 		7BA6FF48133B506900940874 /* ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderProgram.h; sourceTree = "<group>"; };
 		7BA6FF49133B506900940874 /* ShaderProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShaderProgram.m; sourceTree = "<group>"; };
+		7BAA5530133E63010054836B /* StatsTrackingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTrackingTableViewController.h; sourceTree = "<group>"; };
+		7BAA5531133E63010054836B /* StatsTrackingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTrackingTableViewController.m; sourceTree = "<group>"; };
 		7BD13504132D9E9600150AA0 /* ImageProcessingGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingGLView.h; sourceTree = "<group>"; };
 		7BD13505132D9E9600150AA0 /* ImageProcessingGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcessingGLView.m; sourceTree = "<group>"; };
 		7BD13506132D9E9600150AA0 /* ImageProcessingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingViewController.h; sourceTree = "<group>"; };
@@ -521,6 +522,7 @@
 			isa = PBXGroup;
 			children = (
 				7BA6FF23133B461F00940874 /* default.vsh */,
+				7B36E51E13442776002C9DE7 /* hsi_threshold.fsh */,
 				7BA6FF24133B461F00940874 /* erosion_dilation.fsh */,
 				7B2362D9133068FF00548F13 /* mblue.fsh */,
 				7B2362DA133068FF00548F13 /* mblue.vsh */,
@@ -560,6 +562,8 @@
 			children = (
 				D4B8F362131E3D61002C1A44 /* DataOverlayViewController.h */,
 				D4B8F363131E3D61002C1A44 /* DataOverlayViewController.m */,
+				7BAA5530133E63010054836B /* StatsTrackingTableViewController.h */,
+				7BAA5531133E63010054836B /* StatsTrackingTableViewController.m */,
 				D4B8F223131CF44E002C1A44 /* GravityObject.h */,
 				D4B8F224131CF44E002C1A44 /* GravityObject.m */,
 				7BD13577132DB86600150AA0 /* SensorReader.h */,
@@ -830,6 +834,7 @@
 				7B383EF3133B405E0018B146 /* mred.vsh in Resources */,
 				7B053D11132CF35D00E2AB1C /* DirectDisplayShader.fsh in Resources */,
 				7B053D12132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */,
+				7B36E51F13442776002C9DE7 /* hsi_threshold.fsh in Resources */,
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				D4B8F366131E3D61002C1A44 /* DataOverlayViewController.xib in Resources */,
 				7BD472F2133A6031001A9741 /* RoutingOverlayViewController.xib in Resources */,
@@ -841,6 +846,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B36E52113442776002C9DE7 /* hsi_threshold.fsh in Resources */,
 				7B9BB91C133BC40A00A58F52 /* default.vsh in Resources */,
 				7B9BB91D133BC40A00A58F52 /* erosion_dilation.fsh in Resources */,
 				7B383EEC133B40570018B146 /* mblue.fsh in Resources */,
@@ -860,6 +866,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B36E52013442776002C9DE7 /* hsi_threshold.fsh in Resources */,
 				7B9BB91A133BC40000A58F52 /* default.vsh in Resources */,
 				7B053D0D132CF35D00E2AB1C /* DirectDisplayShader.fsh in Resources */,
 				7B053D0E132CF35D00E2AB1C /* DirectDisplayShader.vsh in Resources */,
@@ -922,15 +929,12 @@
 				7BD1350D132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */,
 				7BD1357A132DB86600150AA0 /* SensorReader.m in Sources */,
 				7B236139132FD38700548F13 /* StatsTracker.m in Sources */,
-				7B2362E5133068FF00548F13 /* mblue.fsh in Sources */,
-				7B2362E6133068FF00548F13 /* mblue.vsh in Sources */,
-				7B2362E7133068FF00548F13 /* mred.fsh in Sources */,
-				7B2362E8133068FF00548F13 /* mred.vsh in Sources */,
 				7BD472EC133A5FFD001A9741 /* RoutingOverlayViewController.m in Sources */,
 				7BD472F7133A6060001A9741 /* MapViewController.m in Sources */,
 				7BD47304133A607C001A9741 /* AnnotationView.m in Sources */,
 				7BD47305133A607C001A9741 /* CurrentLocationAnnotation.m in Sources */,
 				7BA6FF4C133B506900940874 /* ShaderProgram.m in Sources */,
+				7BAA5532133E63010054836B /* StatsTrackingTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -978,15 +982,12 @@
 				7BD1350B132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */,
 				7BD13579132DB86600150AA0 /* SensorReader.m in Sources */,
 				7B236138132FD38700548F13 /* StatsTracker.m in Sources */,
-				7B2362E1133068FF00548F13 /* mblue.fsh in Sources */,
-				7B2362E2133068FF00548F13 /* mblue.vsh in Sources */,
-				7B2362E3133068FF00548F13 /* mred.fsh in Sources */,
-				7B2362E4133068FF00548F13 /* mred.vsh in Sources */,
 				7BD472EB133A5FFC001A9741 /* RoutingOverlayViewController.m in Sources */,
 				7BD472F6133A6060001A9741 /* MapViewController.m in Sources */,
 				7BD47302133A607C001A9741 /* AnnotationView.m in Sources */,
 				7BD47303133A607C001A9741 /* CurrentLocationAnnotation.m in Sources */,
 				7BA6FF4B133B506900940874 /* ShaderProgram.m in Sources */,
+				7BAA5534133E63010054836B /* StatsTrackingTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -994,14 +995,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD47300133A607C001A9741 /* AnnotationView.m in Sources */,
 				7BECBAF11324FFB300E9D057 /* BMW_iOSAppDelegate.m in Sources */,
 				7BECBAF41324FFB300E9D057 /* CaptureSessionManager.m in Sources */,
 				7BFA67541328498900CF3B0E /* Connection.m in Sources */,
 				7BFA67551328498900CF3B0E /* ConnectionDelegate.m in Sources */,
+				7BD47301133A607C001A9741 /* CurrentLocationAnnotation.m in Sources */,
 				7BECBAF51324FFB300E9D057 /* DataOverlayViewController.m in Sources */,
 				7BFA67561328498900CF3B0E /* FromXMLElementDelegate.m in Sources */,
 				7BECBAF31324FFB300E9D057 /* GravityObject.m in Sources */,
+				7BD13508132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */,
+				7BD13509132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */,
 				7BECBAF01324FFB300E9D057 /* main.m in Sources */,
+				7BD472F5133A6060001A9741 /* MapViewController.m in Sources */,
 				7BFA67571328498900CF3B0E /* NSArray+JSONSerializableSupport.m in Sources */,
 				7BFA67581328498900CF3B0E /* NSArray+XMLSerializableSupport.m in Sources */,
 				7BFA67591328498900CF3B0E /* NSData+Additions.m in Sources */,
@@ -1028,17 +1034,13 @@
 				7BFA676E1328498900CF3B0E /* ObjectiveResourceConfig.m in Sources */,
 				7BFA676F1328498900CF3B0E /* ObjectiveResourceDateFormatter.m in Sources */,
 				7BFA67701328498900CF3B0E /* Response.m in Sources */,
-				7BFA67711328498900CF3B0E /* SBJSON.m in Sources */,
-				7BFA67721328498900CF3B0E /* VelocityEvent.m in Sources */,
-				7BD13508132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */,
-				7BD13509132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */,
-				7BD1357B132DB86600150AA0 /* SensorReader.m in Sources */,
-				7B236137132FD38700548F13 /* StatsTracker.m in Sources */,
 				7BD472EA133A5FFC001A9741 /* RoutingOverlayViewController.m in Sources */,
-				7BD472F5133A6060001A9741 /* MapViewController.m in Sources */,
-				7BD47300133A607C001A9741 /* AnnotationView.m in Sources */,
-				7BD47301133A607C001A9741 /* CurrentLocationAnnotation.m in Sources */,
+				7BFA67711328498900CF3B0E /* SBJSON.m in Sources */,
+				7BD1357B132DB86600150AA0 /* SensorReader.m in Sources */,
 				7BA6FF4A133B506900940874 /* ShaderProgram.m in Sources */,
+				7B236137132FD38700548F13 /* StatsTracker.m in Sources */,
+				7BAA5533133E63010054836B /* StatsTrackingTableViewController.m in Sources */,
+				7BFA67721328498900CF3B0E /* VelocityEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

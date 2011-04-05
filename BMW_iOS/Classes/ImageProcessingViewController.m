@@ -102,7 +102,7 @@ enum {
     glClear(GL_COLOR_BUFFER_BIT);
     
 	// Use shader program.
-	[glView setDisplayFramebuffer];	
+	[glView setPositionThresholdFramebuffer];	
 	shader = [ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"hsi_threshold.frag.glsl"];
 	[shader setAsActive];
 	 
@@ -110,7 +110,6 @@ enum {
 	glBindTexture(GL_TEXTURE_2D, videoFrameTexture);
 	
 	// Update uniform values
-	transY += 0.1f;
 	glUniform1i([shader indexForUniform:@"inputImage"], 0);
 	/*
 	glUniform1f([shader indexForUniform:@"anchorWidth"], 13.0);
@@ -129,7 +128,7 @@ enum {
 	
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 	
-//	shader = [ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"mblue.fsh"];
+	shader = [ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"dilation.frag.glsl"];
 //multiple passes	
 //	[glView setPositionThresholdFramebuffer];
 //	[shader setAsActive];
@@ -146,16 +145,29 @@ enum {
 //	
 //	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 //	
-//	[glView setDisplayFramebuffer];
-//	glUseProgram(blueProgram);
-//	glActiveTexture(GL_TEXTURE0);
-//	glBindTexture(GL_TEXTURE_2D, glView.positionRenderTexture);
-//	glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
-//	glEnableVertexAttribArray(ATTRIB_VERTEX);
-//	glVertexAttribPointer(ATTRIB_TEXTUREPOSITON, 2, GL_FLOAT, 0, 0, passthroughTextureVertices);
-//	glEnableVertexAttribArray(ATTRIB_TEXTUREPOSITON);
-//	
-//	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+	[glView setDisplayFramebuffer];
+	[shader setAsActive];
+	
+	
+	
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, glView.positionRenderTexture);
+	
+	// Update uniform values
+	glUniform1i([shader indexForUniform:@"inputImage"], 0);
+	glUniform1f([shader indexForUniform:@"anchorWidth"], 7.0);
+	glUniform1f([shader indexForUniform:@"elementWidth"], 7.0);
+	glUniform1f([shader indexForUniform:@"anchorHeight"], 3.0);
+	glUniform1f([shader indexForUniform:@"elementHeight"], 3.0);
+	glUniform2f([shader indexForUniform:@"pixelSize"], 1.0/FBO_HEIGHT,1.0/FBO_WIDTH);
+	
+	// Update attribute values.
+	glVertexAttribPointer([shader indexForAttribute:@"position"], 2, GL_FLOAT, 0, 0, squareVertices);
+	glEnableVertexAttribArray([shader indexForAttribute:@"position"]);
+	glVertexAttribPointer([shader indexForAttribute:@"inputTextureCoordinate"], 2, GL_FLOAT, 0, 0, passthroughTextureVertices);
+	glEnableVertexAttribArray([shader indexForAttribute:@"inputTextureCoordinate"]);
+	
+	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 	
     [glView presentFramebuffer];
 }

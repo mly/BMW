@@ -39,7 +39,7 @@ static StatsTracker *sharedTracker;
 	if(currentStats)
 	{
 		NSMutableDictionary *miniStats = [[[NSMutableDictionary alloc] init] autorelease];
-		[miniStats setObject:[currentStats objectForKey:DATE] forKey:DATE];
+		[miniStats setObject:[NSNumber numberWithDouble:[[currentStats objectForKey:DATE] timeIntervalSince1970]] forKey:DATE];
 		CLLocation *l = [currentStats objectForKey:LOCATION];
 		[miniStats setObject:[NSNumber numberWithDouble:l.coordinate.latitude] forKey:@"Latitude"];
 		[miniStats setObject:[NSNumber numberWithDouble:l.coordinate.longitude] forKey:@"Longitude"];

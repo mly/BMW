@@ -103,7 +103,7 @@ enum {
     
 	// Use shader program.
 	[glView setDisplayFramebuffer];	
-	shader = [ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"hsi_threshold.fsh"];
+	shader = [ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"hsi_threshold.frag.glsl"];
 	[shader setAsActive];
 	 
 	glActiveTexture(GL_TEXTURE0);

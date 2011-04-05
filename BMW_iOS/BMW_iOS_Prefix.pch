@@ -6,7 +6,7 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 #endif
-#define MAP_VIEW 1
+#define MAP_VIEW 0
 #define CM_DEBUG 0
 #define CL_DEBUG 0
 #ifndef OPEN_CV

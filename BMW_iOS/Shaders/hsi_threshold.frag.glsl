@@ -1,3 +1,4 @@
+precision highp float;
 float RH_MIN1 = 0.0;
 float RH_MAX1 = 40.0;
 float RH_MIN2 = 350.0;

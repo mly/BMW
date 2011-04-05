@@ -10,12 +10,15 @@
 #import "ImageProcessingViewController.h"
 #import "DataOverlayViewController.h"
 
+NSString* BMWConnectedChanged = @"BMWConnectedChanged";
+
 
 @implementation BMW_iOSAppDelegate
 
 @synthesize window;
 @synthesize viewController;
 @synthesize tracker;
+@synthesize bmwAppController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -40,6 +43,11 @@
 	[self.window addSubview:mapVC.view];
 #endif
     [self.window makeKeyAndVisible];
+	
+	self.bmwAppController = [[[SimpleWeatherAppController alloc] init] autorelease];
+#if TARGET_IPHONE_SIMULATOR
+	[bmwAppController accessoryDidStart:nil]; // fake it
+#endif
 		
 	reader = [[SensorReader alloc] init];
 	[reader startReading];

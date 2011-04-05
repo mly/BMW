@@ -9,6 +9,7 @@
 #import "StatsTracker.h"
 #import <CoreLocation/CoreLocation.h>
 #import <CoreMotion/CMMotionManager.h>
+#include "JSONSerializableSupport.h"
 
 @implementation StatsTracker
 @synthesize currentStats, stats;
@@ -34,7 +35,17 @@ static StatsTracker *sharedTracker;
 
 -(void)addStats:(NSMutableDictionary *)stat
 {
-	NSLog(@"prev stats:%@",currentStats);
+	//do a server push at this point instead of NSLog
+	if(currentStats)
+	{
+		NSMutableDictionary *miniStats = [[[NSMutableDictionary alloc] init] autorelease];
+		[miniStats setObject:[currentStats objectForKey:DATE] forKey:DATE];
+		CLLocation *l = [currentStats objectForKey:LOCATION];
+		[miniStats setObject:[NSNumber numberWithDouble:l.coordinate.latitude] forKey:@"Latitude"];
+		[miniStats setObject:[NSNumber numberWithDouble:l.coordinate.longitude] forKey:@"Longitude"];
+		[miniStats setObject:[[UIDevice currentDevice] uniqueIdentifier] forKey:UUID];
+		NSLog(@"prev stats:%@",[miniStats toJSON]);
+	}
 	[currentStats release];
 	currentStats = stat;
 	[currentStats retain];

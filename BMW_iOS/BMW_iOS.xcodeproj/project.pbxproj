@@ -242,7 +242,7 @@
 		D4CAF755134A62CD002E1B53 /* SimpleWeatherApp_dev.p12 in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF746134A62CD002E1B53 /* SimpleWeatherApp_dev.p12 */; };
 		D4CAF756134A62CD002E1B53 /* SimpleWeatherApp_dev.p7b in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF747134A62CD002E1B53 /* SimpleWeatherApp_dev.p7b */; };
 		D4CAF757134A62CD002E1B53 /* Sunny-Interval-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF748134A62CD002E1B53 /* Sunny-Interval-icon.png */; };
-		D4CAF764134A6442002E1B53 /* SimpleWeatherAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CAF760134A6442002E1B53 /* SimpleWeatherAppController.m */; };
+		D4CAF764134A6442002E1B53 /* RemoteAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CAF760134A6442002E1B53 /* RemoteAppController.m */; };
 		D4CAF779134A646E002E1B53 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CAF774134A646E002E1B53 /* MainVC.m */; };
 		D4CAF77A134A646E002E1B53 /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CAF776134A646E002E1B53 /* MenuVC.m */; };
 		D4CAF77B134A646E002E1B53 /* SimpleWeatherApp.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CAF778134A646E002E1B53 /* SimpleWeatherApp.m */; };
@@ -406,8 +406,8 @@
 		D4CAF746134A62CD002E1B53 /* SimpleWeatherApp_dev.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleWeatherApp_dev.p12; sourceTree = "<group>"; };
 		D4CAF747134A62CD002E1B53 /* SimpleWeatherApp_dev.p7b */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleWeatherApp_dev.p7b; sourceTree = "<group>"; };
 		D4CAF748134A62CD002E1B53 /* Sunny-Interval-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sunny-Interval-icon.png"; sourceTree = "<group>"; };
-		D4CAF75F134A6442002E1B53 /* SimpleWeatherAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleWeatherAppController.h; sourceTree = "<group>"; };
-		D4CAF760134A6442002E1B53 /* SimpleWeatherAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleWeatherAppController.m; sourceTree = "<group>"; };
+		D4CAF75F134A6442002E1B53 /* RemoteAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteAppController.h; sourceTree = "<group>"; };
+		D4CAF760134A6442002E1B53 /* RemoteAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteAppController.m; sourceTree = "<group>"; };
 		D4CAF773134A646E002E1B53 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		D4CAF774134A646E002E1B53 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 		D4CAF775134A646E002E1B53 /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVC.h; sourceTree = "<group>"; };
@@ -880,8 +880,8 @@
 				D4CAF776134A646E002E1B53 /* MenuVC.m */,
 				D4CAF777134A646E002E1B53 /* SimpleWeatherApp.h */,
 				D4CAF778134A646E002E1B53 /* SimpleWeatherApp.m */,
-				D4CAF75F134A6442002E1B53 /* SimpleWeatherAppController.h */,
-				D4CAF760134A6442002E1B53 /* SimpleWeatherAppController.m */,
+				D4CAF75F134A6442002E1B53 /* RemoteAppController.h */,
+				D4CAF760134A6442002E1B53 /* RemoteAppController.m */,
 			);
 			path = RemoteApp;
 			sourceTree = "<group>";
@@ -1094,7 +1094,7 @@
 				7BD47304133A607C001A9741 /* AnnotationView.m in Sources */,
 				7BD47305133A607C001A9741 /* CurrentLocationAnnotation.m in Sources */,
 				7BA6FF4C133B506900940874 /* ShaderProgram.m in Sources */,
-				D4CAF764134A6442002E1B53 /* SimpleWeatherAppController.m in Sources */,
+				D4CAF764134A6442002E1B53 /* RemoteAppController.m in Sources */,
 				D4CAF779134A646E002E1B53 /* MainVC.m in Sources */,
 				D4CAF77A134A646E002E1B53 /* MenuVC.m in Sources */,
 				D4CAF77B134A646E002E1B53 /* SimpleWeatherApp.m in Sources */,

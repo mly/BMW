@@ -12,7 +12,7 @@
 #include "SensorReader.h"
 #include "StatsTracker.h"
 #import "MapViewController.h"
-#import "SimpleWeatherAppController.h"
+#import "RemoteAppController.h"
 
 @class ImageProcessingViewController;
 
@@ -23,7 +23,7 @@ extern NSString* BMWConnectedChanged;
     ImageProcessingViewController *viewController;
 	SensorReader *reader;
 	
-	SimpleWeatherAppController* bmwAppController;
+	RemoteAppController* bmwAppController;
 }
 
 -(CLLocation *)currentLocation;
@@ -31,7 +31,7 @@ extern NSString* BMWConnectedChanged;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet ImageProcessingViewController *viewController;
 @property (readonly) StatsTracker *tracker;
-@property (nonatomic, retain) SimpleWeatherAppController *bmwAppController;
+@property (nonatomic, retain) RemoteAppController *bmwAppController;
 
 
 

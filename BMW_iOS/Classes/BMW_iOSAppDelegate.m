@@ -44,7 +44,7 @@ NSString* BMWConnectedChanged = @"BMWConnectedChanged";
 #endif
     [self.window makeKeyAndVisible];
 	
-	self.bmwAppController = [[[SimpleWeatherAppController alloc] init] autorelease];
+	self.bmwAppController = [[[RemoteAppController alloc] init] autorelease];
 #if TARGET_IPHONE_SIMULATOR
 	[bmwAppController accessoryDidStart:nil]; // fake it
 #endif

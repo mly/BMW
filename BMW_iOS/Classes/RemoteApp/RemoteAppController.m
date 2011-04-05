@@ -87,8 +87,8 @@
 - (void)connectToUSB 
 {	
 	// Start Rhmi App
-	self.app = [[[SimpleWeatherApp alloc] initWithHmiDescription:@"SimpleWeatherApp.xml" 
-											 imageDatabaseAll:@"SimpleWeatherApp_ALL_Images.zip"
+	self.app = [[[RemoteApp alloc] initWithHmiDescription:@"RemoteApp.xml" 
+											 imageDatabaseAll:@"RemoteApp_ALL_Images.zip"
 											 imageDatabaseBMW:nil
 											imageDatabaseMINI:nil
 											  textDatabaseAll:nil 

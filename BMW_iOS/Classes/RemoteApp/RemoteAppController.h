@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <iDrive/iDrive.h>
-#import "SimpleWeatherApp.h"
+#import "RemoteApp.h"
 
 @interface RemoteAppController : NSObject <IDApplicationDelegate> {
 	ExternalAccessoryMonitor*	usbAccessoryMonitor;
-	SimpleWeatherApp*				app;
+	RemoteApp*				app;
 }
-@property (retain) SimpleWeatherApp* app;
+@property (retain) RemoteApp* app;
 @property (retain) ExternalAccessoryMonitor* usbAccessoryMonitor;
 
 - (void)accessoryDidStart:(NSNotification*) notification; // call this with nil to fake a connection

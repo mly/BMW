@@ -7,8 +7,8 @@
 //
 
 #import "MenuVC.h"
-#import "SimpleWeatherAppIDs.h"
-#import "SimpleWeatherApp.h"
+#import "RemoteAppIDs.h"
+#import "RemoteApp.h"
 
 @implementation MenuVC
 @synthesize list;
@@ -45,7 +45,7 @@
  */
 -(void)rhmiDidStart
 {
-	[list setTargetView:((SimpleWeatherApp*)(self.application)).mainVC];	// Set the view that will be opened when an element is selected
+	[list setTargetView:((RemoteApp*)(self.application)).mainVC];	// Set the view that will be opened when an element is selected
 	[list setTarget:self selector:@selector(listElementSelected:)];			// Set the callback when an element is selected
 	[self populateList];
 	[super rhmiDidStart];

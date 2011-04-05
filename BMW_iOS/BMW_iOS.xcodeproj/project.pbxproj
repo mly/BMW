@@ -221,31 +221,36 @@
 		D43DB63213261DE900DCAD92 /* NSString+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60F13261DE900DCAD92 /* NSString+XMLSerializableSupport.m */; };
 		D43DB63313261DE900DCAD92 /* ObjectiveResourceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB61413261DE900DCAD92 /* ObjectiveResourceConfig.m */; };
 		D43DB63413261DE900DCAD92 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB61613261DE900DCAD92 /* Response.m */; };
+		D49C2556134B98C4003F493F /* Remote_source.xml in Resources */ = {isa = PBXBuildFile; fileRef = D49C2544134B98C4003F493F /* Remote_source.xml */; };
+		D49C2557134B98C4003F493F /* current.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C2547134B98C4003F493F /* current.png */; };
+		D49C2558134B98C4003F493F /* destination.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C2548134B98C4003F493F /* destination.png */; };
+		D49C2559134B98C4003F493F /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C2549134B98C4003F493F /* home.png */; };
+		D49C255A134B98C4003F493F /* icon_achievements.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C254A134B98C4003F493F /* icon_achievements.png */; };
+		D49C255B134B98C4003F493F /* icon_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C254B134B98C4003F493F /* icon_dashboard.png */; };
+		D49C255C134B98C4003F493F /* icon_leaderboards.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C254C134B98C4003F493F /* icon_leaderboards.png */; };
+		D49C255D134B98C4003F493F /* icon_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C254D134B98C4003F493F /* icon_profile.png */; };
+		D49C255E134B98C4003F493F /* icon_route.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C254E134B98C4003F493F /* icon_route.png */; };
+		D49C255F134B98C4003F493F /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C254F134B98C4003F493F /* search.png */; };
+		D49C2560134B98C4003F493F /* RemoteApp.xml in Resources */ = {isa = PBXBuildFile; fileRef = D49C2551134B98C4003F493F /* RemoteApp.xml */; };
+		D49C2561134B98C4003F493F /* RemoteApp_ALL_Images.zip in Resources */ = {isa = PBXBuildFile; fileRef = D49C2552134B98C4003F493F /* RemoteApp_ALL_Images.zip */; };
+		D49C2562134B98C4003F493F /* RemoteApp_dev.p12 in Resources */ = {isa = PBXBuildFile; fileRef = D49C2553134B98C4003F493F /* RemoteApp_dev.p12 */; };
+		D49C2563134B98C4003F493F /* RemoteApp_dev.p7b in Resources */ = {isa = PBXBuildFile; fileRef = D49C2554134B98C4003F493F /* RemoteApp_dev.p7b */; };
+		D49C2564134B98C4003F493F /* Sunny-Interval-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C2555134B98C4003F493F /* Sunny-Interval-icon.png */; };
+		D49C25BF134B9ACD003F493F /* Achievements.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C25BA134B9ACD003F493F /* Achievements.png */; };
+		D49C25C0134B9ACD003F493F /* Dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C25BB134B9ACD003F493F /* Dashboard.png */; };
+		D49C25C1134B9ACD003F493F /* DrivingProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C25BC134B9ACD003F493F /* DrivingProfile.png */; };
+		D49C25C2134B9ACD003F493F /* Routes.psd in Resources */ = {isa = PBXBuildFile; fileRef = D49C25BD134B9ACD003F493F /* Routes.psd */; };
+		D49C25C3134B9ACD003F493F /* Routing.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C25BE134B9ACD003F493F /* Routing.png */; };
 		D4B8F1CC131CE519002C1A44 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */; };
 		D4B8F225131CF44E002C1A44 /* GravityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F224131CF44E002C1A44 /* GravityObject.m */; };
 		D4B8F27A131D6588002C1A44 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F279131D6588002C1A44 /* CaptureSessionManager.m */; };
 		D4B8F365131E3D61002C1A44 /* DataOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F363131E3D61002C1A44 /* DataOverlayViewController.m */; };
 		D4B8F366131E3D61002C1A44 /* DataOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4B8F364131E3D61002C1A44 /* DataOverlayViewController.xib */; };
 		D4CAF69D134A61EB002E1B53 /* iDrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CAF69C134A61EB002E1B53 /* iDrive.framework */; };
-		D4CAF749134A62CD002E1B53 /* current.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF739134A62CD002E1B53 /* current.png */; };
-		D4CAF74A134A62CD002E1B53 /* destination.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF73A134A62CD002E1B53 /* destination.png */; };
-		D4CAF74B134A62CD002E1B53 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF73B134A62CD002E1B53 /* home.png */; };
-		D4CAF74C134A62CD002E1B53 /* icon_achievements.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF73C134A62CD002E1B53 /* icon_achievements.png */; };
-		D4CAF74D134A62CD002E1B53 /* icon_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF73D134A62CD002E1B53 /* icon_dashboard.png */; };
-		D4CAF74E134A62CD002E1B53 /* icon_leaderboards.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF73E134A62CD002E1B53 /* icon_leaderboards.png */; };
-		D4CAF74F134A62CD002E1B53 /* icon_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF73F134A62CD002E1B53 /* icon_profile.png */; };
-		D4CAF750134A62CD002E1B53 /* icon_route.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF740134A62CD002E1B53 /* icon_route.png */; };
-		D4CAF751134A62CD002E1B53 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF741134A62CD002E1B53 /* search.png */; };
-		D4CAF752134A62CD002E1B53 /* SimpleWeatherApp.xml in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF743134A62CD002E1B53 /* SimpleWeatherApp.xml */; };
-		D4CAF753134A62CD002E1B53 /* SimpleWeatherApp_ALL_Images.zip in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF744134A62CD002E1B53 /* SimpleWeatherApp_ALL_Images.zip */; };
-		D4CAF754134A62CD002E1B53 /* SimpleWeather_source.xml in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF745134A62CD002E1B53 /* SimpleWeather_source.xml */; };
-		D4CAF755134A62CD002E1B53 /* SimpleWeatherApp_dev.p12 in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF746134A62CD002E1B53 /* SimpleWeatherApp_dev.p12 */; };
-		D4CAF756134A62CD002E1B53 /* SimpleWeatherApp_dev.p7b in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF747134A62CD002E1B53 /* SimpleWeatherApp_dev.p7b */; };
-		D4CAF757134A62CD002E1B53 /* Sunny-Interval-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D4CAF748134A62CD002E1B53 /* Sunny-Interval-icon.png */; };
 		D4CAF764134A6442002E1B53 /* RemoteAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CAF760134A6442002E1B53 /* RemoteAppController.m */; };
 		D4CAF779134A646E002E1B53 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CAF774134A646E002E1B53 /* MainVC.m */; };
 		D4CAF77A134A646E002E1B53 /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CAF776134A646E002E1B53 /* MenuVC.m */; };
-		D4CAF77B134A646E002E1B53 /* SimpleWeatherApp.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CAF778134A646E002E1B53 /* SimpleWeatherApp.m */; };
+		D4CAF77B134A646E002E1B53 /* RemoteApp.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CAF778134A646E002E1B53 /* RemoteApp.m */; };
 		D4CAF799134A664B002E1B53 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CAF798134A664B002E1B53 /* AudioToolbox.framework */; };
 		D4CAF79B134A6653002E1B53 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CAF79A134A6653002E1B53 /* CoreAudio.framework */; };
 		D4CAF79D134A665B002E1B53 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CAF79C134A665B002E1B53 /* CoreTelephony.framework */; };
@@ -379,6 +384,29 @@
 		D43DB61413261DE900DCAD92 /* ObjectiveResourceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveResourceConfig.m; sourceTree = "<group>"; };
 		D43DB61513261DE900DCAD92 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
 		D43DB61613261DE900DCAD92 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+		D49C2541134B98C4003F493F /* RemoteAppGfxResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteAppGfxResources.h; sourceTree = "<group>"; };
+		D49C2542134B98C4003F493F /* RemoteAppIDs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteAppIDs.h; sourceTree = "<group>"; };
+		D49C2543134B98C4003F493F /* RemoteAppTextIDs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteAppTextIDs.h; sourceTree = "<group>"; };
+		D49C2544134B98C4003F493F /* Remote_source.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Remote_source.xml; sourceTree = "<group>"; };
+		D49C2547134B98C4003F493F /* current.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = current.png; sourceTree = "<group>"; };
+		D49C2548134B98C4003F493F /* destination.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = destination.png; sourceTree = "<group>"; };
+		D49C2549134B98C4003F493F /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		D49C254A134B98C4003F493F /* icon_achievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_achievements.png; sourceTree = "<group>"; };
+		D49C254B134B98C4003F493F /* icon_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_dashboard.png; sourceTree = "<group>"; };
+		D49C254C134B98C4003F493F /* icon_leaderboards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_leaderboards.png; sourceTree = "<group>"; };
+		D49C254D134B98C4003F493F /* icon_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_profile.png; sourceTree = "<group>"; };
+		D49C254E134B98C4003F493F /* icon_route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_route.png; sourceTree = "<group>"; };
+		D49C254F134B98C4003F493F /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		D49C2551134B98C4003F493F /* RemoteApp.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RemoteApp.xml; sourceTree = "<group>"; };
+		D49C2552134B98C4003F493F /* RemoteApp_ALL_Images.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = RemoteApp_ALL_Images.zip; sourceTree = "<group>"; };
+		D49C2553134B98C4003F493F /* RemoteApp_dev.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RemoteApp_dev.p12; sourceTree = "<group>"; };
+		D49C2554134B98C4003F493F /* RemoteApp_dev.p7b */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RemoteApp_dev.p7b; sourceTree = "<group>"; };
+		D49C2555134B98C4003F493F /* Sunny-Interval-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sunny-Interval-icon.png"; sourceTree = "<group>"; };
+		D49C25BA134B9ACD003F493F /* Achievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Achievements.png; sourceTree = "<group>"; };
+		D49C25BB134B9ACD003F493F /* Dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dashboard.png; sourceTree = "<group>"; };
+		D49C25BC134B9ACD003F493F /* DrivingProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DrivingProfile.png; sourceTree = "<group>"; };
+		D49C25BD134B9ACD003F493F /* Routes.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Routes.psd; sourceTree = "<group>"; };
+		D49C25BE134B9ACD003F493F /* Routing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Routing.png; sourceTree = "<group>"; };
 		D4B8F1CB131CE519002C1A44 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D4B8F223131CF44E002C1A44 /* GravityObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GravityObject.h; sourceTree = "<group>"; };
 		D4B8F224131CF44E002C1A44 /* GravityObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GravityObject.m; sourceTree = "<group>"; };
@@ -388,32 +416,14 @@
 		D4B8F363131E3D61002C1A44 /* DataOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataOverlayViewController.m; sourceTree = "<group>"; };
 		D4B8F364131E3D61002C1A44 /* DataOverlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DataOverlayViewController.xib; path = Classes/DataOverlayViewController.xib; sourceTree = "<group>"; };
 		D4CAF69C134A61EB002E1B53 /* iDrive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iDrive.framework; sourceTree = "<group>"; };
-		D4CAF734134A62CD002E1B53 /* SimpleWeatherAppGfxResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleWeatherAppGfxResources.h; sourceTree = "<group>"; };
-		D4CAF735134A62CD002E1B53 /* SimpleWeatherAppIDs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleWeatherAppIDs.h; sourceTree = "<group>"; };
-		D4CAF736134A62CD002E1B53 /* SimpleWeatherAppTextIDs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleWeatherAppTextIDs.h; sourceTree = "<group>"; };
-		D4CAF739134A62CD002E1B53 /* current.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = current.png; sourceTree = "<group>"; };
-		D4CAF73A134A62CD002E1B53 /* destination.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = destination.png; sourceTree = "<group>"; };
-		D4CAF73B134A62CD002E1B53 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		D4CAF73C134A62CD002E1B53 /* icon_achievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_achievements.png; sourceTree = "<group>"; };
-		D4CAF73D134A62CD002E1B53 /* icon_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_dashboard.png; sourceTree = "<group>"; };
-		D4CAF73E134A62CD002E1B53 /* icon_leaderboards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_leaderboards.png; sourceTree = "<group>"; };
-		D4CAF73F134A62CD002E1B53 /* icon_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_profile.png; sourceTree = "<group>"; };
-		D4CAF740134A62CD002E1B53 /* icon_route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_route.png; sourceTree = "<group>"; };
-		D4CAF741134A62CD002E1B53 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
-		D4CAF743134A62CD002E1B53 /* SimpleWeatherApp.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SimpleWeatherApp.xml; sourceTree = "<group>"; };
-		D4CAF744134A62CD002E1B53 /* SimpleWeatherApp_ALL_Images.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = SimpleWeatherApp_ALL_Images.zip; sourceTree = "<group>"; };
-		D4CAF745134A62CD002E1B53 /* SimpleWeather_source.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SimpleWeather_source.xml; sourceTree = "<group>"; };
-		D4CAF746134A62CD002E1B53 /* SimpleWeatherApp_dev.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleWeatherApp_dev.p12; sourceTree = "<group>"; };
-		D4CAF747134A62CD002E1B53 /* SimpleWeatherApp_dev.p7b */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleWeatherApp_dev.p7b; sourceTree = "<group>"; };
-		D4CAF748134A62CD002E1B53 /* Sunny-Interval-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sunny-Interval-icon.png"; sourceTree = "<group>"; };
 		D4CAF75F134A6442002E1B53 /* RemoteAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteAppController.h; sourceTree = "<group>"; };
 		D4CAF760134A6442002E1B53 /* RemoteAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteAppController.m; sourceTree = "<group>"; };
 		D4CAF773134A646E002E1B53 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		D4CAF774134A646E002E1B53 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 		D4CAF775134A646E002E1B53 /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVC.h; sourceTree = "<group>"; };
 		D4CAF776134A646E002E1B53 /* MenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuVC.m; sourceTree = "<group>"; };
-		D4CAF777134A646E002E1B53 /* SimpleWeatherApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleWeatherApp.h; sourceTree = "<group>"; };
-		D4CAF778134A646E002E1B53 /* SimpleWeatherApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleWeatherApp.m; sourceTree = "<group>"; };
+		D4CAF777134A646E002E1B53 /* RemoteApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteApp.h; sourceTree = "<group>"; };
+		D4CAF778134A646E002E1B53 /* RemoteApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteApp.m; sourceTree = "<group>"; };
 		D4CAF798134A664B002E1B53 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D4CAF79A134A6653002E1B53 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		D4CAF79C134A665B002E1B53 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -546,7 +556,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D4CAF731134A62CD002E1B53 /* RemoteApp */,
+				D49C25B9134B9ACD003F493F /* Images */,
+				D49C253E134B98C4003F493F /* RemoteApp */,
 				D4B8F364131E3D61002C1A44 /* DataOverlayViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				7BD472F8133A606D001A9741 /* MapViewController.xib */,
@@ -805,70 +816,82 @@
 			path = XML;
 			sourceTree = "<group>";
 		};
-		D4CAF731134A62CD002E1B53 /* RemoteApp */ = {
+		D49C253E134B98C4003F493F /* RemoteApp */ = {
 			isa = PBXGroup;
 			children = (
-				D4CAF732134A62CD002E1B53 /* RHMI XML */,
-				D4CAF746134A62CD002E1B53 /* SimpleWeatherApp_dev.p12 */,
-				D4CAF747134A62CD002E1B53 /* SimpleWeatherApp_dev.p7b */,
-				D4CAF748134A62CD002E1B53 /* Sunny-Interval-icon.png */,
+				D49C253F134B98C4003F493F /* RHMI XML */,
+				D49C2553134B98C4003F493F /* RemoteApp_dev.p12 */,
+				D49C2554134B98C4003F493F /* RemoteApp_dev.p7b */,
+				D49C2555134B98C4003F493F /* Sunny-Interval-icon.png */,
 			);
 			name = RemoteApp;
 			path = Resources/RemoteApp;
 			sourceTree = "<group>";
 		};
-		D4CAF732134A62CD002E1B53 /* RHMI XML */ = {
+		D49C253F134B98C4003F493F /* RHMI XML */ = {
 			isa = PBXGroup;
 			children = (
-				D4CAF733134A62CD002E1B53 /* include */,
-				D4CAF737134A62CD002E1B53 /* res */,
-				D4CAF745134A62CD002E1B53 /* SimpleWeather_source.xml */,
+				D49C2540134B98C4003F493F /* include */,
+				D49C2544134B98C4003F493F /* Remote_source.xml */,
+				D49C2545134B98C4003F493F /* res */,
 			);
 			path = "RHMI XML";
 			sourceTree = "<group>";
 		};
-		D4CAF733134A62CD002E1B53 /* include */ = {
+		D49C2540134B98C4003F493F /* include */ = {
 			isa = PBXGroup;
 			children = (
-				D4CAF734134A62CD002E1B53 /* SimpleWeatherAppGfxResources.h */,
-				D4CAF735134A62CD002E1B53 /* SimpleWeatherAppIDs.h */,
-				D4CAF736134A62CD002E1B53 /* SimpleWeatherAppTextIDs.h */,
+				D49C2541134B98C4003F493F /* RemoteAppGfxResources.h */,
+				D49C2542134B98C4003F493F /* RemoteAppIDs.h */,
+				D49C2543134B98C4003F493F /* RemoteAppTextIDs.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		D4CAF737134A62CD002E1B53 /* res */ = {
+		D49C2545134B98C4003F493F /* res */ = {
 			isa = PBXGroup;
 			children = (
-				D4CAF738134A62CD002E1B53 /* Bitmaps */,
-				D4CAF742134A62CD002E1B53 /* build */,
+				D49C2546134B98C4003F493F /* Bitmaps */,
+				D49C2550134B98C4003F493F /* build */,
 			);
 			path = res;
 			sourceTree = "<group>";
 		};
-		D4CAF738134A62CD002E1B53 /* Bitmaps */ = {
+		D49C2546134B98C4003F493F /* Bitmaps */ = {
 			isa = PBXGroup;
 			children = (
-				D4CAF739134A62CD002E1B53 /* current.png */,
-				D4CAF73A134A62CD002E1B53 /* destination.png */,
-				D4CAF73B134A62CD002E1B53 /* home.png */,
-				D4CAF73C134A62CD002E1B53 /* icon_achievements.png */,
-				D4CAF73D134A62CD002E1B53 /* icon_dashboard.png */,
-				D4CAF73E134A62CD002E1B53 /* icon_leaderboards.png */,
-				D4CAF73F134A62CD002E1B53 /* icon_profile.png */,
-				D4CAF740134A62CD002E1B53 /* icon_route.png */,
-				D4CAF741134A62CD002E1B53 /* search.png */,
+				D49C2547134B98C4003F493F /* current.png */,
+				D49C2548134B98C4003F493F /* destination.png */,
+				D49C2549134B98C4003F493F /* home.png */,
+				D49C254A134B98C4003F493F /* icon_achievements.png */,
+				D49C254B134B98C4003F493F /* icon_dashboard.png */,
+				D49C254C134B98C4003F493F /* icon_leaderboards.png */,
+				D49C254D134B98C4003F493F /* icon_profile.png */,
+				D49C254E134B98C4003F493F /* icon_route.png */,
+				D49C254F134B98C4003F493F /* search.png */,
 			);
 			path = Bitmaps;
 			sourceTree = "<group>";
 		};
-		D4CAF742134A62CD002E1B53 /* build */ = {
+		D49C2550134B98C4003F493F /* build */ = {
 			isa = PBXGroup;
 			children = (
-				D4CAF743134A62CD002E1B53 /* SimpleWeatherApp.xml */,
-				D4CAF744134A62CD002E1B53 /* SimpleWeatherApp_ALL_Images.zip */,
+				D49C2551134B98C4003F493F /* RemoteApp.xml */,
+				D49C2552134B98C4003F493F /* RemoteApp_ALL_Images.zip */,
 			);
 			path = build;
+			sourceTree = "<group>";
+		};
+		D49C25B9134B9ACD003F493F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D49C25BA134B9ACD003F493F /* Achievements.png */,
+				D49C25BB134B9ACD003F493F /* Dashboard.png */,
+				D49C25BC134B9ACD003F493F /* DrivingProfile.png */,
+				D49C25BD134B9ACD003F493F /* Routes.psd */,
+				D49C25BE134B9ACD003F493F /* Routing.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		D4CAF758134A6442002E1B53 /* RemoteApp */ = {
@@ -878,8 +901,8 @@
 				D4CAF774134A646E002E1B53 /* MainVC.m */,
 				D4CAF775134A646E002E1B53 /* MenuVC.h */,
 				D4CAF776134A646E002E1B53 /* MenuVC.m */,
-				D4CAF777134A646E002E1B53 /* SimpleWeatherApp.h */,
-				D4CAF778134A646E002E1B53 /* SimpleWeatherApp.m */,
+				D4CAF777134A646E002E1B53 /* RemoteApp.h */,
+				D4CAF778134A646E002E1B53 /* RemoteApp.m */,
 				D4CAF75F134A6442002E1B53 /* RemoteAppController.h */,
 				D4CAF760134A6442002E1B53 /* RemoteAppController.m */,
 			);
@@ -984,21 +1007,26 @@
 				D4B8F366131E3D61002C1A44 /* DataOverlayViewController.xib in Resources */,
 				7BD472F2133A6031001A9741 /* RoutingOverlayViewController.xib in Resources */,
 				7BD472FB133A606D001A9741 /* MapViewController.xib in Resources */,
-				D4CAF749134A62CD002E1B53 /* current.png in Resources */,
-				D4CAF74A134A62CD002E1B53 /* destination.png in Resources */,
-				D4CAF74B134A62CD002E1B53 /* home.png in Resources */,
-				D4CAF74C134A62CD002E1B53 /* icon_achievements.png in Resources */,
-				D4CAF74D134A62CD002E1B53 /* icon_dashboard.png in Resources */,
-				D4CAF74E134A62CD002E1B53 /* icon_leaderboards.png in Resources */,
-				D4CAF74F134A62CD002E1B53 /* icon_profile.png in Resources */,
-				D4CAF750134A62CD002E1B53 /* icon_route.png in Resources */,
-				D4CAF751134A62CD002E1B53 /* search.png in Resources */,
-				D4CAF752134A62CD002E1B53 /* SimpleWeatherApp.xml in Resources */,
-				D4CAF753134A62CD002E1B53 /* SimpleWeatherApp_ALL_Images.zip in Resources */,
-				D4CAF754134A62CD002E1B53 /* SimpleWeather_source.xml in Resources */,
-				D4CAF755134A62CD002E1B53 /* SimpleWeatherApp_dev.p12 in Resources */,
-				D4CAF756134A62CD002E1B53 /* SimpleWeatherApp_dev.p7b in Resources */,
-				D4CAF757134A62CD002E1B53 /* Sunny-Interval-icon.png in Resources */,
+				D49C2556134B98C4003F493F /* Remote_source.xml in Resources */,
+				D49C2557134B98C4003F493F /* current.png in Resources */,
+				D49C2558134B98C4003F493F /* destination.png in Resources */,
+				D49C2559134B98C4003F493F /* home.png in Resources */,
+				D49C255A134B98C4003F493F /* icon_achievements.png in Resources */,
+				D49C255B134B98C4003F493F /* icon_dashboard.png in Resources */,
+				D49C255C134B98C4003F493F /* icon_leaderboards.png in Resources */,
+				D49C255D134B98C4003F493F /* icon_profile.png in Resources */,
+				D49C255E134B98C4003F493F /* icon_route.png in Resources */,
+				D49C255F134B98C4003F493F /* search.png in Resources */,
+				D49C2560134B98C4003F493F /* RemoteApp.xml in Resources */,
+				D49C2561134B98C4003F493F /* RemoteApp_ALL_Images.zip in Resources */,
+				D49C2562134B98C4003F493F /* RemoteApp_dev.p12 in Resources */,
+				D49C2563134B98C4003F493F /* RemoteApp_dev.p7b in Resources */,
+				D49C2564134B98C4003F493F /* Sunny-Interval-icon.png in Resources */,
+				D49C25BF134B9ACD003F493F /* Achievements.png in Resources */,
+				D49C25C0134B9ACD003F493F /* Dashboard.png in Resources */,
+				D49C25C1134B9ACD003F493F /* DrivingProfile.png in Resources */,
+				D49C25C2134B9ACD003F493F /* Routes.psd in Resources */,
+				D49C25C3134B9ACD003F493F /* Routing.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1097,7 +1125,7 @@
 				D4CAF764134A6442002E1B53 /* RemoteAppController.m in Sources */,
 				D4CAF779134A646E002E1B53 /* MainVC.m in Sources */,
 				D4CAF77A134A646E002E1B53 /* MenuVC.m in Sources */,
-				D4CAF77B134A646E002E1B53 /* SimpleWeatherApp.m in Sources */,
+				D4CAF77B134A646E002E1B53 /* RemoteApp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

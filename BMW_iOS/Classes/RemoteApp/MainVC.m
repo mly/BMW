@@ -7,7 +7,7 @@
 //
 
 #import "MainVC.h"
-#import "SimpleWeatherAppIDs.h"
+#import "RemoteAppIDs.h"
 #import "BMW_iOSAppDelegate.h"
 
 

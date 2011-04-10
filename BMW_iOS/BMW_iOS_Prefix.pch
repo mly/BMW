@@ -6,7 +6,7 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 #endif
-#define MAP_VIEW 1
+#define MAP_VIEW 0
 #define CM_DEBUG 0
 #define CL_DEBUG 0
 #ifndef OPEN_CV
@@ -19,5 +19,5 @@
 #define EDGE_DETECTION 1
 #define FACE_DETECTION 0
 #define RENDER_PROCESSING 1
-#define USE_FRONT_CAMERA 1
+#define USE_FRONT_CAMERA 0
 #endif

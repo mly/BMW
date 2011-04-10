@@ -30,9 +30,7 @@ NSString* BMWConnectedChanged = @"BMWConnectedChanged";
 	[UIApplication sharedApplication].idleTimerDisabled = YES;
     // Add the view controller's view to the window and display.
 	//To save battery on the plane
-	//Aaron TODO: remove the commented version of this.
-	//[self.window addSubview:viewController.view];
-#ifndef MAP_VIEW
+#if !MAP_VIEW
 	[self.window addSubview:viewController.view];
 	DataOverlayViewController *dataOverlayVC = [[DataOverlayViewController alloc] init];
 	[dataOverlayVC.view setFrame:CGRectMake(-230, 200, 500, 100)];

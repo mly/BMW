@@ -1,3 +1,4 @@
+precision highp float;
 uniform sampler2D inputImage;
 
 varying vec2 pos;

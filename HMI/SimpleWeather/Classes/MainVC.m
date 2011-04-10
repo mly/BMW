@@ -9,7 +9,7 @@
 #import "MainVC.h"
 #import "SimpleWeatherAppIDs.h"
 #import "SimpleWeatherAppDelegate.h"
-#import "WeatherRenderer.h"
+
 
 @implementation MainVC
 @synthesize homeButton;
@@ -141,24 +141,6 @@
  */
 -(void)homeButtonClicked:(IDButton*)button
 {
-	// Get Forcast Object
-	Forecast* forecast = [[[Forecast alloc] init] autorelease];
-	forecast.locationName = @"Woodside";
-	NSMutableArray* days = [[[NSMutableArray alloc] init] autorelease];
-	for (int i=1;i<6;i++)
-	{
-		Day* day = [[[Day alloc] init] autorelease];
-		day.highTemp = i * 12.2;
-		day.lowTemp = i * 4.6;
-		[days addObject: day];
-	}
-	forecast.days = days;
-	
-	// Create View
-	UIImage* view = [WeatherRenderer renderWithForecast: forecast];
-	
-	
-	
 	// Display View
 	[viewImage setImage: [UIImage imageNamed:@"Dashboard.png"]];
 	[stateLabel setText: nil];

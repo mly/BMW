@@ -2,7 +2,7 @@ class CreateDrivingStats < ActiveRecord::Migration
   def self.up
     create_table :driving_stats do |t|
       t.integer :id
-      t.timestamp :iphone_timestamp
+      t.float :iphone_timestamp
       t.float :velocity
       t.float :acceleration
       t.float :latitude

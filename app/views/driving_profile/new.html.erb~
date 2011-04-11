@@ -1,0 +1,7 @@
+<h1>Add new driving profile</h1>
+<%= start_form_tag :action => 'create' %>
+<p><label for="user_name">User Name</label>:
+<%= text_field 'driving_profile', 'user_name' %></p>
+<%= submit_tag "Create" %>
+<%= end_form_tag %>
+<%= link_to 'Back', {:action => 'list'} %>

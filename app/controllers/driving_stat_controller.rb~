@@ -1,0 +1,25 @@
+class DrivingStatController < ApplicationController
+      def list
+          @stats = DrivingStat.find(:all)
+      end
+
+      def show
+          @stat = DrivingStat.find(params[:id])
+      end
+
+      def new
+          @stat = DrivingProfile.new
+      end
+
+      def create
+          @stat = DrivingStat.new(params[:driving_stat])
+          if @stat.save
+             redirect_to :action => 'list'
+          end
+      end
+
+      def delete
+      	  DrivingStat.find(params[:id]).destroy
+          redirect_to :action => 'list'
+      end
+end

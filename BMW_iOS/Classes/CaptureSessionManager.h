@@ -10,6 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import <opencv/cv.h>
 
+#ifdef OPEN_CV
+
 @protocol ImageProcessingCameraDelegate;
 
 @interface CaptureSessionManager : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate> {
@@ -38,3 +40,5 @@
 - (void)cameraHasConnected;
 - (void)processNewCameraFrame:(CVImageBufferRef)cameraFrame;
 @end
+
+#endif

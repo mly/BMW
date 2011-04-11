@@ -10,12 +10,15 @@
 #import "ImageProcessingViewController.h"
 #import "DataOverlayViewController.h"
 
+NSString* BMWConnectedChanged = @"BMWConnectedChanged";
+
 
 @implementation BMW_iOSAppDelegate
 
 @synthesize window;
 @synthesize viewController;
 @synthesize tracker;
+@synthesize bmwAppController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -27,18 +30,23 @@
 	[UIApplication sharedApplication].idleTimerDisabled = YES;
     // Add the view controller's view to the window and display.
 	//To save battery on the plane
-	//Aaron TODO: remove the commented version of this.
+#if !MAP_VIEW
 	[self.window addSubview:viewController.view];
-	/*
 	DataOverlayViewController *dataOverlayVC = [[DataOverlayViewController alloc] init];
 	[dataOverlayVC.view setFrame:CGRectMake(-230, 200, 500, 100)];
-	dataOverlayVC.view.transform = CGAffineTransformMakeRotation(M_PI/2);
+	dataOverlayVC.view.transform = CGAffineTransformMakeRotation(M_PI/2);	
 	[self.window addSubview:dataOverlayVC.view];
-	*/
+#else
+	MapViewController *mapVC = [[MapViewController alloc] init];
+	[self.window addSubview:mapVC.view];
+#endif
     [self.window makeKeyAndVisible];
 	
-//	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];
-	
+	self.bmwAppController = [[[RemoteAppController alloc] init] autorelease];
+#if TARGET_IPHONE_SIMULATOR
+	[bmwAppController accessoryDidStart:nil]; // fake it
+#endif
+		
 	reader = [[SensorReader alloc] init];
 	[reader startReading];
 

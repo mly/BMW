@@ -1,0 +1,27 @@
+class DrivingProfileController < ApplicationController
+      def list
+      	  @profiles = DrivingProfile.find(:all)
+      end
+      
+      def show
+      	  @profile = DrivingProfile.find(params[:id])
+      end
+      
+      def new
+      	  @profile = DrivingProfile.new
+      end
+
+      def create
+
+      	  @profile = DrivingProfile.new(params[:driving_profile])
+	  if @profile.save
+	     redirect_to :action => 'list'
+	  end
+      end
+
+      def delete
+      	  DrivingProfile.find(params[:id]).destroy
+	  redirect_to :action => 'list'
+      end
+
+end

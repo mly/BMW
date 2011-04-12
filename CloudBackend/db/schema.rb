@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20110405005340) do
 
   create_table "driving_stats", :force => true do |t|
     t.datetime "iphone_timestamp"
+    t.string   "iphone_udid"
     t.float    "velocity"
     t.float    "acceleration"
     t.float    "latitude"

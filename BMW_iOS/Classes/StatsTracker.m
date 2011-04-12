@@ -44,6 +44,25 @@ static StatsTracker *sharedTracker;
 		[miniStats setObject:[NSNumber numberWithDouble:l.coordinate.latitude] forKey:@"Latitude"];
 		[miniStats setObject:[NSNumber numberWithDouble:l.coordinate.longitude] forKey:@"Longitude"];
 		[miniStats setObject:[[UIDevice currentDevice] uniqueIdentifier] forKey:UUID];
+		
+		NSMutableURLRequest *req = [[[NSURLRequest alloc] init] autorelease];
+		NSString *post = [miniStats toJSON];
+		NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:NO];
+		NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+		
+		[req setURL:[NSURL URLWithString:@"http://localhost:3000/driving_stat/post"]];
+		[req setHTTPMethod:@"POST"];
+		[req setValue:postLength forHTTPHeaderField:@"Content-Length"];
+		[req setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+		[req setHTTPBody:postData];
+		
+		NSError *error;
+		NSURLResponse *response;
+		NSData *urlData=[NSURLConnection sendSynchronousRequest:req returningResponse:&response error:&error];
+		NSString *data=[[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
+		NSLog(data);
+		
+		//NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest: delegate:self startImmediately:YES];
 		NSLog(@"prev stats:%@",[miniStats toJSON]);
 	}
 	[currentStats release];

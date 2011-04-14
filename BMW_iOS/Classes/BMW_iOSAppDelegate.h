@@ -13,8 +13,7 @@
 #include "StatsTracker.h"
 #import "MapViewController.h"
 #import "RemoteAppController.h"
-
-@class ImageProcessingViewController;
+#include "ImageProcessingViewController.h"
 
 extern NSString* BMWConnectedChanged;
 

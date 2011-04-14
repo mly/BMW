@@ -22,7 +22,6 @@
 
 
 - (id)init {
-	super;
 	self.unclosedProperties = [NSMutableArray array];
 	return self;
 }

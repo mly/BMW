@@ -1191,6 +1191,7 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* BMW_iOSAppDelegate.m in Sources */,
+				7BD1350D132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */,
 				D4B8F225131CF44E002C1A44 /* GravityObject.m in Sources */,
 				D4B8F27A131D6588002C1A44 /* CaptureSessionManager.m in Sources */,
 				D4B8F365131E3D61002C1A44 /* DataOverlayViewController.m in Sources */,
@@ -1226,7 +1227,6 @@
 				D43DB63313261DE900DCAD92 /* ObjectiveResourceConfig.m in Sources */,
 				D43DB63413261DE900DCAD92 /* Response.m in Sources */,
 				7BD1350C132D9E9600150AA0 /* ImageProcessingGLView.m in Sources */,
-				7BD1350D132D9E9600150AA0 /* ImageProcessingViewController.m in Sources */,
 				7BD1357A132DB86600150AA0 /* SensorReader.m in Sources */,
 				7B236139132FD38700548F13 /* StatsTracker.m in Sources */,
 				7BD472EC133A5FFD001A9741 /* RoutingOverlayViewController.m in Sources */,
@@ -1547,6 +1547,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = "CL_DEBUG=1";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
@@ -1562,6 +1563,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = (

@@ -67,19 +67,5 @@ void main()
 			gl_FragColor = vec4(1, 0, 0, 1);
 		} else gl_FragColor = vec4(0,0,0,1);
 		
-	//Check for green traffic lights
-	} else if (hue >= GH_MIN && hue <= GH_MAX && sat >= GS_THRESHOLD && ins >= I_THRESHOLD){
-
-		if (pixel.g > G_THRESHOLD && pixel.r < RB_THRESHOLD && pixel.b < RB_THRESHOLD) {
-			gl_FragColor = vec4(0, 1, 0, 1);
-		} else gl_FragColor = vec4(0,0,0,1);	
-
-	//Check for yellow traffic lights
-	} else if (hue >= YH_MIN && hue <= YH_MAX && sat >= YS_THRESHOLD && ins >= I_THRESHOLD) {
-		
-		if (pixel.r > Y_THRESHOLD && pixel.g > Y_THRESHOLD && pixel.b < RY_THRESHOLD) {
-			gl_FragColor = vec4(1, 1, 0, 1);
-		} else gl_FragColor = vec4(0,0,0,1);
-
-	} else gl_FragColor = vec4(0,0,0,1);	
+	}else gl_FragColor = vec4(0,0,0,1);	
 }

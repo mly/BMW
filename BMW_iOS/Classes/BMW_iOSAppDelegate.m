@@ -7,7 +7,6 @@
 //
 
 #import "BMW_iOSAppDelegate.h"
-#import "ImageProcessingViewController.h"
 #import "DataOverlayViewController.h"
 
 NSString* BMWConnectedChanged = @"BMWConnectedChanged";
@@ -31,8 +30,8 @@ NSString* BMWConnectedChanged = @"BMWConnectedChanged";
     // Add the view controller's view to the window and display.
 	//To save battery on the plane
 #if !MAP_VIEW
-	//[self.window addSubview:viewController.view];
-	DataOverlayViewController *dataOverlayVC = [[DataOverlayViewController alloc] init];
+	[self.window addSubview:[viewController view]];
+    DataOverlayViewController *dataOverlayVC = [[DataOverlayViewController alloc] init];
 	[dataOverlayVC.view setFrame:CGRectMake(-230, 200, 500, 100)];
 	dataOverlayVC.view.transform = CGAffineTransformMakeRotation(M_PI/2);	
 	[self.window addSubview:dataOverlayVC.view];
@@ -43,9 +42,9 @@ NSString* BMWConnectedChanged = @"BMWConnectedChanged";
     [self.window makeKeyAndVisible];
 	
 	self.bmwAppController = [[[RemoteAppController alloc] init] autorelease];
-//#if TARGET_IPHONE_SIMULATOR
+#if TARGET_IPHONE_SIMULATOR
 	[bmwAppController accessoryDidStart:nil]; // fake it
-//#endif
+#endif
 		
 	reader = [[SensorReader alloc] init];
 	[reader startReading];

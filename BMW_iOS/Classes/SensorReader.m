@@ -43,7 +43,7 @@
 			[stats setObject:locationManager.location forKey:LOCATION];
 			[stats setObject:locationManager.heading forKey:HEADING];
 			[stats setObject:[NSDate date] forKey:DATE];
-			[[StatsTracker sharedTracker] addStats:stats];
+			//[[StatsTracker sharedTracker] addStats:stats];
 			[[StatsTracker sharedTracker] processStats];
 			[stats release];
 		}
@@ -59,7 +59,6 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
 	NSLog(@"%@",newLocation);
-	
 }
 
 - (void)dealloc {

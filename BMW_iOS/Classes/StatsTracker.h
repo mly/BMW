@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#define UUID @"UUID"
+#define UDID @"UDID"
 #define DEVICE_MOTION @"Device Motion"
 #define LOCATION @"Location"
 #define HEADING @"Heading"
@@ -18,6 +18,7 @@
 #define MIN_ALTITUDE @"Min Altitude"
 #define CURRENT_STOP_TIME @"Current Stop Time"
 #define LIFETIME_STOP_TIME @"Lifetime Stop Time"
+
 
 @interface StatsTracker : NSObject {
 	NSMutableArray *stats;

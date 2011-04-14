@@ -43,14 +43,16 @@ static StatsTracker *sharedTracker;
 		CLLocation *l = [currentStats objectForKey:LOCATION];
 		[miniStats setObject:[NSNumber numberWithDouble:l.coordinate.latitude] forKey:@"Latitude"];
 		[miniStats setObject:[NSNumber numberWithDouble:l.coordinate.longitude] forKey:@"Longitude"];
-		[miniStats setObject:[[UIDevice currentDevice] uniqueIdentifier] forKey:UUID];
+		[miniStats setObject:[[UIDevice currentDevice] uniqueIdentifier] forKey:UDID];
 		
-		NSMutableURLRequest *req = [[[NSURLRequest alloc] init] autorelease];
-		NSString *post = [miniStats toJSON];
-		NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:NO];
+		NSMutableURLRequest *req = [[[NSMutableURLRequest alloc] init] autorelease];
+		NSString *post = [NSString stringWithFormat:@"data=%@", [miniStats JSONRepresentation]];
+		NSLog(post);
+		NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
 		NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+		NSLog(@"%@", postData);
 		
-		[req setURL:[NSURL URLWithString:@"http://localhost:3000/driving_stat/post"]];
+		[req setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",SERVER_URL, @"/driving_stat/create"]]];
 		[req setHTTPMethod:@"POST"];
 		[req setValue:postLength forHTTPHeaderField:@"Content-Length"];
 		[req setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];

@@ -6,7 +6,7 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 #endif
-#define MAP_VIEW 0
+#define MAP_VIEW 1
 #define CM_DEBUG 0
 #define CL_DEBUG 0
 #ifndef OPEN_CV
@@ -20,4 +20,11 @@
 #define FACE_DETECTION 0
 #define RENDER_PROCESSING 1
 #define USE_FRONT_CAMERA 0
+#endif
+
+#define LOCAL_SERVER 0
+#if LOCAL_SERVER
+#define SERVER_URL @"http://bing.com" //and use Charles to reroute
+#else
+#define SERVER_URL @"http://bunkermw.heroku.com"
 #endif

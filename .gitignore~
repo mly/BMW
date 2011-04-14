@@ -5,9 +5,7 @@ BMW_iOS/build
 
 
 #BMW HMI
-HMI/BMW.app
-HMI/MINI.app
-HMI/RHMI\ Editor
-HMI/SimpleWeather/build
-
-HerokuBackend
+Stanford\ CS210/BMW.app
+Stanford\ CS210/MINI.app
+Stanford\ CS210/RHMI\ Editor
+Stanford\ CS210/SimpleWeather/build

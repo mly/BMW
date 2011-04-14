@@ -96,12 +96,7 @@
 											 textDatabaseMINI:nil 
 											  devCertificates:YES
 													 delegate:self] autorelease];
-	
-#if TARGET_IPHONE_SIMULATOR
-	[app connectWithHostname: @"127.0.0.1"];
-#else	
-	[app connectWithHostname:@"10.31.100.60"];
-#endif
+	[app connectWithHostname: @"127.0.0.0"];
 	// Waiting for	-idApplicationDidConnect: ...
 	// or			-idApplication: connectionFailedWithError: ...
 }	 

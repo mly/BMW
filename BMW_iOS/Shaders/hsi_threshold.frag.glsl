@@ -15,11 +15,11 @@ float YS_THRESHOLD = .5;
 
 float I_THRESHOLD = 100.0;
 
-float R_THRESHOLD = 200.0;
-float G_THRESHOLD = 150.0;
-float Y_THRESHOLD = 150.0;
+float R_THRESHOLD = 120.0;
+float G_THRESHOLD = 100.0;
+float Y_THRESHOLD = 100.0;
 
-float GB_THRESHOLD = 100.0;
+float GB_THRESHOLD = 70.0;
 float RB_THRESHOLD = 100.0;
 float RY_THRESHOLD = 100.0;
 

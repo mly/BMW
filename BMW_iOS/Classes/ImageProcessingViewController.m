@@ -181,13 +181,18 @@ enum {
 
 - (void)findRed:(GLubyte *)pixels
 {
-	
+    int counter = 0;
+    int threshold = 20;
 	for (NSUInteger currentPixel = 0; currentPixel < (FBO_WIDTH * FBO_HEIGHT); currentPixel++)
 	{
         if((CGFloat)pixels[currentPixel * 4] / 255.0f > 0)
         {
-            [[StatsTracker sharedTracker] signalRed];
-            return;
+            counter++;
+            if(counter>=threshold)
+            {
+                [[StatsTracker sharedTracker] signalRed];
+                return;
+            }
         }
 	}
     [[StatsTracker sharedTracker] signalBlack];

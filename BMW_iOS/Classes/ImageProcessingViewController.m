@@ -4,6 +4,7 @@
 //
 
 #import "ImageProcessingViewController.h"
+#include "StatsTracker.h"
 #ifdef OPEN_CV
 // Uniform index.
 enum {
@@ -50,6 +51,8 @@ enum {
 	
 	camera = [[CaptureSessionManager alloc] init];
 	camera.delegate = self;
+    
+    rawPositionPixels = (GLubyte *) calloc(FBO_WIDTH * FBO_HEIGHT * 4, sizeof(GLubyte));
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -129,6 +132,9 @@ enum {
 	
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
     
+    glReadPixels(0, 0, FBO_WIDTH, FBO_HEIGHT, GL_RGBA, GL_UNSIGNED_BYTE, rawPositionPixels);
+    [self findRed:rawPositionPixels];	
+    
 //	shader = [ShaderProgram programWithVertexShader:@"default.vsh" andFragmentShader:@"dilation.frag.glsl"];
 //multiple passes	
 //	[glView setPositionThresholdFramebuffer];
@@ -172,6 +178,21 @@ enum {
 	
     [glView presentFramebuffer];
 }
+
+- (void)findRed:(GLubyte *)pixels
+{
+	
+	for (NSUInteger currentPixel = 0; currentPixel < (FBO_WIDTH * FBO_HEIGHT); currentPixel++)
+	{
+        if((CGFloat)pixels[currentPixel * 4] / 255.0f > 0)
+        {
+            [[StatsTracker sharedTracker] signalRed];
+            return;
+        }
+	}
+    [[StatsTracker sharedTracker] signalBlack];
+}
+
 
 #pragma mark -
 #pragma mark ImageProcessingCameraDelegate methods

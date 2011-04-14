@@ -23,9 +23,15 @@
 	NSMutableArray *stats;
 	NSMutableDictionary *currentStats;
 	int curIndex;
+    NSDate *redStart;
+    int redCount;
 }
 -(void)addStats:(NSMutableDictionary *)stat;
 -(void)addStat:(id)stat withValue:(id)value;
+-(double)getTime;
+-(int)getLightCount;
+-(void)signalRed;
+-(void)signalBlack;
 +(StatsTracker *)sharedTracker;//for simplicity's sake - eventually we probably just want to pass this, not do it as a singleton
 
 @property(readonly) NSDictionary *currentStats;

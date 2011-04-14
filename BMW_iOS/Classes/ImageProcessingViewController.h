@@ -25,6 +25,7 @@
 
 - (void) assetWriterStart;
 - (NSURL *) fileURL;
+- (void)findRed:(GLubyte *)pixels;
 
 @end
 

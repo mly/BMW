@@ -29,8 +29,46 @@ static StatsTracker *sharedTracker;
 	{
 		stats = [[NSMutableArray alloc] init];
 		curIndex = -1;
+        redStart = nil;
+        redCount = 0;
 	}
 	return self;
+}
+
+-(void)signalRed
+{
+    if(redStart==nil)
+    {
+        redStart=[[NSDate date] retain];
+        redCount++;
+    }
+}
+
+-(double)getTime
+{
+    if(redStart!=nil)
+    {
+        double time = [[NSDate date] timeIntervalSinceDate:redStart];
+        NSLog(@"time: %f",time);
+        return time;
+    }
+    return -1;
+}
+
+-(int)getLightCount
+{
+    return redCount;
+}
+
+-(void)signalBlack
+{
+    if(redStart!=nil)
+    {
+        double time = [self getTime];
+        //send to server!
+        [redStart release];
+        redStart = nil;
+    }
 }
 
 -(void)addStats:(NSMutableDictionary *)stat

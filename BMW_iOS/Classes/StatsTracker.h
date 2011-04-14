@@ -26,6 +26,7 @@
     NSDate *redStart;
     NSString *cloudLightInfo;
     int redCount;
+    BOOL queryingServer;
 }
 -(void)addStats:(NSMutableDictionary *)stat;
 -(void)addStat:(id)stat withValue:(id)value;
@@ -33,6 +34,7 @@
 -(int)getLightCount;
 -(void)signalRed;
 -(void)signalBlack;
+-(NSString *)getAggregateLightInfo;
 +(StatsTracker *)sharedTracker;//for simplicity's sake - eventually we probably just want to pass this, not do it as a singleton
 
 @property(readonly) NSDictionary *currentStats;

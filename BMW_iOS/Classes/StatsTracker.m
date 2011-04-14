@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreMotion/CMMotionManager.h>
 #include "JSONSerializableSupport.h"
+#include "SBJSON.h"
 
 @implementation StatsTracker
 @synthesize currentStats, stats;
@@ -31,6 +32,8 @@ static StatsTracker *sharedTracker;
 		curIndex = -1;
         redStart = nil;
         redCount = 0;
+        queryingServer = NO;
+        cloudLightInfo = @"querying server";
 	}
 	return self;
 }
@@ -49,7 +52,7 @@ static StatsTracker *sharedTracker;
     if(redStart!=nil)
     {
         double time = [[NSDate date] timeIntervalSinceDate:redStart];
-        NSLog(@"time: %f",time);
+        //NSLog(@"time: %f",time);
         return time;
     }
     return -1;
@@ -84,11 +87,26 @@ static StatsTracker *sharedTracker;
 
 -(void)queryServer
 {
-    
+    if(!queryingServer)
+    {
+        queryingServer = YES;
+        NSString *url = @"http://bunkermw.heroku.com/lights/stats";
+        NSString * data = [NSString stringWithContentsOfURL:[NSURL URLWithString:url]];
+        
+        SBJSON *parser = [[[SBJSON alloc] init] autorelease];
+        
+        NSDictionary *lightStats = [parser objectWithString:data error:nil];
+        cloudLightInfo = [NSString stringWithFormat:@"Total Lights:%@ Total Time @ Lights:%@\nAverage Time: %@",
+                          [lightStats objectForKey:@"numLights"],
+                          [lightStats objectForKey:@"totalTime"],
+                          [lightStats objectForKey:@"averageTime"]];
+        queryingServer = NO;
+    }
 }
 
 -(NSString *)getAggregateLightInfo
 {
+    [self queryServer];
     return cloudLightInfo;
 }
 

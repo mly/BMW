@@ -33,12 +33,12 @@
 -(void)populateLabelsFromsStatsTracker
 {
     //get time
-    NSString *count = [NSString stringWithFormat:@"Number of Lights Seen: %d\n",[[StatsTracker sharedTracker] getLightCount]];
+    NSString *count = [NSString stringWithFormat:@"Number of Lights Seen: %d",[[StatsTracker sharedTracker] getLightCount]];
     double time = [[StatsTracker sharedTracker] getTime];
     NSString *timeS = @"";
     if (time!=-1)
-        timeS = [NSString stringWithFormat:@"Seconds looking at current light: %f\n",time];
-	textView.text = [NSString stringWithFormat:@"%@%@",count,timeS];
+        timeS = [NSString stringWithFormat:@", Time @ Current Light: %f",time];
+	textView.text = [NSString stringWithFormat:@"%@%@\n%@",count,timeS,[[StatsTracker sharedTracker] getAggregateLightInfo]];
     //[NSString stringWithFormat:@"%@",[StatsTracker sharedTracker].currentStats];
 	[self performSelector:@selector(populateLabelsFromsStatsTracker) withObject:nil afterDelay:0.1];
 }

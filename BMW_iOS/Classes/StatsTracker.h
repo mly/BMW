@@ -24,6 +24,7 @@
 	NSMutableDictionary *currentStats;
 	int curIndex;
     NSDate *redStart;
+    NSString *cloudLightInfo;
     int redCount;
 }
 -(void)addStats:(NSMutableDictionary *)stat;

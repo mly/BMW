@@ -68,7 +68,28 @@ static StatsTracker *sharedTracker;
         //send to server!
         [redStart release];
         redStart = nil;
+        
+        NSMutableURLRequest *req = [[[NSMutableURLRequest alloc] init] autorelease];
+		NSString *url = [NSString stringWithFormat:@"http://bunkermw.heroku.com/lights/new?seconds=%f&color=red",time];
+		
+		[req setURL:[NSURL URLWithString:url]];
+		[req setHTTPMethod:@"GET"];
+		[req setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+		
+		NSError *error;
+		NSURLResponse *response;
+		NSData *urlData=[NSURLConnection sendSynchronousRequest:req returningResponse:&response error:&error];
     }
+}
+
+-(void)queryServer
+{
+    
+}
+
+-(NSString *)getAggregateLightInfo
+{
+    return cloudLightInfo;
 }
 
 -(void)addStats:(NSMutableDictionary *)stat

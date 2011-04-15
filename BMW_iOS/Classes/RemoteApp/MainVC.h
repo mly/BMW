@@ -43,5 +43,6 @@
 -(void)currentButtonClicked:(IDButton*)button;
 -(void)destButtonClicked:(IDButton*)button;
 -(void)lookupButtonClicked:(IDButton*)button;
+-(void)setRedLight:(BOOL)light;
 
 @end

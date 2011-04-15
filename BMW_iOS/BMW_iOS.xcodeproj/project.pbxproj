@@ -281,6 +281,7 @@
 		D43DB63213261DE900DCAD92 /* NSString+XMLSerializableSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB60F13261DE900DCAD92 /* NSString+XMLSerializableSupport.m */; };
 		D43DB63313261DE900DCAD92 /* ObjectiveResourceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB61413261DE900DCAD92 /* ObjectiveResourceConfig.m */; };
 		D43DB63413261DE900DCAD92 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DB61613261DE900DCAD92 /* Response.m */; };
+		D4872BCD1357B59600BDBDED /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4872BCC1357B59600BDBDED /* MediaPlayer.framework */; };
 		D49C2556134B98C4003F493F /* Remote_source.xml in Resources */ = {isa = PBXBuildFile; fileRef = D49C2544134B98C4003F493F /* Remote_source.xml */; };
 		D49C2557134B98C4003F493F /* current.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C2547134B98C4003F493F /* current.png */; };
 		D49C2558134B98C4003F493F /* destination.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C2548134B98C4003F493F /* destination.png */; };
@@ -444,6 +445,7 @@
 		D43DB61413261DE900DCAD92 /* ObjectiveResourceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveResourceConfig.m; sourceTree = "<group>"; };
 		D43DB61513261DE900DCAD92 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
 		D43DB61613261DE900DCAD92 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+		D4872BCC1357B59600BDBDED /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D49C2541134B98C4003F493F /* RemoteAppGfxResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteAppGfxResources.h; sourceTree = "<group>"; };
 		D49C2542134B98C4003F493F /* RemoteAppIDs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteAppIDs.h; sourceTree = "<group>"; };
 		D49C2543134B98C4003F493F /* RemoteAppTextIDs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteAppTextIDs.h; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 				D4CAF79D134A665B002E1B53 /* CoreTelephony.framework in Frameworks */,
 				D4CAF79F134A6666002E1B53 /* ExternalAccessory.framework in Frameworks */,
 				D4CAF7A1134A666D002E1B53 /* Security.framework in Frameworks */,
+				D4872BCD1357B59600BDBDED /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +614,7 @@
 				7B4177601324922100BE9374 /* Libraries */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				D4872BCC1357B59600BDBDED /* MediaPlayer.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -1066,11 +1070,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BFBCB73134BCC15003ABB41 /* hsi_threshold.frag.glsl in Resources */,
 				7BFBCB6F134BCC15003ABB41 /* dilation.frag.glsl in Resources */,
 				7BFBCB70134BCC15003ABB41 /* dilation.vert.glsl in Resources */,
 				7BFBCB71134BCC15003ABB41 /* erosion.frag.glsl in Resources */,
 				7BFBCB72134BCC15003ABB41 /* erosion.vert.glsl in Resources */,
-				7BFBCB73134BCC15003ABB41 /* hsi_threshold.frag.glsl in Resources */,
 				7BFBCB74134BCC15003ABB41 /* hsi_threshold.vert.glsl in Resources */,
 				7B9BB91E133BC41100A58F52 /* default.vsh in Resources */,
 				7B053D11132CF35D00E2AB1C /* DirectDisplayShader.fsh in Resources */,

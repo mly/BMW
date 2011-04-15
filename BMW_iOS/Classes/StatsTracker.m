@@ -9,6 +9,7 @@
 #import "StatsTracker.h"
 #import <CoreLocation/CoreLocation.h>
 #import <CoreMotion/CMMotionManager.h>
+#import "BMW_iOSAppDelegate.h"
 #include "JSONSerializableSupport.h"
 #include "SBJSON.h"
 
@@ -42,6 +43,8 @@ static StatsTracker *sharedTracker;
 {
     if(redStart==nil)
     {
+		BMW_iOSAppDelegate *del = [[UIApplication sharedApplication] delegate];
+		[del.bmwAppController.app.mainVC setRedLight:YES];
         redStart=[[NSDate date] retain];
         redCount++;
     }
@@ -67,6 +70,8 @@ static StatsTracker *sharedTracker;
 {
     if(redStart!=nil)
     {
+		BMW_iOSAppDelegate *del = [[UIApplication sharedApplication] delegate];
+		[del.bmwAppController.app.mainVC setRedLight:NO];
         double time = [self getTime];
         //send to server!
         [redStart release];

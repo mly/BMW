@@ -9,6 +9,7 @@
 #import "MainVC.h"
 #import "RemoteAppIDs.h"
 #import "BMW_iOSAppDelegate.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 
 @implementation MainVC
@@ -62,6 +63,13 @@
 	return self;
 }
 
+-(void)setRedLight:(BOOL)light {
+	if (light) {
+		[stateLabel setText:@"Red Light!"]; 
+	} else {
+		[stateLabel setText:@"No Red Light"];
+	}
+}
 
 -(void)dealloc {
 	self.homeButton = nil;
@@ -142,8 +150,9 @@
 -(void)homeButtonClicked:(IDButton*)button
 {
 	// Display View
-	[viewImage setImage: [UIImage imageNamed:@"Dashboard.png"]];
-	[stateLabel setText: nil];
+	//[viewImage setImage: [UIImage imageNamed:@"Dashboard.png"]];
+	[viewImage setImage:nil];
+	[stateLabel setText: @"No Red Light"];
 	
 	//imageTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(updateDashboardImage:) userInfo:nil repeats:YES];
 	//[stateLabel stopAnimating];
@@ -163,8 +172,28 @@
 
 -(void)destButtonClicked:(IDButton*)button
 {
-	[viewImage setImage: [UIImage imageNamed:@"DrivingProfile.png"]];
-	[stateLabel setText: @""];
+	[viewImage setImage:nil];
+	//[viewImage setImage: [UIImage imageNamed:@"DrivingProfile.png"]];
+	[stateLabel setText: @"Jams!"];
+	
+	MPMusicPlayerController *myPlayer = [MPMusicPlayerController applicationMusicPlayer];
+	
+	// assign a playback queue containing all media items on the device
+	MPMediaQuery *query = [MPMediaQuery songsQuery];
+	MPMediaItemCollection *collection;
+	for (MPMediaItem *item in query.items) {
+		if ([[item valueForProperty:MPMediaItemPropertyTitle] isEqualToString:@"Bad Romance"]) {
+			NSLog(@"%@", [item valueForProperty:MPMediaItemPropertyTitle]);
+			collection = [MPMediaItemCollection collectionWithItems:[NSArray arrayWithObject:item]];
+			[myPlayer setQueueWithItemCollection:collection];
+		}
+	}
+	
+	//[myPlayer setQueueWithQuery: [MPMediaQuery songsQuery]];
+	
+	
+	// start playing from the beginning of the queue
+	[myPlayer play];
 }
 
 -(void)lookupButtonClicked:(IDButton*)button

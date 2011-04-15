@@ -96,7 +96,7 @@
 											 textDatabaseMINI:nil 
 											  devCertificates:YES
 													 delegate:self] autorelease];
-	[app connectWithHostname: @"127.0.0.0"];
+	[app connectWithHostname: @"10.33.6.113"];
 	// Waiting for	-idApplicationDidConnect: ...
 	// or			-idApplication: connectionFailedWithError: ...
 }	 

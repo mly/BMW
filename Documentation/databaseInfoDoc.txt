@@ -1,0 +1,23 @@
+Basic Read Info
+---------------
+UDID - iPhone unique identifier
+Date - Timestamp of reading
+AccelerationX
+AccelerationY
+AccelerationZ
+GyroscopeX
+GyroscopeY
+GyroscopeZ
+Latitude
+Longitude
+Speed
+Heading - (compass reading)
+Light Representation - not sure how this will be done yet…
+
+Processed info (I'll send a little bit of this for testing, and we'll then do processing on the backend to see which is more efficient)
+--------------
+Time Stopped
+Times gone through a yellow
+Time at red light
+number of lights gone through
+average speed
